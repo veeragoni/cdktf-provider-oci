@@ -56,6 +56,7 @@ crash.*.log
 cdktf.out/
 cdktf.log
 .cdktf/
+.claude/
 imported/
 imports/
 !imports/*.ts
@@ -130,6 +131,4 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-!/.github/workflows/check-provider-updates.yml
-!/.github/workflows/generate-bindings.yml
 !/.projenrc.js

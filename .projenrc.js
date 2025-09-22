@@ -12,7 +12,7 @@ const project = new ConstructLibraryCdktf({
   npmAccess: NpmAccess.PUBLIC,
   releaseToNpm: true,
 
-  cdktfVersion: '^0.20.0',
+  cdktfVersion: '^0.20.0 || ^0.21.0',
   constructsVersion: '^10.0.0',
   jsiiVersion: '^5.0.0',
 
