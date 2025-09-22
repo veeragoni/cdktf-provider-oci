@@ -12,19 +12,41 @@ This repository contains auto-generated CDKTF (Cloud Development Kit for Terrafo
 
 ## Installation
 
-### TypeScript/JavaScript
+> **Important**: Due to the size of the OCI provider (thousands of resources), the bindings must be generated locally in your project. This package provides setup instructions and helper utilities.
+
+### Step 1: Install the package
+
+#### TypeScript/JavaScript
 ```bash
 npm install cdktf-provider-oci
 # or
 yarn add cdktf-provider-oci
 ```
 
-### Python
+#### Python
 ```bash
 pip install cdktf-provider-oci
 ```
 
-> **Note**: If you encounter issues with the npm package, you may need to generate the OCI provider bindings locally. See the [Troubleshooting](#troubleshooting) section below.
+### Step 2: Generate OCI provider bindings
+
+1. Add the OCI provider to your `cdktf.json`:
+```json
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "terraformProviders": [
+    "oracle/oci@~> 7.19"
+  ]
+}
+```
+
+2. Generate the provider bindings:
+```bash
+cdktf get
+```
+
+This will create a `.gen/providers/oci/` directory with all the OCI resources.
 
 ## Quick Start
 
@@ -32,9 +54,11 @@ pip install cdktf-provider-oci
 ```typescript
 import { Construct } from 'constructs';
 import { App, TerraformStack } from 'cdktf';
-import { OciProvider, CoreInstance, CoreVcn, CoreSubnet } from 'cdktf-provider-oci';
-// Or import specific resources as needed:
-// import { oci } from 'cdktf-provider-oci'; // Then use oci.CoreInstance, etc.
+// Import from locally generated bindings:
+import { OciProvider } from './.gen/providers/oci/provider';
+import { CoreInstance } from './.gen/providers/oci/core-instance';
+import { CoreVcn } from './.gen/providers/oci/core-vcn';
+import { CoreSubnet } from './.gen/providers/oci/core-subnet';
 
 class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
@@ -98,7 +122,12 @@ app.synth();
 import os
 from constructs import Construct
 from cdktf import App, TerraformStack
-from cdktf_provider_oci import OciProvider, CoreInstance, CoreVcn, CoreSubnet
+# Import from locally generated bindings:
+# After running `cdktf get`, these will be available:
+from imports.oci.provider import OciProvider
+from imports.oci.core_instance import CoreInstance
+from imports.oci.core_vcn import CoreVcn
+from imports.oci.core_subnet import CoreSubnet
 
 class MyStack(TerraformStack):
     def __init__(self, scope: Construct, name: str):
@@ -220,52 +249,42 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the Apache-2.0 License - see the [LICENSE](./LICENSE) file for details.
 
+## Why Local Generation?
+
+The OCI Terraform provider contains thousands of resources and data sources, making the compiled JavaScript package extremely large (hundreds of MBs). To avoid package size issues and memory problems during compilation, this package serves as a guide for generating the OCI provider bindings locally in your project.
+
+This approach ensures:
+- ✅ No npm package size limitations
+- ✅ Faster installation
+- ✅ Always up-to-date with the latest OCI provider version you specify
+- ✅ No memory issues during JSII compilation
+
 ## Troubleshooting
-
-### Issue: Module not found or missing OCI resources
-
-If you encounter errors like "Cannot find module" or the OCI resources are not available, the package may not have been properly built with all provider bindings. Here's how to fix it:
-
-#### Option 1: Generate bindings locally (Recommended for now)
-
-1. Add the OCI provider to your `cdktf.json`:
-```json
-{
-  "terraformProviders": [
-    "oracle/oci@~> 6.0"
-  ]
-}
-```
-
-2. Generate the bindings:
-```bash
-cdktf get
-```
-
-3. Update your imports to use the locally generated providers:
-```typescript
-import { OciProvider } from './.gen/providers/oci/provider';
-import { CoreInstance } from './.gen/providers/oci/core-instance';
-```
-
-#### Option 2: Wait for package update
-
-We're working on fixing the npm package to properly include all OCI provider bindings. Once updated, you'll be able to use the package directly as shown in the examples above.
 
 ### Common Import Patterns
 
 ```typescript
-// Import specific resources (when package is properly built)
-import { OciProvider, CoreInstance, CoreVcn } from 'cdktf-provider-oci';
-
-// Import everything through namespace
-import { oci } from 'cdktf-provider-oci';
-// Then use: new oci.CoreInstance(...), new oci.CoreVcn(...), etc.
-
-// Import from locally generated bindings (current workaround)
+// TypeScript - Import from locally generated bindings
 import { OciProvider } from './.gen/providers/oci/provider';
 import { CoreInstance } from './.gen/providers/oci/core-instance';
 ```
+
+```python
+# Python - Import from locally generated bindings
+from imports.oci.provider import OciProvider
+from imports.oci.core_instance import CoreInstance
+```
+
+### Finding Resource Names
+
+After running `cdktf get`, you can find all available resources in:
+- TypeScript: `.gen/providers/oci/` directory
+- Python: `imports/oci/` directory
+
+Resource naming convention:
+- Terraform resource `oci_core_instance` becomes `CoreInstance`
+- Terraform resource `oci_identity_compartment` becomes `IdentityCompartment`
+- Data sources follow the same pattern with `Data` prefix: `DataOciCoreInstances`
 
 ## Resources
 

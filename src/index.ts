@@ -1,18 +1,38 @@
-// Re-export main OCI provider class
-export { OciProvider } from '../generated/providers/oci/provider';
+// This package provides CDKTF bindings for Oracle Cloud Infrastructure (OCI)
+//
+// Due to the size of the OCI provider, the bindings need to be generated locally.
+// Please see the README for instructions on how to generate and use the OCI provider bindings.
+//
+// Example usage after generating bindings:
+// import { OciProvider } from './.gen/providers/oci/provider';
+// import { CoreInstance } from './.gen/providers/oci/core-instance';
 
-// Re-export commonly used OCI resources
-export { CoreInstance } from '../generated/providers/oci/core-instance';
-export { CoreVcn } from '../generated/providers/oci/core-vcn';
-export { CoreSubnet } from '../generated/providers/oci/core-subnet';
-export { CoreInternetGateway } from '../generated/providers/oci/core-internet-gateway';
-export { CoreSecurityList } from '../generated/providers/oci/core-security-list';
-export { CoreRouteTable } from '../generated/providers/oci/core-route-table';
-export { CoreVolume } from '../generated/providers/oci/core-volume';
-export { CoreVolumeAttachment } from '../generated/providers/oci/core-volume-attachment';
-export { IdentityCompartment } from '../generated/providers/oci/identity-compartment';
-export { ObjectstorageBucket } from '../generated/providers/oci/objectstorage-bucket';
-export { ObjectstorageObject } from '../generated/providers/oci/objectstorage-object';
+export interface OciProviderConfig {
+  readonly region: string;
+  readonly tenancyOcid: string;
+  readonly userOcid: string;
+  readonly fingerprint: string;
+  readonly privateKey: string;
+}
 
-// Export all OCI provider bindings through a namespace
-export * as oci from '../generated/providers/oci';
+// Helper class to provide guidance
+export class OciProviderHelper {
+  static setupInstructions(): string {
+    return `
+To use the OCI provider with CDKTF:
+
+1. Add to your cdktf.json:
+   {
+     "terraformProviders": ["oracle/oci@~> 7.19"]
+   }
+
+2. Run: cdktf get
+
+3. Import from generated bindings:
+   import { OciProvider } from './.gen/providers/oci/provider';
+   import { CoreInstance } from './.gen/providers/oci/core-instance';
+
+See https://github.com/veeragoni/cdktf-provider-oci for full documentation.
+`;
+  }
+}
