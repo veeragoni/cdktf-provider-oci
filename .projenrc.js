@@ -44,6 +44,14 @@ const project = new ConstructLibraryCdktf({
     module: 'cdktf_provider_oci',
   },
 
+  // Jest configuration - use jest.config.js file only
+  jestOptions: {
+    jestConfig: {
+      preset: 'ts-jest',
+      testEnvironment: 'node',
+    },
+  },
+
   // Add package.json keywords for better discoverability
   keywords: [
     'cdk',
