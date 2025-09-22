@@ -1,0 +1,3 @@
+# `oci_ocvp_esxi_host`
+
+Refer to the Terraform Registry for docs: [`oci_ocvp_esxi_host`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/resources/ocvp_esxi_host).
