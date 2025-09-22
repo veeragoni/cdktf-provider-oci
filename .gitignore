@@ -56,7 +56,6 @@ crash.*.log
 cdktf.out/
 cdktf.log
 .cdktf/
-.claude
 imported/
 imports/
 !imports/*.ts

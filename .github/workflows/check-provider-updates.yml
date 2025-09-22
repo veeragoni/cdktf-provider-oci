@@ -63,7 +63,7 @@ jobs:
 
           \        # Generate new provider bindings
 
-          \        npx cdktf-cli get --language typescript --provider \"oracle/oci@~> $LATEST_VERSION\"
+          \        npx cdktf-cli@latest get --language typescript --provider \"oracle/oci@~> $LATEST_VERSION\"
 
 
           \        # Update .projenrc.ts with new version

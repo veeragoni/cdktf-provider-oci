@@ -23,14 +23,14 @@ echo -e "${YELLOW}🔍 Checking OCI Provider version: ${PROVIDER_VERSION}${NC}"
 
 # Generate provider bindings
 echo -e "${YELLOW}⚙️  Generating provider bindings...${NC}"
-npx cdktf get --language=typescript --provider="oracle/oci@~> ${PROVIDER_VERSION}"
+npx cdktf-cli@latest get --language=typescript --provider="oracle/oci@~> ${PROVIDER_VERSION}"
 
 # Also generate for Python if enabled
 if [ -f "provider-config.json" ]; then
   PYTHON_ENABLED=$(jq -r '.languages.python.enabled' provider-config.json)
   if [ "$PYTHON_ENABLED" = "true" ]; then
     echo -e "${YELLOW}🐍 Generating Python bindings...${NC}"
-    npx cdktf get --language=python --provider="oracle/oci@~> ${PROVIDER_VERSION}"
+    npx cdktf-cli@latest get --language=python --provider="oracle/oci@~> ${PROVIDER_VERSION}"
   fi
 fi
 

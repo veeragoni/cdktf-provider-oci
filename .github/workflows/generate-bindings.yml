@@ -48,7 +48,7 @@ jobs:
 
           \        echo \"Generating bindings for OCI provider version: $PROVIDER_VERSION\"
 
-          \        npx cdktf-cli get --language typescript --provider \"oracle/oci@~> $PROVIDER_VERSION\"
+          \        npx cdktf-cli@latest get --language typescript --provider \"oracle/oci@~> $PROVIDER_VERSION\"
 
           \      "
       - name: Build project

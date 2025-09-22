@@ -16,7 +16,7 @@ const project = new ConstructLibraryCdktf({
   constructsVersion: '^10.0.0',
   jsiiVersion: '^5.0.0',
 
-  deps: ['cdktf', 'constructs', '@cdktf/provider-generator'],
+  deps: ['cdktf', 'constructs'],
   peerDeps: ['cdktf', 'constructs'],
 
   // Enable GitHub workflows
