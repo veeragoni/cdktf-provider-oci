@@ -10,17 +10,25 @@ To publish packages to NPM, you need to set up the following secret:
 
 **Secret Name:** `NPM_TOKEN`
 
-**How to obtain:**
+**⚠️ IMPORTANT: You MUST use an "Automation" token, NOT a "Publish" token**
+
+**How to obtain an Automation Token:**
 1. Log in to [npmjs.com](https://www.npmjs.com/)
-2. Click on your profile picture → Access Tokens
-3. Click "Generate New Token" → "Classic Token"
-4. Select type: "Automation" (for CI/CD)
-5. Copy the generated token
+2. Click on your profile picture → **Access Tokens**
+3. Click **"Generate New Token"** → **"Classic Token"**
+4. **CRITICAL: Select type: "Automation"**
+   - ✅ **Automation**: Works with CI/CD, bypasses 2FA
+   - ❌ **Publish**: Requires OTP, will fail in GitHub Actions with error "This operation requires a one-time password"
+5. Copy the generated token (format: `npm_...`)
 6. Add it to your GitHub repository:
    - Go to Settings → Secrets and variables → Actions
    - Click "New repository secret"
    - Name: `NPM_TOKEN`
-   - Value: Your NPM token (starts with `npm_`)
+   - Value: Your automation token
+
+**If you get error "This operation requires a one-time password":**
+- You're using a "Publish" token instead of "Automation" token
+- Solution: Generate a new token and select "Automation" type
 
 ### 2. PyPI Publishing (Using API Token - Recommended)
 
@@ -95,9 +103,15 @@ After adding the secrets, you can verify they're working by:
 ## Troubleshooting
 
 ### NPM Publishing Fails
+
+**Error: "This operation requires a one-time password"**
+- **Cause**: You're using a "Publish" token with 2FA enabled
+- **Solution**: Create an "Automation" token instead (see instructions above)
+
+**Other issues:**
 - Verify the package name is available or you have access
-- Check if the token has the correct permissions
 - Ensure NPM_TOKEN starts with `npm_`
+- Check token hasn't expired (tokens can expire after a set period)
 
 ### PyPI Publishing Fails
 - Verify the package name is available or you have access

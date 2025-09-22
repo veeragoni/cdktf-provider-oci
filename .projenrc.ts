@@ -5,7 +5,7 @@ import { JobPermission } from 'projen/lib/github/workflows-model';
 
 const project = new ConstructLibraryCdktf({
   defaultReleaseBranch: 'main',
-  name: '@cdktf/provider-oci',
+  name: 'cdktf-provider-oci',
   description: 'CDKTF bindings for Oracle Cloud Infrastructure',
   repositoryUrl: 'https://github.com/veeragoni/cdktf-provider-oci.git',
 

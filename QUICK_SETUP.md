@@ -2,11 +2,11 @@
 
 ## Step-by-Step Setup
 
-### 1. Get NPM Token
+### 1. Get NPM Token (MUST be Automation type!)
 ```bash
 # Login to npmjs.com
-# Go to: Profile → Access Tokens → Generate New Token
-# Select: Automation
+# Go to: Profile → Access Tokens → Generate New Token → Classic Token
+# ⚠️ IMPORTANT: Select "Automation" (NOT "Publish")
 # Copy the token (npm_...)
 ```
 

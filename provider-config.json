@@ -10,7 +10,7 @@
   "languages": {
     "typescript": {
       "enabled": true,
-      "packageName": "@cdktf/provider-oci",
+      "packageName": "cdktf-provider-oci",
       "packageDescription": "CDKTF bindings for Oracle Cloud Infrastructure"
     },
     "python": {

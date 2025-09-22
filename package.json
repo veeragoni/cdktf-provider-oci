@@ -1,5 +1,5 @@
 {
-  "name": "@cdktf/provider-oci",
+  "name": "cdktf-provider-oci",
   "description": "CDKTF bindings for Oracle Cloud Infrastructure",
   "repository": {
     "type": "git",

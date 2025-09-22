@@ -14,9 +14,9 @@ This repository contains auto-generated CDKTF (Cloud Development Kit for Terrafo
 
 ### TypeScript/JavaScript
 ```bash
-npm install @cdktf/provider-oci
+npm install cdktf-provider-oci
 # or
-yarn add @cdktf/provider-oci
+yarn add cdktf-provider-oci
 ```
 
 ### Python
@@ -30,8 +30,8 @@ pip install cdktf-provider-oci
 ```typescript
 import { Construct } from 'constructs';
 import { App, TerraformStack } from 'cdktf';
-import { OciProvider } from '@cdktf/provider-oci/lib/provider';
-import { Instance } from '@cdktf/provider-oci/lib/instance';
+import { OciProvider } from 'cdktf-provider-oci/lib/provider';
+import { Instance } from 'cdktf-provider-oci/lib/instance';
 
 class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
