@@ -116,10 +116,10 @@ project.postSynthesize = () => {
     }
 
     const docsStart = readme.indexOf('## Docs');
-    const versioningStart = readme.indexOf('## Versioning');
-    if (docsStart !== -1 && versioningStart !== -1) {
+    const usageStart = readme.indexOf('## Usage');
+    if (docsStart !== -1 && usageStart !== -1) {
       const docsText = `## Docs\n\nRelease builds publish TypeScript and Python API references. Generate them locally with \`yarn docgen\` (output under \`docs/\`).\n\n`;
-      readme = readme.slice(0, docsStart) + docsText + readme.slice(versioningStart);
+      readme = readme.slice(0, docsStart) + docsText + readme.slice(usageStart);
     }
 
     fs.writeFileSync(readmePath, readme);
