@@ -97,6 +97,16 @@ app.synth()
 
 Install dependencies with `pip install cdktf cdktf-provider-oci constructs` before synthesizing.
 
+Find auto-generated docs for this provider here:
+
+- [Typescript](./docs/API.typescript.md)
+- [Python](./docs/API.python.md)
+- [Java](./docs/API.java.md)
+- [C#](./docs/API.csharp.md)
+- [Go](./docs/API.go.md)
+
+You can also visit a hosted version of the documentation on [constructs.dev](https://constructs.dev/packages/@cdktf/provider-oci).
+
 ## Versioning
 
 This project is explicitly not tracking the Terraform oci provider version 1:1. In fact, it always tracks `latest` of `~> 7.19.0` with every release. If there are scenarios where you explicitly have to pin your provider version, you can do so by [generating the provider constructs manually](https://cdk.tf/imports).
