@@ -105,20 +105,29 @@ project.postSynthesize = () => {
 
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2) + '\n');
 
+  // Copy custom README if it exists
+  const customReadmePath = 'README-CUSTOM.md';
   const readmePath = 'README.md';
-  if (fs.existsSync(readmePath)) {
+  if (fs.existsSync(customReadmePath)) {
+    try {
+      fs.chmodSync(readmePath, 0o644);
+    } catch {}
+    const customContent = fs.readFileSync(customReadmePath, 'utf8');
+    fs.writeFileSync(readmePath, customContent);
+  } else if (fs.existsSync(readmePath)) {
     try {
       fs.chmodSync(readmePath, 0o600);
     } catch {}
     let readme = fs.readFileSync(readmePath, 'utf8');
 
+    // Only update npm/pypi sections if they're using old format
     const npmSection = `### npm\n\nPublished from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).\n\n\`npm install cdktf-provider-oci\`\n\n`;
     const pypiSection = `### PyPI\n\nPublished at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).\n\n\`pip install cdktf-provider-oci\`\n\n`;
 
     const npmStart = readme.indexOf('### NPM');
     const pypiStart = readme.indexOf('### PyPI');
     if (npmStart !== -1 && pypiStart !== -1) {
-      const sectionAfter = readme.indexOf('## Docs', pypiStart);
+      const sectionAfter = readme.indexOf('## Configuration', pypiStart) || readme.indexOf('## Docs', pypiStart);
       readme = readme.slice(0, npmStart) + npmSection + pypiSection + (sectionAfter !== -1 ? readme.slice(sectionAfter) : '');
     }
 
@@ -201,10 +210,12 @@ app.synth()
 Install dependencies with \`pip install cdktf cdktf-provider-oci constructs\` before synthesizing.
 `;
 
-    // Insert Usage section before ## Docs
-    const docsIndex = readme.indexOf('## Docs');
-    if (docsIndex !== -1) {
-      readme = readme.slice(0, docsIndex) + usageSection + '\n' + readme.slice(docsIndex);
+    // Only insert Usage section if it doesn't already exist
+    if (readme.indexOf('## Usage') === -1 && readme.indexOf('## Configuration') === -1) {
+      const docsIndex = readme.indexOf('## Docs');
+      if (docsIndex !== -1) {
+        readme = readme.slice(0, docsIndex) + usageSection + '\n' + readme.slice(docsIndex);
+      }
     }
 
     fs.writeFileSync(readmePath, readme);
