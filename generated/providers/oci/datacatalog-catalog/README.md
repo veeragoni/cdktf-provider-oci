@@ -1,3 +1,0 @@
-# `oci_datacatalog_catalog`
-
-Refer to the Terraform Registry for docs: [`oci_datacatalog_catalog`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/resources/datacatalog_catalog).

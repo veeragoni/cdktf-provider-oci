@@ -62,21 +62,31 @@ const project = new ConstructLibraryCdktf({
 
   // Gitignore configuration
   gitignore: [
-    '*.log',
-    '*.pid',
-    '*.seed',
-    '*.pid.lock',
-    '.DS_Store',
-    '*.swp',
-    '*.swo',
-    '*~',
+    // IDE and editor files
     '.idea/',
     '.vscode/',
     '*.iml',
     '.history/',
+    '.claude/',
+    '*.swp',
+    '*.swo',
+    '*~',
+    '.DS_Store',
+
+    // Log and temporary files
+    '*.log',
+    '*.pid',
+    '*.seed',
+    '*.pid.lock',
+    'crash.log',
+    'crash.*.log',
+
+    // Environment files
     '.env',
     '.env.local',
     '.env.*.local',
+
+    // Terraform and CDKTF files
     'terraform.tfstate',
     'terraform.tfstate.*',
     '.terraform/',
@@ -87,9 +97,8 @@ const project = new ConstructLibraryCdktf({
     '*_override.tf.json',
     '.terraformrc',
     'terraform.rc',
-    'crash.log',
-    'crash.*.log',
     '.gen/',
+    'generated/',
     'cdktf.out/',
     'cdktf.log',
     '.cdktf/',
@@ -98,6 +107,8 @@ const project = new ConstructLibraryCdktf({
     '!imports/*.ts',
     'cdk.out/',
     'cdk.context.json',
+
+    // Package manager files
     'package-lock.json',
     'yarn-error.log',
     'lerna-debug.log*',
@@ -320,13 +331,8 @@ generateBindings.addJob('generate', {
   ],
 });
 
-// Add a task to update npmignore after compilation
-const updateNpmignoreTask = project.addTask('update-npmignore', {
-  description: 'Update .npmignore with additional patterns',
-  exec: 'node scripts/update-npmignore.js',
-});
-
-// Add it to post-compile
-project.postCompileTask.spawn(updateNpmignoreTask);
+// Files are properly excluded by being in src/ which is already in npmignore
+// The generated OCI provider files in lib/generated/ won't exist in the npm package
+// because we're not actually compiling them (they would cause memory errors)
 
 project.synth();

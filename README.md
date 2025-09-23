@@ -1,28 +1,24 @@
-# CDKTF Provider for Oracle Cloud Infrastructure (OCI)
+# CDKTF OCI Provider Bindings
 
-This package provides setup instructions and helper utilities for using Oracle Cloud Infrastructure with CDKTF (Cloud Development Kit for Terraform).
+Generate and use Oracle Cloud Infrastructure (OCI) resources with the Cloud Development Kit for Terraform (CDKTF).
 
-> **Important**: Due to the size of the OCI provider (thousands of resources), the actual provider bindings must be generated locally in your project. This package provides guidance to help you set this up.
+> **Note**: Due to the size of the OCI provider (thousands of resources), bindings are generated locally in your project rather than distributed as a package.
 
 ## Installation
 
-### Step 1: Install the package
+### Step 1: Set up your CDKTF project
 
-#### TypeScript/JavaScript
+If you haven't already, create a new CDKTF project:
+
 ```bash
-npm install cdktf-provider-oci
-# or
-yarn add cdktf-provider-oci
+npm install -g cdktf-cli
+cdktf init --template typescript --local
 ```
 
-#### Python
-```bash
-pip install cdktf-provider-oci
-```
+### Step 2: Configure the OCI provider
 
-### Step 2: Generate OCI provider bindings
+Add the OCI provider to your `cdktf.json`:
 
-1. Add the OCI provider to your `cdktf.json`:
 ```json
 {
   "language": "typescript",
@@ -33,22 +29,21 @@ pip install cdktf-provider-oci
 }
 ```
 
-2. Generate the provider bindings:
+### Step 3: Generate the provider bindings
+
 ```bash
 cdktf get
 ```
 
-This will create a `.gen/providers/oci/` directory with all the OCI resources.
+This creates a `.gen/providers/oci/` directory with TypeScript bindings for all OCI resources.
 
-## Quick Start
+## Usage
 
-### TypeScript Example
+### TypeScript
 ```typescript
 import { Construct } from 'constructs';
 import { App, TerraformStack } from 'cdktf';
-// Import from locally generated bindings:
 import { OciProvider } from './.gen/providers/oci/provider';
-import { CoreInstance } from './.gen/providers/oci/core-instance';
 import { CoreVcn } from './.gen/providers/oci/core-vcn';
 import { CoreSubnet } from './.gen/providers/oci/core-subnet';
 
@@ -56,68 +51,43 @@ class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
     super(scope, name);
 
+    // Configure OCI Provider
     new OciProvider(this, 'oci', {
       region: 'us-ashburn-1',
-      tenancyOcid: process.env.OCI_TENANCY_OCID || '',
-      userOcid: process.env.OCI_USER_OCID || '',
-      fingerprint: process.env.OCI_FINGERPRINT || '',
-      privateKey: process.env.OCI_PRIVATE_KEY || '',
+      tenancyOcid: process.env.OCI_TENANCY_OCID!,
+      userOcid: process.env.OCI_USER_OCID!,
+      fingerprint: process.env.OCI_FINGERPRINT!,
+      privateKey: process.env.OCI_PRIVATE_KEY!,
     });
 
     // Create a VCN
-    const vcn = new CoreVcn(this, 'example-vcn', {
-      compartmentId: process.env.OCI_COMPARTMENT_ID || '',
+    const vcn = new CoreVcn(this, 'my-vcn', {
+      compartmentId: process.env.OCI_COMPARTMENT_ID!,
       cidrBlock: '10.0.0.0/16',
-      displayName: 'example-vcn',
-      dnsLabel: 'examplevcn',
+      displayName: 'My VCN',
     });
 
     // Create a Subnet
-    const subnet = new CoreSubnet(this, 'example-subnet', {
-      compartmentId: process.env.OCI_COMPARTMENT_ID || '',
+    new CoreSubnet(this, 'my-subnet', {
+      compartmentId: process.env.OCI_COMPARTMENT_ID!,
       vcnId: vcn.id,
       cidrBlock: '10.0.1.0/24',
-      displayName: 'example-subnet',
-      dnsLabel: 'examplesubnet',
-      availabilityDomain: 'AD-1',
-    });
-
-    // Create an Instance
-    new CoreInstance(this, 'example-instance', {
-      availabilityDomain: 'AD-1',
-      compartmentId: process.env.OCI_COMPARTMENT_ID || '',
-      shape: 'VM.Standard.E2.1.Micro',
-      shapeConfig: {
-        ocpus: 1,
-        memoryInGbs: 1,
-      },
-      createVnicDetails: {
-        subnetId: subnet.id,
-        assignPublicIp: 'true',
-      },
-      sourceDetails: {
-        sourceType: 'image',
-        sourceId: 'ocid1.image.oc1.iad.xxxxxx', // Replace with actual image OCID
-      },
-      displayName: 'example-instance',
+      displayName: 'My Subnet',
     });
   }
 }
 
 const app = new App();
-new MyStack(app, 'oci-example');
+new MyStack(app, 'oci-stack');
 app.synth();
 ```
 
-### Python Example
+### Python
 ```python
 import os
 from constructs import Construct
 from cdktf import App, TerraformStack
-# Import from locally generated bindings:
-# After running `cdktf get`, these will be available:
 from imports.oci.provider import OciProvider
-from imports.oci.core_instance import CoreInstance
 from imports.oci.core_vcn import CoreVcn
 from imports.oci.core_subnet import CoreSubnet
 
@@ -128,77 +98,52 @@ class MyStack(TerraformStack):
         # Configure OCI Provider
         OciProvider(self, "oci",
             region="us-ashburn-1",
-            tenancy_ocid=os.environ.get("OCI_TENANCY_OCID", ""),
-            user_ocid=os.environ.get("OCI_USER_OCID", ""),
-            fingerprint=os.environ.get("OCI_FINGERPRINT", ""),
-            private_key=os.environ.get("OCI_PRIVATE_KEY", "")
+            tenancy_ocid=os.environ["OCI_TENANCY_OCID"],
+            user_ocid=os.environ["OCI_USER_OCID"],
+            fingerprint=os.environ["OCI_FINGERPRINT"],
+            private_key=os.environ["OCI_PRIVATE_KEY"]
         )
 
         # Create a VCN
-        vcn = CoreVcn(self, "example-vcn",
-            compartment_id=os.environ.get("OCI_COMPARTMENT_ID", ""),
+        vcn = CoreVcn(self, "my-vcn",
+            compartment_id=os.environ["OCI_COMPARTMENT_ID"],
             cidr_block="10.0.0.0/16",
-            display_name="example-vcn",
-            dns_label="examplevcn"
+            display_name="My VCN"
         )
 
         # Create a Subnet
-        subnet = CoreSubnet(self, "example-subnet",
-            compartment_id=os.environ.get("OCI_COMPARTMENT_ID", ""),
+        CoreSubnet(self, "my-subnet",
+            compartment_id=os.environ["OCI_COMPARTMENT_ID"],
             vcn_id=vcn.id,
             cidr_block="10.0.1.0/24",
-            display_name="example-subnet",
-            dns_label="examplesubnet",
-            availability_domain="AD-1"
-        )
-
-        # Create an Instance
-        CoreInstance(self, "example-instance",
-            availability_domain="AD-1",
-            compartment_id=os.environ.get("OCI_COMPARTMENT_ID", ""),
-            shape="VM.Standard.E2.1.Micro",
-            shape_config={
-                "ocpus": 1,
-                "memory_in_gbs": 1
-            },
-            create_vnic_details={
-                "subnet_id": subnet.id,
-                "assign_public_ip": "true"
-            },
-            source_details={
-                "source_type": "image",
-                "source_id": "ocid1.image.oc1.iad.xxxxxx"  # Replace with actual image OCID
-            },
-            display_name="example-instance"
+            display_name="My Subnet"
         )
 
 app = App()
-MyStack(app, "oci-example")
+MyStack(app, "oci-stack")
 app.synth()
 ```
 
-## Contributing
-
-For development instructions and contributing to this project, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
 
-This project is licensed under the Apache-2.0 License - see the [LICENSE](./LICENSE) file for details.
+## How It Works
 
-## Why Local Generation?
+When you run `cdktf get`, the CDKTF CLI:
+1. Downloads the OCI Terraform provider
+2. Generates TypeScript/Python bindings for all resources
+3. Places them in your project directory (`.gen/` or `imports/`)
+4. Makes them available for import in your code
 
-The OCI Terraform provider contains thousands of resources and data sources, making the compiled JavaScript package extremely large (hundreds of MBs). To avoid package size issues and memory problems during compilation, this package serves as a guide for generating the OCI provider bindings locally in your project.
-
-This approach ensures:
-- ✅ No npm package size limitations
-- ✅ Faster installation
-- ✅ Always up-to-date with the latest OCI provider version you specify
-- ✅ No memory issues during JSII compilation
+This gives you:
+- ✅ Type-safe access to all OCI resources
+- ✅ IntelliSense/autocomplete in your IDE
+- ✅ The exact provider version you specify
+- ✅ No large dependencies in node_modules
 
 ## Troubleshooting
 
@@ -233,9 +178,3 @@ Resource naming convention:
 - [CDKTF Documentation](https://developer.hashicorp.com/terraform/cdktf)
 - [Oracle Cloud Infrastructure Documentation](https://docs.oracle.com/iaas/Content/home.htm)
 
-## Support
-
-For issues and questions:
-- Open an issue in this repository
-- Check existing issues for solutions
-- Refer to the official OCI and CDKTF documentation

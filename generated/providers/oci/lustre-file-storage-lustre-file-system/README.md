@@ -1,3 +1,0 @@
-# `oci_lustre_file_storage_lustre_file_system`
-
-Refer to the Terraform Registry for docs: [`oci_lustre_file_storage_lustre_file_system`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/resources/lustre_file_storage_lustre_file_system).
