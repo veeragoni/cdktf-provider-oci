@@ -16,6 +16,7 @@ const entries = fs
   .readdirSync(SRC_DIR, { withFileTypes: true })
   .filter(entry => entry.isDirectory())
   .map(entry => entry.name)
+  .filter(name => name !== 'provider') // Exclude provider, will be added manually at top
   .sort((a, b) => a.localeCompare(b));
 
 const header = [
@@ -31,6 +32,9 @@ const metadata = [
   "export const providerName = 'registry.terraform.io/oracle/oci';",
   'export const providerVersionMap: Record<string, string> = versionMapJson;',
   'export const providerVersion = providerVersionMap[providerName];',
+  '',
+  '// Export provider',
+  "export * from './provider';",
   '',
 ];
 
