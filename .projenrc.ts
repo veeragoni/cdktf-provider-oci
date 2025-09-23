@@ -320,23 +320,13 @@ generateBindings.addJob('generate', {
   ],
 });
 
-// Add extra files to npmignore that shouldn't be in the npm package
-project.npmignore?.exclude(
-  '/generated/',
-  '/scripts/',
-  'GITHUB_SECRETS_SETUP.md',
-  'QUICK_SETUP.md',
-  'NPM_PACKAGE_FIX.md',
-  'CONTRIBUTING.md',
-  'README.npm.md',
-  'tsconfig.build.json',
-  'provider-config.json',
-  'cdktf.json',
-  'main.ts',
-  'setup.js',
-  'help',
-  '*.sh',
-  '.history/'
-);
+// Add a task to update npmignore after compilation
+const updateNpmignoreTask = project.addTask('update-npmignore', {
+  description: 'Update .npmignore with additional patterns',
+  exec: 'node scripts/update-npmignore.js',
+});
+
+// Add it to post-compile
+project.postCompileTask.spawn(updateNpmignoreTask);
 
 project.synth();
