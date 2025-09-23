@@ -1,152 +1,97 @@
-const { ConstructLibraryCdktf } = require('projen/lib/cdktf');
-const { NpmAccess } = require('projen/lib/javascript');
+/**
+ * Copyright (c) Suresh Veeragoni
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-const project = new ConstructLibraryCdktf({
-  defaultReleaseBranch: 'main',
-  name: 'cdktf-provider-oci',
-  description: 'CDKTF bindings for Oracle Cloud Infrastructure',
-  repositoryUrl: 'https://github.com/veeragoni/cdktf-provider-oci.git',
+const { CdktfProviderProject } = require("@cdktf/provider-project");
 
+const project = new CdktfProviderProject({
   author: 'Suresh Veeragoni',
   authorAddress: 'github@veeragoni.com',
-  npmAccess: NpmAccess.PUBLIC,
-  releaseToNpm: true,
+  authorOrganization: false,
+  defaultReleaseBranch: 'main',
+  name: 'cdktf-provider-oci',
+  repositoryUrl: 'https://github.com/veeragoni/cdktf-provider-oci.git',
+  description: 'Prebuilt Oracle Cloud Infrastructure (OCI) Provider for Terraform CDK (cdktf)',
 
-  cdktfVersion: '^0.20.0 || ^0.21.0',
-  constructsVersion: '^10.0.0',
-  jsiiVersion: '^5.0.0',
-
-  deps: ['cdktf', 'constructs'],
-  peerDeps: ['cdktf', 'constructs'],
-
-  // Enable GitHub workflows
-  github: true,
-  githubOptions: {
-    pullRequestLintOptions: {
-      semanticTitleOptions: {
-        types: ['feat', 'fix', 'chore', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci'],
-      },
-    },
-  },
-
-  // Auto-approve and merge dependabot PRs
-  autoApproveOptions: {
-    allowedUsernames: ['dependabot[bot]'],
-  },
-
-  // Release configuration
-  release: true,
-  releaseWorkflow: true,
-  majorVersion: 0,
+  terraformProvider: 'oracle/oci@~> 7.19.0',
+  cdktfVersion: '^0.21.0',
+  constructsVersion: '^10.4.2',
+  minNodeVersion: '20.9.0',
+  typescriptVersion: '~5.8.0',
+  jsiiVersion: '~5.8.0',
 
   publishToPypi: {
     distName: 'cdktf-provider-oci',
     module: 'cdktf_provider_oci',
   },
 
-
-  // Add package.json keywords for better discoverability
   keywords: [
+    'oci',
+    'oracle',
+    'oracle-cloud',
+    'oracle-cloud-infrastructure',
     'cdk',
     'cdktf',
     'terraform',
-    'oracle',
-    'oci',
-    'oracle-cloud',
-    'oracle-cloud-infrastructure',
-    'provider',
+    'provider'
   ],
 
-  // Gitignore configuration
-  gitignore: [
-    '*.log',
-    '*.pid',
-    '*.seed',
-    '*.pid.lock',
-    '.DS_Store',
-    '*.swp',
-    '*.swo',
-    '*~',
-    '.idea/',
-    '.vscode/',
-    '*.iml',
-    '.history/',
-    '.env',
-    '.env.local',
-    '.env.*.local',
-    'terraform.tfstate',
-    'terraform.tfstate.*',
-    '.terraform/',
-    '*.tfvars',
-    'override.tf',
-    'override.tf.json',
-    '*_override.tf',
-    '*_override.tf.json',
-    '.terraformrc',
-    'terraform.rc',
-    'crash.log',
-    'crash.*.log',
-    '.gen/',
-    'cdktf.out/',
-    'cdktf.log',
-    '.cdktf/',
-    '.claude/',
-    'imported/',
-    'imports/',
-    '!imports/*.ts',
-    'cdk.out/',
-    'cdk.context.json',
-    'package-lock.json',
-    'yarn-error.log',
-    'lerna-debug.log*',
-    '.npm/',
-    '.yarn-integrity',
-    '.cache/',
-    '.parcel-cache/',
-    '.next/',
-    '.nuxt/',
-    '.docusaurus/',
-    '.serverless/',
-    '.fusebox/',
-    '.dynamodb/',
-    '.tern-port',
-    '.venv/',
-    'venv/',
-    'ENV/',
-    'env.bak/',
-    'venv.bak/',
-    '__pycache__/',
-    '*.py[cod]',
-    '*$py.class',
-    '*.so',
-    '.Python',
-    'pip-log.txt',
-    'pip-delete-this-directory.txt',
-    '.pytest_cache/',
-    '.coverage',
-    '.coverage.*',
-    'htmlcov/',
-    '.tox/',
-    '*.cover',
-    '.hypothesis/',
-    '*.egg-info/',
-    '.installed.cfg',
-    '*.egg',
-    'MANIFEST',
-    'wheels/',
-    'share/python-wheels/',
-    'instance/',
-    '.webassets-cache',
-    '.scrapy',
-    'target/',
-    '.ipynb_checkpoints',
-    '.python-version',
-    '.mypy_cache/',
-    '.dmypy.json',
-    'dmypy.json',
-    '.pyre/',
-    '.pytype/',
+  devDeps: [
+    '@cdktf/provider-project@^0.7.0',
+    'cdktf-cli@^0.21.0',
+    'dot-prop@^5.2.0',
   ],
+
+  isDeprecated: false,
+
+  // Configure release workflow to only build and publish Python and TypeScript
+  releaseToNpm: true,
+  workflowNodeVersion: '20.9.0',
+
+  // Environment variables for publishing
+  npmDistTag: 'latest',
+  npmRegistry: 'https://registry.npmjs.org/',
 });
+
+// Mark generated src files as linguist-generated
+project.gitattributes.addAttributes('/src/**', 'linguist-generated');
+
+// Clean configuration for Python and TypeScript only
+
+// Fix package.json after synthesis to use correct author and repository
+project.postSynthesize = () => {
+  const fs = require('fs');
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+
+  // Update author information
+  packageJson.author = {
+    name: 'Suresh Veeragoni',
+    email: 'github@veeragoni.com',
+    organization: false
+  };
+
+  // Update package name and repository
+  packageJson.name = 'cdktf-provider-oci';
+  packageJson.repository.url = 'https://github.com/veeragoni/cdktf-provider-oci.git';
+
+  // Only keep Python and JavaScript targets in jsii
+  packageJson.jsii.targets = {
+    python: packageJson.jsii.targets.python
+  };
+
+  fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2) + '\n');
+};
+
+project.addScripts({
+  'check-if-new-provider-version': 'node scripts/check-for-upgrades.js',
+  'fetch': 'npx projen fetch',
+  'commit': 'git add -A && git commit -am "Update provider" || echo "No changes to commit"',
+  'should-release': '! git diff --exit-code v$(cat version.json | jq -r \'.version\') ./src ./package.json',
+  'prebump': 'yarn fetch && yarn compile && yarn run commit && yarn run should-release',
+  'build-provider': 'yarn fetch && yarn compile && yarn docgen',
+});
+
+// CdktfProviderProject already includes the necessary workflows
 
 project.synth();
