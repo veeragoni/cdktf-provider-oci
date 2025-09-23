@@ -2,27 +2,28 @@
 
 This package provides setup instructions and helper utilities for using Oracle Cloud Infrastructure with CDKTF (Cloud Development Kit for Terraform).
 
-> **Important**: Due to the size of the OCI provider (thousands of resources), the actual provider bindings must be generated locally in your project. This package provides guidance to help you set this up.
+> **Important**: Due to the size of the OCI provider (thousands of resources), the actual provider bindings must be generated locally in your project. This package provides guidance and utilities to help you set this up.
 
 ## Installation
 
-### Step 1: Install the package
-
-#### TypeScript/JavaScript
+### TypeScript/JavaScript
 ```bash
 npm install cdktf-provider-oci
 # or
 yarn add cdktf-provider-oci
 ```
 
-#### Python
+### Python
 ```bash
 pip install cdktf-provider-oci
 ```
 
-### Step 2: Generate OCI provider bindings
+## Setup
 
-1. Add the OCI provider to your `cdktf.json`:
+### Step 1: Configure your CDKTF project
+
+Add the OCI provider to your `cdktf.json`:
+
 ```json
 {
   "language": "typescript",
@@ -33,16 +34,22 @@ pip install cdktf-provider-oci
 }
 ```
 
-2. Generate the provider bindings:
+### Step 2: Generate the OCI provider bindings
+
+Run the following command in your project:
+
 ```bash
 cdktf get
 ```
 
-This will create a `.gen/providers/oci/` directory with all the OCI resources.
+This will generate the OCI provider bindings in:
+- TypeScript: `.gen/providers/oci/` directory
+- Python: `imports/oci/` directory
 
-## Quick Start
+## Usage Examples
 
-### TypeScript Example
+### TypeScript
+
 ```typescript
 import { Construct } from 'constructs';
 import { App, TerraformStack } from 'cdktf';
@@ -109,13 +116,13 @@ new MyStack(app, 'oci-example');
 app.synth();
 ```
 
-### Python Example
+### Python
+
 ```python
 import os
 from constructs import Construct
 from cdktf import App, TerraformStack
 # Import from locally generated bindings:
-# After running `cdktf get`, these will be available:
 from imports.oci.provider import OciProvider
 from imports.oci.core_instance import CoreInstance
 from imports.oci.core_vcn import CoreVcn
@@ -177,46 +184,30 @@ MyStack(app, "oci-example")
 app.synth()
 ```
 
-## Contributing
+## Running Your CDKTF Application
 
-For development instructions and contributing to this project, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+Once you've set up your stack:
 
+```bash
+# Generate Terraform configuration
+cdktf synth
 
-## Contributing
+# Deploy to OCI
+cdktf deploy
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the Apache-2.0 License - see the [LICENSE](./LICENSE) file for details.
+# Destroy resources when done
+cdktf destroy
+```
 
 ## Why Local Generation?
 
-The OCI Terraform provider contains thousands of resources and data sources, making the compiled JavaScript package extremely large (hundreds of MBs). To avoid package size issues and memory problems during compilation, this package serves as a guide for generating the OCI provider bindings locally in your project.
-
-This approach ensures:
+The OCI Terraform provider contains thousands of resources and data sources. To avoid package size limitations and compilation issues, the bindings are generated locally in your project. This ensures:
 - ✅ No npm package size limitations
 - ✅ Faster installation
-- ✅ Always up-to-date with the latest OCI provider version you specify
-- ✅ No memory issues during JSII compilation
+- ✅ Always up-to-date with your specified OCI provider version
+- ✅ No memory issues during compilation
 
-## Troubleshooting
-
-### Common Import Patterns
-
-```typescript
-// TypeScript - Import from locally generated bindings
-import { OciProvider } from './.gen/providers/oci/provider';
-import { CoreInstance } from './.gen/providers/oci/core-instance';
-```
-
-```python
-# Python - Import from locally generated bindings
-from imports.oci.provider import OciProvider
-from imports.oci.core_instance import CoreInstance
-```
-
-### Finding Resource Names
+## Finding Resource Names
 
 After running `cdktf get`, you can find all available resources in:
 - TypeScript: `.gen/providers/oci/` directory
@@ -236,6 +227,9 @@ Resource naming convention:
 ## Support
 
 For issues and questions:
-- Open an issue in this repository
-- Check existing issues for solutions
-- Refer to the official OCI and CDKTF documentation
+- [GitHub Issues](https://github.com/veeragoni/cdktf-provider-oci/issues)
+- [OCI Provider Documentation](https://registry.terraform.io/providers/oracle/oci/latest/docs)
+
+## License
+
+Apache-2.0

@@ -59,6 +59,7 @@ const project = new ConstructLibraryCdktf({
     'provider',
   ],
 
+
   // Gitignore configuration
   gitignore: [
     '*.log',
@@ -318,5 +319,24 @@ generateBindings.addJob('generate', {
     },
   ],
 });
+
+// Add extra files to npmignore that shouldn't be in the npm package
+project.npmignore?.exclude(
+  '/generated/',
+  '/scripts/',
+  'GITHUB_SECRETS_SETUP.md',
+  'QUICK_SETUP.md',
+  'NPM_PACKAGE_FIX.md',
+  'CONTRIBUTING.md',
+  'README.npm.md',
+  'tsconfig.build.json',
+  'provider-config.json',
+  'cdktf.json',
+  'main.ts',
+  'setup.js',
+  'help',
+  '*.sh',
+  '.history/'
+);
 
 project.synth();
