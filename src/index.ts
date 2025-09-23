@@ -8,6 +8,7 @@ export const providerName = 'registry.terraform.io/oracle/oci';
 export const providerVersionMap: Record<string, string> = versionMapJson;
 export const providerVersion = providerVersionMap[providerName];
 
+export * from './provider';
 export * from './adm-knowledge-base';
 export * from './adm-remediation-recipe';
 export * from './adm-remediation-run';
