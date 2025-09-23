@@ -95,7 +95,10 @@ jobs:
           NPM_REGISTRY: https://registry.npmjs.org/
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |-
-          npm set "//$NPM_REGISTRY/:_authToken=$NPM_TOKEN"
+          REGISTRY_HOST=${NPM_REGISTRY#https://}
+          REGISTRY_HOST=${REGISTRY_HOST#http://}
+          REGISTRY_HOST=${REGISTRY_HOST%/}
+          npm set "//$REGISTRY_HOST/:_authToken=$NPM_TOKEN"
           npm deprecate cdktf-provider-oci "See https://cdk.tf/imports for details on how to continue to use the oci provider in your CDK for Terraform (CDKTF) projects by generating the bindings locally."
   release_github:
     name: Publish to GitHub Releases

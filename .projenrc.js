@@ -208,6 +208,11 @@ project.postSynthesize = () => {
       'https://registry.npmjs.org/'
     );
 
+    releaseContent = releaseContent.replace(
+      'npm set "//$NPM_REGISTRY/:_authToken=$NPM_TOKEN"',
+      'REGISTRY_HOST=${NPM_REGISTRY#https://}\n          REGISTRY_HOST=${REGISTRY_HOST#http://}\n          REGISTRY_HOST=${REGISTRY_HOST%/}\n          npm set "//$REGISTRY_HOST/:_authToken=$NPM_TOKEN"'
+    );
+
     // Add a manual force release input and propagate environment variable
     releaseContent = releaseContent.replace(
       '  workflow_dispatch: {}\n',
