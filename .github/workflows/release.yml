@@ -86,7 +86,7 @@ jobs:
       - name: Deprecate the package on NPM
         if: steps.check_status.outputs.is_deprecated == 'true' || steps.check_status.outputs.is_deprecated == true
         env:
-          NPM_REGISTRY: https//registry.npmjs.org/
+          NPM_REGISTRY: https://registry.npmjs.org/
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |-
           npm set "//$NPM_REGISTRY/:_authToken=$NPM_TOKEN"
@@ -166,7 +166,7 @@ jobs:
       - name: Release
         env:
           NPM_DIST_TAG: latest
-          NPM_REGISTRY: https//registry.npmjs.org/
+          NPM_REGISTRY: https://registry.npmjs.org/
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx -p publib@latest publib-npm
       - name: Extract Version

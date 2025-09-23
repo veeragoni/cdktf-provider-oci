@@ -184,6 +184,16 @@ project.postSynthesize = () => {
       'cdktf-provider-oci'
     );
 
+    // Ensure npm publish jobs use a valid registry URL
+    releaseContent = releaseContent.replace(
+      /https\/\/https\/\/registry\.npmjs\.org\//g,
+      'https://registry.npmjs.org/'
+    );
+    releaseContent = releaseContent.replace(
+      /https\/\/registry\.npmjs\.org\//g,
+      'https://registry.npmjs.org/'
+    );
+
     // Remove unwanted release jobs by finding their sections and removing them
     const jobsToRemove = ['release_maven', 'release_nuget', 'release_golang'];
 
