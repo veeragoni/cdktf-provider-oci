@@ -69,6 +69,7 @@ project.gitattributes.addAttributes('/src/**', 'linguist-generated');
 // Fix package.json and workflows after synthesis
 project.postSynthesize = () => {
   const fs = require('fs');
+  const { execSync } = require('child_process');
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
   // Update author information
@@ -101,7 +102,6 @@ project.postSynthesize = () => {
   const releaseWorkflowPath = '.github/workflows/release.yml';
   if (fs.existsSync(releaseWorkflowPath)) {
     // Make the file writable first
-    const { execSync } = require('child_process');
     try {
       execSync(`chmod +w "${releaseWorkflowPath}"`, { stdio: 'ignore' });
     } catch {}
@@ -149,6 +149,12 @@ project.postSynthesize = () => {
       fs.unlinkSync(workflowPath);
     }
   });
+
+  try {
+    execSync('node scripts/generate-index.cjs', { stdio: 'inherit' });
+  } catch (error) {
+    console.warn('Warning: failed to regenerate src/index.ts during post-synthesize.', error);
+  }
 };
 
 project.addScripts({
@@ -158,7 +164,18 @@ project.addScripts({
   'should-release': 'node scripts/should-release.js',
   'prebump': 'yarn fetch && yarn compile && yarn run commit && yarn run should-release',
   'build-provider': 'yarn fetch && yarn compile && yarn docgen',
+  'generate:index': 'node scripts/generate-index.cjs',
 });
+
+const generateIndexTask = project.addTask('generate-index', {
+  exec: 'node scripts/generate-index.cjs',
+});
+
+const fetchTask = project.tasks.tryFind('fetch');
+fetchTask?.exec('node scripts/generate-index.cjs');
+
+const preCompileTask = project.tasks.tryFind('pre-compile');
+preCompileTask?.prependExec('node scripts/generate-index.cjs');
 
 // CdktfProviderProject already includes the necessary workflows
 

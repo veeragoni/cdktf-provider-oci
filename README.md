@@ -5,56 +5,21 @@ This repo builds and publishes the [Terraform oci provider](https://registry.ter
 
 ## Available Packages
 
-### NPM
+### npm
 
-The npm package is available at [https://www.npmjs.com/package/@cdktf/provider-oci](https://www.npmjs.com/package/@cdktf/provider-oci).
+The npm package is published from this repository under [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).
 
-`npm install @cdktf/provider-oci`
+`npm install cdktf-provider-oci`
 
 ### PyPI
 
-The PyPI package is available at [https://pypi.org/project/cdktf-cdktf-provider-oci](https://pypi.org/project/cdktf-cdktf-provider-oci).
+The PyPI package is published under [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).
 
-`pipenv install cdktf-cdktf-provider-oci`
-
-### Nuget
-
-The Nuget package is available at [https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Oci](https://www.nuget.org/packages/HashiCorp.Cdktf.Providers.Oci).
-
-`dotnet add package HashiCorp.Cdktf.Providers.Oci`
-
-### Maven
-
-The Maven package is available at [https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-oci](https://mvnrepository.com/artifact/com.hashicorp/cdktf-provider-oci).
-
-```
-<dependency>
-    <groupId>com.hashicorp</groupId>
-    <artifactId>cdktf-provider-oci</artifactId>
-    <version>[REPLACE WITH DESIRED VERSION]</version>
-</dependency>
-```
-
-### Go
-
-The go package is generated into the [`github.com/cdktf/cdktf-provider-oci-go`](https://github.com/cdktf/cdktf-provider-oci-go) package.
-
-`go get github.com/cdktf/cdktf-provider-oci-go/oci/<version>`
-
-Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
-within the [go.mod](https://github.com/cdktf/cdktf-provider-oci-go/blob/main/oci/go.mod#L1) file.
+`pip install cdktf-provider-oci`
 
 ## Docs
 
-Find auto-generated docs for this provider here: 
-
-- [Typescript](./docs/API.typescript.md)
-- [Python](./docs/API.python.md)
-- [Java](./docs/API.java.md)
-- [C#](./docs/API.csharp.md)
-- [Go](./docs/API.go.md)
-
-You can also visit a hosted version of the documentation on [constructs.dev](https://constructs.dev/packages/@cdktf/provider-oci).
+API references for TypeScript and Python are generated as part of the release workflow and published alongside the npm and PyPI artifacts. You can also run `yarn docgen` locally to produce the latest markdown documentation under `dist/`.
 
 ## Versioning
 
