@@ -177,6 +177,9 @@ fetchTask?.exec('node scripts/generate-index.cjs');
 const preCompileTask = project.tasks.tryFind('pre-compile');
 preCompileTask?.prependExec('node scripts/generate-index.cjs');
 
+const docgenTask = project.tasks.tryFind('docgen');
+docgenTask?.reset("rm -rf docs && rm -f API.md && mkdir docs && jsii-docgen --split-by-submodule -l typescript -l python && mv *.*.md docs && cd docs && ls ./ | xargs sed -i '150000,$ d' $1");
+
 // CdktfProviderProject already includes the necessary workflows
 
 project.synth();
