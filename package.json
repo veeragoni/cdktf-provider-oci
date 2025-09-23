@@ -11,7 +11,7 @@
     "check-if-new-provider-version": "node scripts/check-for-upgrades.js",
     "clobber": "npx projen clobber",
     "compat": "npx projen compat",
-    "compile": "jsii --silence-warnings=reserved-word",
+    "compile": "node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word",
     "default": "npx projen default",
     "docgen": "npx projen docgen",
     "eject": "npx projen eject",

@@ -61,6 +61,9 @@ const project = new CdktfProviderProject({
   npmRegistry: 'https://registry.npmjs.org/',
 });
 
+// Override compile script to increase memory limit for large provider
+project.compileTask.reset('node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word');
+
 // Mark generated src files as linguist-generated
 project.gitattributes.addAttributes('/src/**', 'linguist-generated');
 
