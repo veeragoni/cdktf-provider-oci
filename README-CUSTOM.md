@@ -30,13 +30,13 @@ Before using this provider, ensure you have:
 
 ### npm
 
-Published from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).
+Published from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci).
 
 `npm install cdktf-provider-oci`
 
 ### PyPI
 
-Published at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).
+Published at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/).
 
 `pip install cdktf-provider-oci`
 
