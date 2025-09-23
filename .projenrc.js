@@ -121,8 +121,8 @@ project.postSynthesize = () => {
     let readme = fs.readFileSync(readmePath, 'utf8');
 
     // Only update npm/pypi sections if they're using old format
-    const npmSection = `### npm\n\nPublished from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).\n\n\`npm install cdktf-provider-oci\`\n\n`;
-    const pypiSection = `### PyPI\n\nPublished at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).\n\n\`pip install cdktf-provider-oci\`\n\n`;
+    const npmSection = `### npm\n\nPublished from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci).\n\n\`npm install cdktf-provider-oci\`\n\n`;
+    const pypiSection = `### PyPI\n\nPublished at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/).\n\n\`pip install cdktf-provider-oci\`\n\n`;
 
     const npmStart = readme.indexOf('### NPM');
     const pypiStart = readme.indexOf('### PyPI');
