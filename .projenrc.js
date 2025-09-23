@@ -21,10 +21,17 @@ const project = new CdktfProviderProject({
   typescriptVersion: '~5.8.0',
   jsiiVersion: '~5.8.0',
 
+  // Only enable specific publishing targets
+  releaseToNpm: true,
   publishToPypi: {
     distName: 'cdktf-provider-oci',
     module: 'cdktf_provider_oci',
   },
+
+  // Explicitly disable unwanted targets
+  publishToMaven: false,
+  publishToNuget: false,
+  publishToGo: false,
 
   keywords: [
     'oci',
@@ -59,7 +66,7 @@ project.gitattributes.addAttributes('/src/**', 'linguist-generated');
 
 // Clean configuration for Python and TypeScript only
 
-// Fix package.json after synthesis to use correct author and repository
+// Fix package.json and workflows after synthesis
 project.postSynthesize = () => {
   const fs = require('fs');
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -75,12 +82,73 @@ project.postSynthesize = () => {
   packageJson.name = 'cdktf-provider-oci';
   packageJson.repository.url = 'https://github.com/veeragoni/cdktf-provider-oci.git';
 
-  // Only keep Python and JavaScript targets in jsii
+  // Only keep Python target in jsii (JavaScript is default)
   packageJson.jsii.targets = {
     python: packageJson.jsii.targets.python
   };
 
+  // Remove unwanted package scripts
+  const unwantedScripts = ['package:dotnet', 'package:go', 'package:java'];
+  unwantedScripts.forEach(script => {
+    if (packageJson.scripts[script]) {
+      delete packageJson.scripts[script];
+    }
+  });
+
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2) + '\n');
+
+  // Fix the release workflow to remove unwanted jobs
+  const releaseWorkflowPath = '.github/workflows/release.yml';
+  if (fs.existsSync(releaseWorkflowPath)) {
+    // Make the file writable first
+    const { execSync } = require('child_process');
+    try {
+      execSync(`chmod +w "${releaseWorkflowPath}"`, { stdio: 'ignore' });
+    } catch {}
+
+    let releaseContent = fs.readFileSync(releaseWorkflowPath, 'utf8');
+
+    // Fix the deprecate job to use correct package name
+    releaseContent = releaseContent.replace(
+      '@cdktf/provider-oci',
+      'cdktf-provider-oci'
+    );
+
+    // Remove unwanted release jobs by finding their sections and removing them
+    const jobsToRemove = ['release_maven', 'release_nuget', 'release_golang'];
+
+    jobsToRemove.forEach(jobName => {
+      // Find the job section and remove everything until the next job or end of file
+      const jobRegex = new RegExp(`  ${jobName}:[\\s\\S]*?(?=\\n  [a-z_]+:|$)`, 'g');
+      releaseContent = releaseContent.replace(jobRegex, '');
+    });
+
+    // Also remove these jobs from the deprecate job dependencies
+    releaseContent = releaseContent.replace(
+      /needs:\s*\[\s*-\s*release\s*-\s*release_npm\s*\]/,
+      'needs:\n      - release\n      - release_npm'
+    );
+
+    fs.writeFileSync(releaseWorkflowPath, releaseContent);
+  }
+
+  // Remove unused workflows
+  const unusedWorkflows = [
+    'alert-open-prs.yml',
+    'auto-close-community-issues.yml',
+    'auto-close-community-prs.yml',
+    'fix-jest.sh',
+    'force-release.yml',
+    'lock.yml',
+    'stale.yml'
+  ];
+
+  unusedWorkflows.forEach(workflow => {
+    const workflowPath = `.github/workflows/${workflow}`;
+    if (fs.existsSync(workflowPath)) {
+      fs.unlinkSync(workflowPath);
+    }
+  });
 };
 
 project.addScripts({
