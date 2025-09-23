@@ -8,7 +8,6 @@ export const providerName = 'registry.terraform.io/oracle/oci';
 export const providerVersionMap: Record<string, string> = versionMapJson;
 export const providerVersion = providerVersionMap[providerName];
 
-export * from './provider';
 export * from './adm-knowledge-base';
 export * from './adm-remediation-recipe';
 export * from './adm-remediation-run';
@@ -479,3 +478,4 @@ export * from './data-oci-core-compute-gpu-memory-clusters';
 export * from './data-oci-core-compute-gpu-memory-fabric';
 export * from './data-oci-core-compute-gpu-memory-fabrics';
 export * from './data-oci-core-compute-host';
+export * from './provider';
