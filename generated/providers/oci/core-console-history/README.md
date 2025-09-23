@@ -1,0 +1,3 @@
+# `oci_core_console_history`
+
+Refer to the Terraform Registry for docs: [`oci_core_console_history`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/resources/core_console_history).
