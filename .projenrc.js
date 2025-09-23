@@ -125,6 +125,33 @@ project.postSynthesize = () => {
     fs.writeFileSync(readmePath, readme);
   }
 
+  const issueConfigPath = '.github/ISSUE_TEMPLATE/config.yml';
+  if (fs.existsSync(issueConfigPath)) {
+    try {
+      fs.chmodSync(issueConfigPath, 0o600);
+    } catch {}
+    let issueConfig = fs.readFileSync(issueConfigPath, 'utf8');
+    issueConfig = issueConfig.replace(
+      /(url:\s*")[^"]+("?)/,
+      `$1https://github.com/veeragoni/cdktf-provider-oci/issues/new/choose$2`
+    );
+    issueConfig = issueConfig.replace(
+      /Please file issues with pre-built providers in our main repository\./,
+      'Report problems or request features for this provider directly in this repository.'
+    );
+    fs.writeFileSync(issueConfigPath, issueConfig);
+  }
+
+  const codeownersPath = '.github/CODEOWNERS';
+  if (fs.existsSync(codeownersPath)) {
+    try {
+      fs.chmodSync(codeownersPath, 0o600);
+    } catch {}
+    let codeowners = fs.readFileSync(codeownersPath, 'utf8');
+    codeowners = codeowners.replace(/\*\s+@.+/, '*       @veeragoni');
+    fs.writeFileSync(codeownersPath, codeowners);
+  }
+
   // Fix the release workflow to remove unwanted jobs
   const releaseWorkflowPath = '.github/workflows/release.yml';
   if (fs.existsSync(releaseWorkflowPath)) {
