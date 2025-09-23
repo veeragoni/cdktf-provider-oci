@@ -62,7 +62,8 @@ const project = new CdktfProviderProject({
 });
 
 // Override compile script to increase memory limit for large provider
-project.compileTask.reset('node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word');
+project.tasks.tryFind('compile').reset();
+project.tasks.tryFind('compile').exec('node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word');
 
 // Mark generated src files as linguist-generated
 project.gitattributes.addAttributes('/src/**', 'linguist-generated');
@@ -98,6 +99,9 @@ project.postSynthesize = () => {
       delete packageJson.scripts[script];
     }
   });
+
+  // Override compile script with increased memory limit
+  packageJson.scripts.compile = 'node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word';
 
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2) + '\n');
 

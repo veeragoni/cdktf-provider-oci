@@ -96,7 +96,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "jsii --silence-warnings=reserved-word"
+          "exec": "node --max-old-space-size=8192 ./node_modules/.bin/jsii --silence-warnings=reserved-word"
         }
       ]
     },
