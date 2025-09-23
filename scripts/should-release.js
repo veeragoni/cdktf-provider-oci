@@ -39,16 +39,26 @@ const execSync = require("child_process").execSync;
     );
     const currPackageJson = require("../package.json");
 
+    const prevProviderVersion =
+      prevPackageJson?.cdktf?.provider?.version ?? "<missing>";
+    const currProviderVersion =
+      currPackageJson?.cdktf?.provider?.version ?? "<missing>";
+
+    const prevPeerCdktf =
+      prevPackageJson?.peerDependencies?.cdktf ?? "<missing>";
+    const currPeerCdktf =
+      currPackageJson?.peerDependencies?.cdktf ?? "<missing>";
+
     const thingsToDiff = [
       {
         name: "Terraform provider version",
-        previous: prevPackageJson.cdktf.provider.version,
-        current: currPackageJson.cdktf.provider.version,
+        previous: prevProviderVersion,
+        current: currProviderVersion,
       },
       {
         name: "cdktf peer dependency",
-        previous: prevPackageJson.peerDependencies.cdktf,
-        current: currPackageJson.peerDependencies.cdktf,
+        previous: prevPeerCdktf,
+        current: currPeerCdktf,
       },
     ];
 
