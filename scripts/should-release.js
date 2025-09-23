@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) HashiCorp, Inc.
  * SPDX-License-Identifier: MPL-2.0
@@ -41,13 +42,13 @@ const execSync = require("child_process").execSync;
     const thingsToDiff = [
       {
         name: "Terraform provider version",
-        previous: prevPackageJson.cdktf?.provider?.version || "none",
-        current: currPackageJson.cdktf?.provider?.version || "none",
+        previous: prevPackageJson.cdktf.provider.version,
+        current: currPackageJson.cdktf.provider.version,
       },
       {
         name: "cdktf peer dependency",
-        previous: prevPackageJson.peerDependencies?.cdktf || "none",
-        current: currPackageJson.peerDependencies?.cdktf || "none",
+        previous: prevPackageJson.peerDependencies.cdktf,
+        current: currPackageJson.peerDependencies.cdktf,
       },
     ];
 

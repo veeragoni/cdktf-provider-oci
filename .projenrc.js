@@ -98,6 +98,33 @@ project.postSynthesize = () => {
 
   fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2) + '\n');
 
+  const readmePath = 'README.md';
+  if (fs.existsSync(readmePath)) {
+    try {
+      fs.chmodSync(readmePath, 0o600);
+    } catch {}
+    let readme = fs.readFileSync(readmePath, 'utf8');
+
+    const npmSection = `### npm\n\nPublished from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).\n\n\`npm install cdktf-provider-oci\`\n\n`;
+    const pypiSection = `### PyPI\n\nPublished at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).\n\n\`pip install cdktf-provider-oci\`\n\n`;
+
+    const npmStart = readme.indexOf('### NPM');
+    const pypiStart = readme.indexOf('### PyPI');
+    if (npmStart !== -1 && pypiStart !== -1) {
+      const sectionAfter = readme.indexOf('## Docs', pypiStart);
+      readme = readme.slice(0, npmStart) + npmSection + pypiSection + (sectionAfter !== -1 ? readme.slice(sectionAfter) : '');
+    }
+
+    const docsStart = readme.indexOf('## Docs');
+    const versioningStart = readme.indexOf('## Versioning');
+    if (docsStart !== -1 && versioningStart !== -1) {
+      const docsText = `## Docs\n\nRelease builds publish TypeScript and Python API references. Generate them locally with \`yarn docgen\` (output under \`docs/\`).\n\n`;
+      readme = readme.slice(0, docsStart) + docsText + readme.slice(versioningStart);
+    }
+
+    fs.writeFileSync(readmePath, readme);
+  }
+
   // Fix the release workflow to remove unwanted jobs
   const releaseWorkflowPath = '.github/workflows/release.yml';
   if (fs.existsSync(releaseWorkflowPath)) {
@@ -178,7 +205,36 @@ const preCompileTask = project.tasks.tryFind('pre-compile');
 preCompileTask?.prependExec('node scripts/generate-index.cjs');
 
 const docgenTask = project.tasks.tryFind('docgen');
-docgenTask?.reset("rm -rf docs && rm -f API.md && mkdir docs && jsii-docgen --split-by-submodule -l typescript -l python && mv *.*.md docs && cd docs && ls ./ | xargs sed -i '150000,$ d' $1");
+if (!docgenTask) {
+  console.warn('Warning: docgen task not found; docs languages not adjusted.');
+} else {
+  docgenTask.reset();
+  docgenTask.exec('node scripts/generate-docs.cjs');
+  console.log('Customized docgen task to generate TypeScript/Python docs only.');
+}
+
+const packageAllTask = project.tasks.tryFind('package-all');
+if (!packageAllTask) {
+  console.warn('Warning: package-all task not found; skipping language pruning.');
+} else {
+  packageAllTask.reset();
+  const packageJsTask = project.tasks.tryFind('package:js');
+  if (packageJsTask) {
+    packageAllTask.spawn(packageJsTask);
+  }
+  const packagePythonTask = project.tasks.tryFind('package:python');
+  if (packagePythonTask) {
+    packageAllTask.spawn(packagePythonTask);
+  }
+  console.log('Restricted package-all task to js/python targets.');
+}
+
+['package:java', 'package:dotnet', 'package:go'].forEach(taskName => {
+  const removed = project.removeTask(taskName);
+  if (removed) {
+    console.log(`Removed task: ${taskName}`);
+  }
+});
 
 // CdktfProviderProject already includes the necessary workflows
 

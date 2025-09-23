@@ -114,7 +114,7 @@
       "description": "Generate documentation for the project",
       "steps": [
         {
-          "exec": "rm -rf docs && rm -f API.md && mkdir docs && jsii-docgen --split-by-submodule -l typescript -l python -l java -l csharp -l go && mv *.*.md docs && cd docs && ls ./ | xargs sed -i '150000,$ d' $1"
+          "exec": "node scripts/generate-docs.cjs"
         }
       ]
     },
@@ -141,6 +141,17 @@
         },
         {
           "spawn": "default"
+        },
+        {
+          "exec": "node scripts/generate-index.cjs"
+        }
+      ]
+    },
+    "generate-index": {
+      "name": "generate-index",
+      "steps": [
+        {
+          "exec": "node scripts/generate-index.cjs"
         }
       ]
     },
@@ -184,43 +195,7 @@
           "spawn": "package:js"
         },
         {
-          "spawn": "package:java"
-        },
-        {
           "spawn": "package:python"
-        },
-        {
-          "spawn": "package:dotnet"
-        },
-        {
-          "spawn": "package:go"
-        }
-      ]
-    },
-    "package:dotnet": {
-      "name": "package:dotnet",
-      "description": "Create dotnet language bindings",
-      "steps": [
-        {
-          "exec": "jsii-pacmak -v --target dotnet"
-        }
-      ]
-    },
-    "package:go": {
-      "name": "package:go",
-      "description": "Create go language bindings",
-      "steps": [
-        {
-          "exec": "jsii-pacmak -v --target go"
-        }
-      ]
-    },
-    "package:java": {
-      "name": "package:java",
-      "description": "Create java language bindings",
-      "steps": [
-        {
-          "exec": "jsii-pacmak -v --target java"
         }
       ]
     },
@@ -262,6 +237,9 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation",
       "steps": [
+        {
+          "exec": "node scripts/generate-index.cjs"
+        },
         {
           "spawn": "unconditional-bump"
         }

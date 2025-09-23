@@ -16,6 +16,7 @@
     "docgen": "npx projen docgen",
     "eject": "npx projen eject",
     "fetch": "npx projen fetch",
+    "generate-index": "npx projen generate-index",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
     "package:js": "npx projen package:js",
@@ -33,9 +34,10 @@
     "watch": "npx projen watch",
     "projen": "npx projen",
     "commit": "git add -A && git commit -am \"Update provider\" || echo \"No changes to commit\"",
-    "should-release": "node scripts/force-release.js",
+    "should-release": "node scripts/should-release.js",
     "prebump": "yarn fetch && yarn compile && yarn run commit && yarn run should-release",
-    "build-provider": "yarn fetch && yarn compile && yarn docgen"
+    "build-provider": "yarn fetch && yarn compile && yarn docgen",
+    "generate:index": "node scripts/generate-index.cjs"
   },
   "author": {
     "name": "Suresh Veeragoni",
