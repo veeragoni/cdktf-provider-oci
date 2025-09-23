@@ -1,3 +1,0 @@
-# `data_oci_fleet_apps_management_provisions`
-
-Refer to the Terraform Registry for docs: [`data_oci_fleet_apps_management_provisions`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/data-sources/fleet_apps_management_provisions).

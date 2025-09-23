@@ -1,3 +1,0 @@
-# `data_oci_core_peer_region_for_remote_peerings`
-
-Refer to the Terraform Registry for docs: [`data_oci_core_peer_region_for_remote_peerings`](https://registry.terraform.io/providers/hashicorp/oci/7.19.0/docs/data-sources/core_peer_region_for_remote_peerings).

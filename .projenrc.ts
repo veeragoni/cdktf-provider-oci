@@ -35,6 +35,11 @@ const project = new CdktfProviderProject({
 
   devDeps: ['@cdktf/provider-project@^0.7.0'],
   isDeprecated: false,
+
+  // Ensure generated files are ignored
+  gitignore: [
+    'generated/',
+  ],
 });
 
 project.synth();
