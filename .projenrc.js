@@ -115,11 +115,89 @@ project.postSynthesize = () => {
       readme = readme.slice(0, npmStart) + npmSection + pypiSection + (sectionAfter !== -1 ? readme.slice(sectionAfter) : '');
     }
 
-    const docsStart = readme.indexOf('## Docs');
-    const usageStart = readme.indexOf('## Usage');
-    if (docsStart !== -1 && usageStart !== -1) {
-      const docsText = `## Docs\n\nRelease builds publish TypeScript and Python API references. Generate them locally with \`yarn docgen\` (output under \`docs/\`).\n\n`;
-      readme = readme.slice(0, docsStart) + docsText + readme.slice(usageStart);
+    // Add Usage examples after the PyPI section
+    const usageSection = `
+## Usage
+
+### TypeScript
+
+\`\`\`ts
+import { App, TerraformStack } from 'cdktf';
+import { Construct } from 'constructs';
+import { OciProvider } from 'cdktf-provider-oci/lib/provider';
+import { CoreInstance } from 'cdktf-provider-oci/lib/core-instance';
+
+class MyStack extends TerraformStack {
+  constructor(scope: Construct, id: string) {
+    super(scope, id);
+
+    new OciProvider(this, 'oci', {
+      region: 'us-ashburn-1',
+    });
+
+    new CoreInstance(this, 'example', {
+      compartmentId: 'ocid1.compartment.oc1..exampleuniqueID',
+      availabilityDomain: 'kIdk:US-ASHBURN-AD-1',
+      shape: 'VM.Standard.E4.Flex',
+      sourceDetails: {
+        sourceType: 'image',
+        imageId: 'ocid1.image.oc1..exampleuniqueID',
+      },
+      createVnicDetails: {
+        subnetId: 'ocid1.subnet.oc1..exampleuniqueID',
+      },
+    });
+  }
+}
+
+const app = new App();
+new MyStack(app, 'oci-example');
+app.synth();
+\`\`\`
+
+Install dependencies with \`npm install cdktf cdktf-provider-oci constructs\` before synthesizing.
+
+### Python
+
+\`\`\`python
+from constructs import Construct
+from cdktf import App, TerraformStack
+from cdktf_provider_oci.provider import OciProvider
+from cdktf_provider_oci.core_instance import CoreInstance
+
+
+class MyStack(TerraformStack):
+    def __init__(self, scope: Construct, construct_id: str) -> None:
+        super().__init__(scope, construct_id)
+
+        OciProvider(self, "oci", region="us-ashburn-1")
+
+        CoreInstance(self, "example",
+            compartment_id="ocid1.compartment.oc1..exampleuniqueID",
+            availability_domain="kIdk:US-ASHBURN-AD-1",
+            shape="VM.Standard.E4.Flex",
+            source_details={
+                "source_type": "image",
+                "image_id": "ocid1.image.oc1..exampleuniqueID",
+            },
+            create_vnic_details={
+                "subnet_id": "ocid1.subnet.oc1..exampleuniqueID",
+            },
+        )
+
+
+app = App()
+MyStack(app, "oci-example")
+app.synth()
+\`\`\`
+
+Install dependencies with \`pip install cdktf cdktf-provider-oci constructs\` before synthesizing.
+`;
+
+    // Insert Usage section before ## Docs
+    const docsIndex = readme.indexOf('## Docs');
+    if (docsIndex !== -1) {
+      readme = readme.slice(0, docsIndex) + usageSection + '\n' + readme.slice(docsIndex);
     }
 
     fs.writeFileSync(readmePath, readme);

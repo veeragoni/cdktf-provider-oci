@@ -17,9 +17,6 @@ Published at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/proj
 
 `pip install cdktf-provider-oci`
 
-## Docs
-
-Release builds publish TypeScript and Python API references. Generate them locally with `yarn docgen` (output under `docs/`).
 
 ## Usage
 
@@ -97,7 +94,9 @@ app.synth()
 
 Install dependencies with `pip install cdktf cdktf-provider-oci constructs` before synthesizing.
 
-Find auto-generated docs for this provider here:
+## Docs
+
+Find auto-generated docs for this provider here: 
 
 - [Typescript](./docs/API.typescript.md)
 - [Python](./docs/API.python.md)
