@@ -152,6 +152,22 @@ project.postSynthesize = () => {
     fs.writeFileSync(codeownersPath, codeowners);
   }
 
+  const shouldReleasePath = 'scripts/should-release.js';
+  if (fs.existsSync(shouldReleasePath)) {
+    try {
+      fs.chmodSync(shouldReleasePath, 0o600);
+    } catch {}
+    let shouldRelease = fs.readFileSync(shouldReleasePath, 'utf8');
+    const originalBlock = /const thingsToDiff = \[\s*{\s*name: "Terraform provider version",\s*previous: prevPackageJson\.cdktf\.provider\.version,\s*current: currPackageJson\.cdktf\.provider\.version,\s*},\s*{\s*name: "cdktf peer dependency",\s*previous: prevPackageJson\.peerDependencies\.cdktf,\s*current: currPackageJson\.peerDependencies\.cdktf,\s*},\s*\];/s;
+    if (originalBlock.test(shouldRelease)) {
+      shouldRelease = shouldRelease.replace(
+        originalBlock,
+        `const prevProviderVersion =\n      prevPackageJson?.cdktf?.provider?.version ?? "<missing>";\n    const currProviderVersion =\n      currPackageJson?.cdktf?.provider?.version ?? "<missing>";\n\n    const prevPeerCdktf =\n      prevPackageJson?.peerDependencies?.cdktf ?? "<missing>";\n    const currPeerCdktf =\n      currPackageJson?.peerDependencies?.cdktf ?? "<missing>";\n\n    const thingsToDiff = [\n      {\n        name: "Terraform provider version",\n        previous: prevProviderVersion,\n        current: currProviderVersion,\n      },\n      {\n        name: "cdktf peer dependency",\n        previous: prevPeerCdktf,\n        current: currPeerCdktf,\n      },\n    ];`
+      );
+      fs.writeFileSync(shouldReleasePath, shouldRelease);
+    }
+  }
+
   // Fix the release workflow to remove unwanted jobs
   const releaseWorkflowPath = '.github/workflows/release.yml';
   if (fs.existsSync(releaseWorkflowPath)) {
