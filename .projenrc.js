@@ -194,6 +194,16 @@ project.postSynthesize = () => {
       'https://registry.npmjs.org/'
     );
 
+    // Add a manual force release input and propagate environment variable
+    releaseContent = releaseContent.replace(
+      '  workflow_dispatch: {}\n',
+      '  workflow_dispatch:\n    inputs:\n      force:\n        description: Force release even if versions unchanged\n        required: false\n        default: "false"\n'
+    );
+    releaseContent = releaseContent.replace(
+      '    env:\n      CI: "true"\n',
+      "    env:\n      CI: \"true\"\n      FORCE_RELEASE: ${{ github.event.inputs.force || 'false' }}\n"
+    );
+
     // Remove unwanted release jobs by finding their sections and removing them
     const jobsToRemove = ['release_maven', 'release_nuget', 'release_golang'];
 

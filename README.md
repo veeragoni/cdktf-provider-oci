@@ -7,13 +7,13 @@ This repo builds and publishes the [Terraform oci provider](https://registry.ter
 
 ### npm
 
-Published from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci)
+Published from this repository at [https://www.npmjs.com/package/cdktf-provider-oci](https://www.npmjs.com/package/cdktf-provider-oci) (owner: sureshveeragoni).
 
 `npm install cdktf-provider-oci`
 
 ### PyPI
 
-Published at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/)
+Published at [https://pypi.org/project/cdktf-provider-oci](https://pypi.org/project/cdktf-provider-oci/) (owner: sureshveeragoni).
 
 `pip install cdktf-provider-oci`
 
@@ -33,6 +33,13 @@ These are the upstream dependencies:
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
 
+## Features / Issues / Bugs
+
+Please report bugs and issues to the [CDK for Terraform](https://cdk.tf) project:
+
+- [Create bug report](https://cdk.tf/bug)
+- [Create feature request](https://cdk.tf/feature)
+
 ## Contributing
 
 ### Projen
@@ -45,8 +52,8 @@ There's a custom [project builder](https://github.com/cdktf/cdktf-provider-proje
 
 ### Provider Version
 
-The provider version can be adjusted in [./.projenrc.js](./.projenrc.js)
+The provider version can be adjusted in [./.projenrc.js](./.projenrc.js).
 
 ### Repository Management
 
-The repository is managed by [CDKTF Repository Manager](https://github.com/cdktf/cdktf-repository-manager/)
+The repository is managed by [CDKTF Repository Manager](https://github.com/cdktf/cdktf-repository-manager/).
