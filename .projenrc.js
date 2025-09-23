@@ -209,6 +209,11 @@ project.postSynthesize = () => {
     );
 
     releaseContent = releaseContent.replace(
+      /NPM_REGISTRY: https:\/\/registry\.npmjs\.org\//g,
+      'NPM_REGISTRY: registry.npmjs.org'
+    );
+
+    releaseContent = releaseContent.replace(
       'npm set "//$NPM_REGISTRY/:_authToken=$NPM_TOKEN"',
       'REGISTRY_HOST=${NPM_REGISTRY#https://}\n          REGISTRY_HOST=${REGISTRY_HOST#http://}\n          REGISTRY_HOST=${REGISTRY_HOST%/}\n          npm set "//$REGISTRY_HOST/:_authToken=$NPM_TOKEN"'
     );
