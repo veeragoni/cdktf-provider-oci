@@ -11,6 +11,12 @@ const execSync = require("child_process").execSync;
     "Determining whether changes warrant a new release. Non-zero exit code indicates that a release should be skipped"
   );
 
+  const forceRelease = String(process.env.FORCE_RELEASE || '').toLowerCase();
+  if (forceRelease === '1' || forceRelease === 'true') {
+    console.log('FORCE_RELEASE flag detected; bypassing change detection.');
+    return;
+  }
+
   // inspired by https://github.com/projen/projen/blob/08378c40d1453288053abcddce82475329b4506e/src/release/bump-version.ts#L281
   const prefixFilter = `v*`;
   const listGitTags = [

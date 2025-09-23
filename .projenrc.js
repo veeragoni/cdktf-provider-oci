@@ -158,12 +158,26 @@ project.postSynthesize = () => {
       fs.chmodSync(shouldReleasePath, 0o600);
     } catch {}
     let shouldRelease = fs.readFileSync(shouldReleasePath, 'utf8');
+    let updated = false;
+
     const originalBlock = /const thingsToDiff = \[\s*{\s*name: "Terraform provider version",\s*previous: prevPackageJson\.cdktf\.provider\.version,\s*current: currPackageJson\.cdktf\.provider\.version,\s*},\s*{\s*name: "cdktf peer dependency",\s*previous: prevPackageJson\.peerDependencies\.cdktf,\s*current: currPackageJson\.peerDependencies\.cdktf,\s*},\s*\];/s;
     if (originalBlock.test(shouldRelease)) {
       shouldRelease = shouldRelease.replace(
         originalBlock,
         `const prevProviderVersion =\n      prevPackageJson?.cdktf?.provider?.version ?? "<missing>";\n    const currProviderVersion =\n      currPackageJson?.cdktf?.provider?.version ?? "<missing>";\n\n    const prevPeerCdktf =\n      prevPackageJson?.peerDependencies?.cdktf ?? "<missing>";\n    const currPeerCdktf =\n      currPackageJson?.peerDependencies?.cdktf ?? "<missing>";\n\n    const thingsToDiff = [\n      {\n        name: "Terraform provider version",\n        previous: prevProviderVersion,\n        current: currProviderVersion,\n      },\n      {\n        name: "cdktf peer dependency",\n        previous: prevPeerCdktf,\n        current: currPeerCdktf,\n      },\n    ];`
       );
+      updated = true;
+    }
+
+    if (!shouldRelease.includes('FORCE_RELEASE flag detected; bypassing change detection.')) {
+      shouldRelease = shouldRelease.replace(
+        '  // inspired by https://github.com/projen/projen/blob/08378c40d1453288053abcddce82475329b4506e/src/release/bump-version.ts#L281\n',
+        "  const forceRelease = String(process.env.FORCE_RELEASE || '').toLowerCase();\n  if (forceRelease === '1' || forceRelease === 'true') {\n    console.log('FORCE_RELEASE flag detected; bypassing change detection.');\n    return;\n  }\n\n  // inspired by https://github.com/projen/projen/blob/08378c40d1453288053abcddce82475329b4506e/src/release/bump-version.ts#L281\n"
+      );
+      updated = true;
+    }
+
+    if (updated) {
       fs.writeFileSync(shouldReleasePath, shouldRelease);
     }
   }
