@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataOciContainerengineClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster#cluster_id DataOciContainerengineCluster#cluster_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster#cluster_id DataOciContainerengineCluster#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster#should_include_oidc_config_file DataOciContainerengineCluster#should_include_oidc_config_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster#should_include_oidc_config_file DataOciContainerengineCluster#should_include_oidc_config_file}
   */
-  readonly shouldIncludeOidcConfigFile?: string;
+  readonly shouldIncludeOidcConfigFile?: boolean | cdktf.IResolvable;
 }
 export interface DataOciContainerengineClusterClusterPodNetworkOptions {
 }
@@ -1351,7 +1351,7 @@ export class DataOciContainerengineClusterOptionsList extends cdktf.ComplexList 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster oci_containerengine_cluster}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster oci_containerengine_cluster}
 */
 export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
 
@@ -1367,7 +1367,7 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataOciContainerengineCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataOciContainerengineCluster to import
-  * @param importFromId The id of the existing DataOciContainerengineCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataOciContainerengineCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataOciContainerengineCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1379,7 +1379,7 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/containerengine_cluster oci_containerengine_cluster} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/containerengine_cluster oci_containerengine_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1390,8 +1390,8 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
       terraformResourceType: 'oci_containerengine_cluster',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1504,6 +1504,11 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
     return this.getStringAttribute('open_id_connect_discovery_endpoint');
   }
 
+  // open_id_connect_discovery_key - computed: true, optional: false, required: false
+  public get openIdConnectDiscoveryKey() {
+    return this.getStringAttribute('open_id_connect_discovery_key');
+  }
+
   // options - computed: true, optional: false, required: false
   private _options = new DataOciContainerengineClusterOptionsList(this, "options", false);
   public get options() {
@@ -1511,11 +1516,11 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
   }
 
   // should_include_oidc_config_file - computed: false, optional: true, required: false
-  private _shouldIncludeOidcConfigFile?: string; 
+  private _shouldIncludeOidcConfigFile?: boolean | cdktf.IResolvable; 
   public get shouldIncludeOidcConfigFile() {
-    return this.getStringAttribute('should_include_oidc_config_file');
+    return this.getBooleanAttribute('should_include_oidc_config_file');
   }
-  public set shouldIncludeOidcConfigFile(value: string) {
+  public set shouldIncludeOidcConfigFile(value: boolean | cdktf.IResolvable) {
     this._shouldIncludeOidcConfigFile = value;
   }
   public resetShouldIncludeOidcConfigFile() {
@@ -1548,7 +1553,7 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       cluster_id: cdktf.stringToTerraform(this._clusterId),
-      should_include_oidc_config_file: cdktf.stringToTerraform(this._shouldIncludeOidcConfigFile),
+      should_include_oidc_config_file: cdktf.booleanToTerraform(this._shouldIncludeOidcConfigFile),
     };
   }
 
@@ -1561,10 +1566,10 @@ export class DataOciContainerengineCluster extends cdktf.TerraformDataSource {
         storageClassType: "string",
       },
       should_include_oidc_config_file: {
-        value: cdktf.stringToHclTerraform(this._shouldIncludeOidcConfigFile),
+        value: cdktf.booleanToHclTerraform(this._shouldIncludeOidcConfigFile),
         isBlock: false,
         type: "simple",
-        storageClassType: "string",
+        storageClassType: "boolean",
       },
     };
 

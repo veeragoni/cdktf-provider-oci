@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,15 +8,15 @@ import * as cdktf from 'cdktf';
 
 export interface AiDocumentProcessorJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#compartment_id AiDocumentProcessorJob#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#compartment_id AiDocumentProcessorJob#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#display_name AiDocumentProcessorJob#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#display_name AiDocumentProcessorJob#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#id AiDocumentProcessorJob#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#id AiDocumentProcessorJob#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -25,41 +25,45 @@ export interface AiDocumentProcessorJobConfig extends cdktf.TerraformMetaArgumen
   /**
   * input_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#input_location AiDocumentProcessorJob#input_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#input_location AiDocumentProcessorJob#input_location}
   */
   readonly inputLocation: AiDocumentProcessorJobInputLocation;
   /**
   * output_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#output_location AiDocumentProcessorJob#output_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#output_location AiDocumentProcessorJob#output_location}
   */
   readonly outputLocation: AiDocumentProcessorJobOutputLocation;
   /**
   * processor_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#processor_config AiDocumentProcessorJob#processor_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#processor_config AiDocumentProcessorJob#processor_config}
   */
   readonly processorConfig: AiDocumentProcessorJobProcessorConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#timeouts AiDocumentProcessorJob#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#timeouts AiDocumentProcessorJob#timeouts}
   */
   readonly timeouts?: AiDocumentProcessorJobTimeouts;
 }
 export interface AiDocumentProcessorJobInputLocationObjectLocations {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#bucket AiDocumentProcessorJob#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#bucket AiDocumentProcessorJob#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#namespace AiDocumentProcessorJob#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#namespace AiDocumentProcessorJob#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#object AiDocumentProcessorJob#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#object AiDocumentProcessorJob#object}
   */
   readonly object?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#page_range AiDocumentProcessorJob#page_range}
+  */
+  readonly pageRange?: string[];
 }
 
 export function aiDocumentProcessorJobInputLocationObjectLocationsToTerraform(struct?: AiDocumentProcessorJobInputLocationObjectLocations | cdktf.IResolvable): any {
@@ -71,6 +75,7 @@ export function aiDocumentProcessorJobInputLocationObjectLocationsToTerraform(st
     bucket: cdktf.stringToTerraform(struct!.bucket),
     namespace: cdktf.stringToTerraform(struct!.namespace),
     object: cdktf.stringToTerraform(struct!.object),
+    page_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pageRange),
   }
 }
 
@@ -98,6 +103,12 @@ export function aiDocumentProcessorJobInputLocationObjectLocationsToHclTerraform
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    page_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.pageRange),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
     },
   };
 
@@ -137,6 +148,10 @@ export class AiDocumentProcessorJobInputLocationObjectLocationsOutputReference e
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
+    if (this._pageRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pageRange = this._pageRange;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -147,6 +162,7 @@ export class AiDocumentProcessorJobInputLocationObjectLocationsOutputReference e
       this._bucket = undefined;
       this._namespace = undefined;
       this._object = undefined;
+      this._pageRange = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -158,6 +174,7 @@ export class AiDocumentProcessorJobInputLocationObjectLocationsOutputReference e
       this._bucket = value.bucket;
       this._namespace = value.namespace;
       this._object = value.object;
+      this._pageRange = value.pageRange;
     }
   }
 
@@ -208,6 +225,22 @@ export class AiDocumentProcessorJobInputLocationObjectLocationsOutputReference e
   public get objectInput() {
     return this._object;
   }
+
+  // page_range - computed: true, optional: true, required: false
+  private _pageRange?: string[]; 
+  public get pageRange() {
+    return this.getListAttribute('page_range');
+  }
+  public set pageRange(value: string[]) {
+    this._pageRange = value;
+  }
+  public resetPageRange() {
+    this._pageRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pageRangeInput() {
+    return this._pageRange;
+  }
 }
 
 export class AiDocumentProcessorJobInputLocationObjectLocationsList extends cdktf.ComplexList {
@@ -231,17 +264,21 @@ export class AiDocumentProcessorJobInputLocationObjectLocationsList extends cdkt
 }
 export interface AiDocumentProcessorJobInputLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#data AiDocumentProcessorJob#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#data AiDocumentProcessorJob#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#source_type AiDocumentProcessorJob#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#page_range AiDocumentProcessorJob#page_range}
+  */
+  readonly pageRange?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#source_type AiDocumentProcessorJob#source_type}
   */
   readonly sourceType: string;
   /**
   * object_locations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#object_locations AiDocumentProcessorJob#object_locations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#object_locations AiDocumentProcessorJob#object_locations}
   */
   readonly objectLocations?: AiDocumentProcessorJobInputLocationObjectLocations[] | cdktf.IResolvable;
 }
@@ -253,6 +290,7 @@ export function aiDocumentProcessorJobInputLocationToTerraform(struct?: AiDocume
   }
   return {
     data: cdktf.stringToTerraform(struct!.data),
+    page_range: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.pageRange),
     source_type: cdktf.stringToTerraform(struct!.sourceType),
     object_locations: cdktf.listMapper(aiDocumentProcessorJobInputLocationObjectLocationsToTerraform, true)(struct!.objectLocations),
   }
@@ -270,6 +308,12 @@ export function aiDocumentProcessorJobInputLocationToHclTerraform(struct?: AiDoc
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    page_range: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.pageRange),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
     },
     source_type: {
       value: cdktf.stringToHclTerraform(struct!.sourceType),
@@ -307,6 +351,10 @@ export class AiDocumentProcessorJobInputLocationOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.data = this._data;
     }
+    if (this._pageRange !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pageRange = this._pageRange;
+    }
     if (this._sourceType !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceType = this._sourceType;
@@ -322,12 +370,14 @@ export class AiDocumentProcessorJobInputLocationOutputReference extends cdktf.Co
     if (value === undefined) {
       this.isEmptyObject = false;
       this._data = undefined;
+      this._pageRange = undefined;
       this._sourceType = undefined;
       this._objectLocations.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._data = value.data;
+      this._pageRange = value.pageRange;
       this._sourceType = value.sourceType;
       this._objectLocations.internalValue = value.objectLocations;
     }
@@ -347,6 +397,22 @@ export class AiDocumentProcessorJobInputLocationOutputReference extends cdktf.Co
   // Temporarily expose input value. Use with caution.
   public get dataInput() {
     return this._data;
+  }
+
+  // page_range - computed: true, optional: true, required: false
+  private _pageRange?: string[]; 
+  public get pageRange() {
+    return this.getListAttribute('page_range');
+  }
+  public set pageRange(value: string[]) {
+    this._pageRange = value;
+  }
+  public resetPageRange() {
+    this._pageRange = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pageRangeInput() {
+    return this._pageRange;
   }
 
   // source_type - computed: false, optional: false, required: true
@@ -380,15 +446,15 @@ export class AiDocumentProcessorJobInputLocationOutputReference extends cdktf.Co
 }
 export interface AiDocumentProcessorJobOutputLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#bucket AiDocumentProcessorJob#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#bucket AiDocumentProcessorJob#bucket}
   */
   readonly bucket: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#namespace AiDocumentProcessorJob#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#namespace AiDocumentProcessorJob#namespace}
   */
   readonly namespace: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#prefix AiDocumentProcessorJob#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#prefix AiDocumentProcessorJob#prefix}
   */
   readonly prefix: string;
 }
@@ -521,23 +587,27 @@ export class AiDocumentProcessorJobOutputLocationOutputReference extends cdktf.C
 }
 export interface AiDocumentProcessorJobProcessorConfigFeatures {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#feature_type AiDocumentProcessorJob#feature_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#feature_type AiDocumentProcessorJob#feature_type}
   */
   readonly featureType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#generate_searchable_pdf AiDocumentProcessorJob#generate_searchable_pdf}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#generate_searchable_pdf AiDocumentProcessorJob#generate_searchable_pdf}
   */
   readonly generateSearchablePdf?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#max_results AiDocumentProcessorJob#max_results}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#max_results AiDocumentProcessorJob#max_results}
   */
   readonly maxResults?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#model_id AiDocumentProcessorJob#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#model_id AiDocumentProcessorJob#model_id}
   */
   readonly modelId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#tenancy_id AiDocumentProcessorJob#tenancy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#selection_mark_detection AiDocumentProcessorJob#selection_mark_detection}
+  */
+  readonly selectionMarkDetection?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#tenancy_id AiDocumentProcessorJob#tenancy_id}
   */
   readonly tenancyId?: string;
 }
@@ -552,6 +622,7 @@ export function aiDocumentProcessorJobProcessorConfigFeaturesToTerraform(struct?
     generate_searchable_pdf: cdktf.booleanToTerraform(struct!.generateSearchablePdf),
     max_results: cdktf.numberToTerraform(struct!.maxResults),
     model_id: cdktf.stringToTerraform(struct!.modelId),
+    selection_mark_detection: cdktf.booleanToTerraform(struct!.selectionMarkDetection),
     tenancy_id: cdktf.stringToTerraform(struct!.tenancyId),
   }
 }
@@ -586,6 +657,12 @@ export function aiDocumentProcessorJobProcessorConfigFeaturesToHclTerraform(stru
       isBlock: false,
       type: "simple",
       storageClassType: "string",
+    },
+    selection_mark_detection: {
+      value: cdktf.booleanToHclTerraform(struct!.selectionMarkDetection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
     },
     tenancy_id: {
       value: cdktf.stringToHclTerraform(struct!.tenancyId),
@@ -635,6 +712,10 @@ export class AiDocumentProcessorJobProcessorConfigFeaturesOutputReference extend
       hasAnyValues = true;
       internalValueResult.modelId = this._modelId;
     }
+    if (this._selectionMarkDetection !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectionMarkDetection = this._selectionMarkDetection;
+    }
     if (this._tenancyId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenancyId = this._tenancyId;
@@ -650,6 +731,7 @@ export class AiDocumentProcessorJobProcessorConfigFeaturesOutputReference extend
       this._generateSearchablePdf = undefined;
       this._maxResults = undefined;
       this._modelId = undefined;
+      this._selectionMarkDetection = undefined;
       this._tenancyId = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
@@ -663,6 +745,7 @@ export class AiDocumentProcessorJobProcessorConfigFeaturesOutputReference extend
       this._generateSearchablePdf = value.generateSearchablePdf;
       this._maxResults = value.maxResults;
       this._modelId = value.modelId;
+      this._selectionMarkDetection = value.selectionMarkDetection;
       this._tenancyId = value.tenancyId;
     }
   }
@@ -728,6 +811,22 @@ export class AiDocumentProcessorJobProcessorConfigFeaturesOutputReference extend
     return this._modelId;
   }
 
+  // selection_mark_detection - computed: true, optional: true, required: false
+  private _selectionMarkDetection?: boolean | cdktf.IResolvable; 
+  public get selectionMarkDetection() {
+    return this.getBooleanAttribute('selection_mark_detection');
+  }
+  public set selectionMarkDetection(value: boolean | cdktf.IResolvable) {
+    this._selectionMarkDetection = value;
+  }
+  public resetSelectionMarkDetection() {
+    this._selectionMarkDetection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectionMarkDetectionInput() {
+    return this._selectionMarkDetection;
+  }
+
   // tenancy_id - computed: true, optional: true, required: false
   private _tenancyId?: string; 
   public get tenancyId() {
@@ -764,29 +863,273 @@ export class AiDocumentProcessorJobProcessorConfigFeaturesList extends cdktf.Com
     return new AiDocumentProcessorJobProcessorConfigFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#normalization_type AiDocumentProcessorJob#normalization_type}
+  */
+  readonly normalizationType?: string;
+}
+
+export function aiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToTerraform(struct?: AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    normalization_type: cdktf.stringToTerraform(struct!.normalizationType),
+  }
+}
+
+
+export function aiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToHclTerraform(struct?: AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    normalization_type: {
+      value: cdktf.stringToHclTerraform(struct!.normalizationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._normalizationType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.normalizationType = this._normalizationType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._normalizationType = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._normalizationType = value.normalizationType;
+    }
+  }
+
+  // normalization_type - computed: true, optional: true, required: false
+  private _normalizationType?: string; 
+  public get normalizationType() {
+    return this.getStringAttribute('normalization_type');
+  }
+  public set normalizationType(value: string) {
+    this._normalizationType = value;
+  }
+  public resetNormalizationType() {
+    this._normalizationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get normalizationTypeInput() {
+    return this._normalizationType;
+  }
+}
+
+export class AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapList extends cdktf.ComplexList {
+  public internalValue? : AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference {
+    return new AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AiDocumentProcessorJobProcessorConfigNormalizationFields {
+  /**
+  * map block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#map AiDocumentProcessorJob#map}
+  */
+  readonly map?: AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap[] | cdktf.IResolvable;
+}
+
+export function aiDocumentProcessorJobProcessorConfigNormalizationFieldsToTerraform(struct?: AiDocumentProcessorJobProcessorConfigNormalizationFields | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    map: cdktf.listMapper(aiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToTerraform, true)(struct!.map),
+  }
+}
+
+
+export function aiDocumentProcessorJobProcessorConfigNormalizationFieldsToHclTerraform(struct?: AiDocumentProcessorJobProcessorConfigNormalizationFields | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    map: {
+      value: cdktf.listMapperHcl(aiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToHclTerraform, true)(struct!.map),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AiDocumentProcessorJobProcessorConfigNormalizationFields | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._map?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.map = this._map?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AiDocumentProcessorJobProcessorConfigNormalizationFields | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._map.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._map.internalValue = value.map;
+    }
+  }
+
+  // map - computed: false, optional: true, required: false
+  private _map = new AiDocumentProcessorJobProcessorConfigNormalizationFieldsMapList(this, "map", false);
+  public get map() {
+    return this._map;
+  }
+  public putMap(value: AiDocumentProcessorJobProcessorConfigNormalizationFieldsMap[] | cdktf.IResolvable) {
+    this._map.internalValue = value;
+  }
+  public resetMap() {
+    this._map.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mapInput() {
+    return this._map.internalValue;
+  }
+}
+
+export class AiDocumentProcessorJobProcessorConfigNormalizationFieldsList extends cdktf.ComplexList {
+  public internalValue? : AiDocumentProcessorJobProcessorConfigNormalizationFields[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference {
+    return new AiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AiDocumentProcessorJobProcessorConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#document_type AiDocumentProcessorJob#document_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#document_type AiDocumentProcessorJob#document_type}
   */
   readonly documentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#is_zip_output_enabled AiDocumentProcessorJob#is_zip_output_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#is_zip_output_enabled AiDocumentProcessorJob#is_zip_output_enabled}
   */
   readonly isZipOutputEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#language AiDocumentProcessorJob#language}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#language AiDocumentProcessorJob#language}
   */
   readonly language?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#processor_type AiDocumentProcessorJob#processor_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#model_id AiDocumentProcessorJob#model_id}
+  */
+  readonly modelId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#processor_type AiDocumentProcessorJob#processor_type}
   */
   readonly processorType: string;
   /**
   * features block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#features AiDocumentProcessorJob#features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#features AiDocumentProcessorJob#features}
   */
   readonly features: AiDocumentProcessorJobProcessorConfigFeatures[] | cdktf.IResolvable;
+  /**
+  * normalization_fields block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#normalization_fields AiDocumentProcessorJob#normalization_fields}
+  */
+  readonly normalizationFields?: AiDocumentProcessorJobProcessorConfigNormalizationFields[] | cdktf.IResolvable;
 }
 
 export function aiDocumentProcessorJobProcessorConfigToTerraform(struct?: AiDocumentProcessorJobProcessorConfigOutputReference | AiDocumentProcessorJobProcessorConfig): any {
@@ -798,8 +1141,10 @@ export function aiDocumentProcessorJobProcessorConfigToTerraform(struct?: AiDocu
     document_type: cdktf.stringToTerraform(struct!.documentType),
     is_zip_output_enabled: cdktf.booleanToTerraform(struct!.isZipOutputEnabled),
     language: cdktf.stringToTerraform(struct!.language),
+    model_id: cdktf.stringToTerraform(struct!.modelId),
     processor_type: cdktf.stringToTerraform(struct!.processorType),
     features: cdktf.listMapper(aiDocumentProcessorJobProcessorConfigFeaturesToTerraform, true)(struct!.features),
+    normalization_fields: cdktf.listMapper(aiDocumentProcessorJobProcessorConfigNormalizationFieldsToTerraform, true)(struct!.normalizationFields),
   }
 }
 
@@ -828,6 +1173,12 @@ export function aiDocumentProcessorJobProcessorConfigToHclTerraform(struct?: AiD
       type: "simple",
       storageClassType: "string",
     },
+    model_id: {
+      value: cdktf.stringToHclTerraform(struct!.modelId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
     processor_type: {
       value: cdktf.stringToHclTerraform(struct!.processorType),
       isBlock: false,
@@ -839,6 +1190,12 @@ export function aiDocumentProcessorJobProcessorConfigToHclTerraform(struct?: AiD
       isBlock: true,
       type: "list",
       storageClassType: "AiDocumentProcessorJobProcessorConfigFeaturesList",
+    },
+    normalization_fields: {
+      value: cdktf.listMapperHcl(aiDocumentProcessorJobProcessorConfigNormalizationFieldsToHclTerraform, true)(struct!.normalizationFields),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AiDocumentProcessorJobProcessorConfigNormalizationFieldsList",
     },
   };
 
@@ -872,6 +1229,10 @@ export class AiDocumentProcessorJobProcessorConfigOutputReference extends cdktf.
       hasAnyValues = true;
       internalValueResult.language = this._language;
     }
+    if (this._modelId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modelId = this._modelId;
+    }
     if (this._processorType !== undefined) {
       hasAnyValues = true;
       internalValueResult.processorType = this._processorType;
@@ -879,6 +1240,10 @@ export class AiDocumentProcessorJobProcessorConfigOutputReference extends cdktf.
     if (this._features?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.features = this._features?.internalValue;
+    }
+    if (this._normalizationFields?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.normalizationFields = this._normalizationFields?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -889,16 +1254,20 @@ export class AiDocumentProcessorJobProcessorConfigOutputReference extends cdktf.
       this._documentType = undefined;
       this._isZipOutputEnabled = undefined;
       this._language = undefined;
+      this._modelId = undefined;
       this._processorType = undefined;
       this._features.internalValue = undefined;
+      this._normalizationFields.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._documentType = value.documentType;
       this._isZipOutputEnabled = value.isZipOutputEnabled;
       this._language = value.language;
+      this._modelId = value.modelId;
       this._processorType = value.processorType;
       this._features.internalValue = value.features;
+      this._normalizationFields.internalValue = value.normalizationFields;
     }
   }
 
@@ -950,6 +1319,22 @@ export class AiDocumentProcessorJobProcessorConfigOutputReference extends cdktf.
     return this._language;
   }
 
+  // model_id - computed: true, optional: true, required: false
+  private _modelId?: string; 
+  public get modelId() {
+    return this.getStringAttribute('model_id');
+  }
+  public set modelId(value: string) {
+    this._modelId = value;
+  }
+  public resetModelId() {
+    this._modelId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelIdInput() {
+    return this._modelId;
+  }
+
   // processor_type - computed: false, optional: false, required: true
   private _processorType?: string; 
   public get processorType() {
@@ -975,18 +1360,34 @@ export class AiDocumentProcessorJobProcessorConfigOutputReference extends cdktf.
   public get featuresInput() {
     return this._features.internalValue;
   }
+
+  // normalization_fields - computed: false, optional: true, required: false
+  private _normalizationFields = new AiDocumentProcessorJobProcessorConfigNormalizationFieldsList(this, "normalization_fields", false);
+  public get normalizationFields() {
+    return this._normalizationFields;
+  }
+  public putNormalizationFields(value: AiDocumentProcessorJobProcessorConfigNormalizationFields[] | cdktf.IResolvable) {
+    this._normalizationFields.internalValue = value;
+  }
+  public resetNormalizationFields() {
+    this._normalizationFields.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get normalizationFieldsInput() {
+    return this._normalizationFields.internalValue;
+  }
 }
 export interface AiDocumentProcessorJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#create AiDocumentProcessorJob#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#create AiDocumentProcessorJob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#delete AiDocumentProcessorJob#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#delete AiDocumentProcessorJob#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#update AiDocumentProcessorJob#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#update AiDocumentProcessorJob#update}
   */
   readonly update?: string;
 }
@@ -1138,7 +1539,7 @@ export class AiDocumentProcessorJobTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job oci_ai_document_processor_job}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job oci_ai_document_processor_job}
 */
 export class AiDocumentProcessorJob extends cdktf.TerraformResource {
 
@@ -1154,7 +1555,7 @@ export class AiDocumentProcessorJob extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AiDocumentProcessorJob resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AiDocumentProcessorJob to import
-  * @param importFromId The id of the existing AiDocumentProcessorJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AiDocumentProcessorJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AiDocumentProcessorJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1166,7 +1567,7 @@ export class AiDocumentProcessorJob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_processor_job oci_ai_document_processor_job} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_processor_job oci_ai_document_processor_job} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1177,8 +1578,8 @@ export class AiDocumentProcessorJob extends cdktf.TerraformResource {
       terraformResourceType: 'oci_ai_document_processor_job',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

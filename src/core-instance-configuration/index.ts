@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,76 +8,76 @@ import * as cdktf from 'cdktf';
 
 export interface CoreInstanceConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_id CoreInstanceConfiguration#instance_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_id CoreInstanceConfiguration#instance_id}
   */
   readonly instanceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source CoreInstanceConfiguration#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source CoreInstanceConfiguration#source}
   */
   readonly source?: string;
   /**
   * instance_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_details CoreInstanceConfiguration#instance_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_details CoreInstanceConfiguration#instance_details}
   */
   readonly instanceDetails?: CoreInstanceConfigurationInstanceDetails;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#timeouts CoreInstanceConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#timeouts CoreInstanceConfiguration#timeouts}
   */
   readonly timeouts?: CoreInstanceConfigurationTimeouts;
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumesAttachDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#device CoreInstanceConfiguration#device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#device CoreInstanceConfiguration#device}
   */
   readonly device?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_read_only CoreInstanceConfiguration#is_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_read_only CoreInstanceConfiguration#is_read_only}
   */
   readonly isReadOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_shareable CoreInstanceConfiguration#is_shareable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_shareable CoreInstanceConfiguration#is_shareable}
   */
   readonly isShareable?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#use_chap CoreInstanceConfiguration#use_chap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#use_chap CoreInstanceConfiguration#use_chap}
   */
   readonly useChap?: boolean | cdktf.IResolvable;
 }
@@ -332,11 +332,11 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesAttachDetailsOu
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsAutotunePolicies {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#autotune_type CoreInstanceConfiguration#autotune_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#autotune_type CoreInstanceConfiguration#autotune_type}
   */
   readonly autotuneType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#max_vpus_per_gb CoreInstanceConfiguration#max_vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#max_vpus_per_gb CoreInstanceConfiguration#max_vpus_per_gb}
   */
   readonly maxVpusPerGb?: string;
 }
@@ -478,11 +478,11 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsAu
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsBlockVolumeReplicas {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
 }
@@ -592,14 +592,14 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsBl
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsSourceDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -709,69 +709,69 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsSo
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#backup_policy_id CoreInstanceConfiguration#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#backup_policy_id CoreInstanceConfiguration#backup_policy_id}
   */
   readonly backupPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
   */
   readonly clusterPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_auto_tune_enabled CoreInstanceConfiguration#is_auto_tune_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_auto_tune_enabled CoreInstanceConfiguration#is_auto_tune_enabled}
   */
   readonly isAutoTuneEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#size_in_gbs CoreInstanceConfiguration#size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#size_in_gbs CoreInstanceConfiguration#size_in_gbs}
   */
   readonly sizeInGbs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#vpus_per_gb CoreInstanceConfiguration#vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#vpus_per_gb CoreInstanceConfiguration#vpus_per_gb}
   */
   readonly vpusPerGb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#xrc_kms_key_id CoreInstanceConfiguration#xrc_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#xrc_kms_key_id CoreInstanceConfiguration#xrc_kms_key_id}
   */
   readonly xrcKmsKeyId?: string;
   /**
   * autotune_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#autotune_policies CoreInstanceConfiguration#autotune_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#autotune_policies CoreInstanceConfiguration#autotune_policies}
   */
   readonly autotunePolicies?: CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsAutotunePolicies[] | cdktf.IResolvable;
   /**
   * block_volume_replicas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#block_volume_replicas CoreInstanceConfiguration#block_volume_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#block_volume_replicas CoreInstanceConfiguration#block_volume_replicas}
   */
   readonly blockVolumeReplicas?: CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsBlockVolumeReplicas;
   /**
   * source_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
   */
   readonly sourceDetails?: CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsSourceDetails;
 }
@@ -1261,19 +1261,19 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetailsOu
 }
 export interface CoreInstanceConfigurationInstanceDetailsBlockVolumes {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#volume_id CoreInstanceConfiguration#volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#volume_id CoreInstanceConfiguration#volume_id}
   */
   readonly volumeId?: string;
   /**
   * attach_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#attach_details CoreInstanceConfiguration#attach_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#attach_details CoreInstanceConfiguration#attach_details}
   */
   readonly attachDetails?: CoreInstanceConfigurationInstanceDetailsBlockVolumesAttachDetails;
   /**
   * create_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_details CoreInstanceConfiguration#create_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_details CoreInstanceConfiguration#create_details}
   */
   readonly createDetails?: CoreInstanceConfigurationInstanceDetailsBlockVolumesCreateDetails;
 }
@@ -1447,11 +1447,11 @@ export class CoreInstanceConfigurationInstanceDetailsBlockVolumesList extends cd
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfigPluginsConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#desired_state CoreInstanceConfiguration#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#desired_state CoreInstanceConfiguration#desired_state}
   */
   readonly desiredState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#name CoreInstanceConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#name CoreInstanceConfiguration#name}
   */
   readonly name?: string;
 }
@@ -1596,21 +1596,21 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfigPlu
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_all_plugins_disabled CoreInstanceConfiguration#are_all_plugins_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_all_plugins_disabled CoreInstanceConfiguration#are_all_plugins_disabled}
   */
   readonly areAllPluginsDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_management_disabled CoreInstanceConfiguration#is_management_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_management_disabled CoreInstanceConfiguration#is_management_disabled}
   */
   readonly isManagementDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_monitoring_disabled CoreInstanceConfiguration#is_monitoring_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_monitoring_disabled CoreInstanceConfiguration#is_monitoring_disabled}
   */
   readonly isMonitoringDisabled?: boolean | cdktf.IResolvable;
   /**
   * plugins_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#plugins_config CoreInstanceConfiguration#plugins_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#plugins_config CoreInstanceConfiguration#plugins_config}
   */
   readonly pluginsConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfigPluginsConfig[] | cdktf.IResolvable;
 }
@@ -1781,11 +1781,11 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfigOut
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsAvailabilityConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_live_migration_preferred CoreInstanceConfiguration#is_live_migration_preferred}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_live_migration_preferred CoreInstanceConfiguration#is_live_migration_preferred}
   */
   readonly isLiveMigrationPreferred?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#recovery_action CoreInstanceConfiguration#recovery_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#recovery_action CoreInstanceConfiguration#recovery_action}
   */
   readonly recoveryAction?: string;
 }
@@ -1898,11 +1898,11 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsAvailabilityCo
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
   */
   readonly ipv6SubnetCidr?: string;
 }
@@ -2047,57 +2047,57 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDeta
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
   */
   readonly assignIpv6Ip?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
   */
   readonly assignPrivateDnsRecord?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
   */
   readonly hostnameLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
   */
   readonly nsgIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
   */
   readonly privateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
   */
   readonly skipSourceDestCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * ipv6address_ipv6subnet_cidr_pair_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
   */
   readonly ipv6AddressIpv6SubnetCidrPairDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails[] | cdktf.IResolvable;
 }
@@ -2529,7 +2529,7 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDeta
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsInstanceOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_legacy_imds_endpoints_disabled CoreInstanceConfiguration#are_legacy_imds_endpoints_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_legacy_imds_endpoints_disabled CoreInstanceConfiguration#are_legacy_imds_endpoints_disabled}
   */
   readonly areLegacyImdsEndpointsDisabled?: boolean | cdktf.IResolvable;
 }
@@ -2613,27 +2613,27 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsInstanceOption
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsLaunchOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_type CoreInstanceConfiguration#boot_volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_type CoreInstanceConfiguration#boot_volume_type}
   */
   readonly bootVolumeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#firmware CoreInstanceConfiguration#firmware}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#firmware CoreInstanceConfiguration#firmware}
   */
   readonly firmware?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_consistent_volume_naming_enabled CoreInstanceConfiguration#is_consistent_volume_naming_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_consistent_volume_naming_enabled CoreInstanceConfiguration#is_consistent_volume_naming_enabled}
   */
   readonly isConsistentVolumeNamingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#network_type CoreInstanceConfiguration#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#network_type CoreInstanceConfiguration#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#remote_data_volume_type CoreInstanceConfiguration#remote_data_volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#remote_data_volume_type CoreInstanceConfiguration#remote_data_volume_type}
   */
   readonly remoteDataVolumeType?: string;
 }
@@ -2862,11 +2862,11 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsLaunchOptionsO
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsLicensingConfigs {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#license_type CoreInstanceConfiguration#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#license_type CoreInstanceConfiguration#license_type}
   */
   readonly licenseType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -2974,53 +2974,164 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsLicensingConfi
     return this._type;
   }
 }
+export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compute_host_group_id CoreInstanceConfiguration#compute_host_group_id}
+  */
+  readonly computeHostGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  */
+  readonly type: string;
+}
+
+export function coreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsToTerraform(struct?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsOutputReference | CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    compute_host_group_id: cdktf.stringToTerraform(struct!.computeHostGroupId),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function coreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsToHclTerraform(struct?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsOutputReference | CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    compute_host_group_id: {
+      value: cdktf.stringToHclTerraform(struct!.computeHostGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._computeHostGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computeHostGroupId = this._computeHostGroupId;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._computeHostGroupId = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._computeHostGroupId = value.computeHostGroupId;
+      this._type = value.type;
+    }
+  }
+
+  // compute_host_group_id - computed: false, optional: false, required: true
+  private _computeHostGroupId?: string; 
+  public get computeHostGroupId() {
+    return this.getStringAttribute('compute_host_group_id');
+  }
+  public set computeHostGroupId(value: string) {
+    this._computeHostGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeHostGroupIdInput() {
+    return this._computeHostGroupId;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_virtual_instructions_enabled CoreInstanceConfiguration#are_virtual_instructions_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_virtual_instructions_enabled CoreInstanceConfiguration#are_virtual_instructions_enabled}
   */
   readonly areVirtualInstructionsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#config_map CoreInstanceConfiguration#config_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#config_map CoreInstanceConfiguration#config_map}
   */
   readonly configMap?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_access_control_service_enabled CoreInstanceConfiguration#is_access_control_service_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_access_control_service_enabled CoreInstanceConfiguration#is_access_control_service_enabled}
   */
   readonly isAccessControlServiceEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_input_output_memory_management_unit_enabled CoreInstanceConfiguration#is_input_output_memory_management_unit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_input_output_memory_management_unit_enabled CoreInstanceConfiguration#is_input_output_memory_management_unit_enabled}
   */
   readonly isInputOutputMemoryManagementUnitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_measured_boot_enabled CoreInstanceConfiguration#is_measured_boot_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_measured_boot_enabled CoreInstanceConfiguration#is_measured_boot_enabled}
   */
   readonly isMeasuredBootEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_memory_encryption_enabled CoreInstanceConfiguration#is_memory_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_memory_encryption_enabled CoreInstanceConfiguration#is_memory_encryption_enabled}
   */
   readonly isMemoryEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_secure_boot_enabled CoreInstanceConfiguration#is_secure_boot_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_secure_boot_enabled CoreInstanceConfiguration#is_secure_boot_enabled}
   */
   readonly isSecureBootEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_symmetric_multi_threading_enabled CoreInstanceConfiguration#is_symmetric_multi_threading_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_symmetric_multi_threading_enabled CoreInstanceConfiguration#is_symmetric_multi_threading_enabled}
   */
   readonly isSymmetricMultiThreadingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_trusted_platform_module_enabled CoreInstanceConfiguration#is_trusted_platform_module_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_trusted_platform_module_enabled CoreInstanceConfiguration#is_trusted_platform_module_enabled}
   */
   readonly isTrustedPlatformModuleEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#numa_nodes_per_socket CoreInstanceConfiguration#numa_nodes_per_socket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#numa_nodes_per_socket CoreInstanceConfiguration#numa_nodes_per_socket}
   */
   readonly numaNodesPerSocket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#percentage_of_cores_enabled CoreInstanceConfiguration#percentage_of_cores_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#percentage_of_cores_enabled CoreInstanceConfiguration#percentage_of_cores_enabled}
   */
   readonly percentageOfCoresEnabled?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -3420,11 +3531,11 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfig
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibleInstanceConfigPreemptionAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preserve_boot_volume CoreInstanceConfiguration#preserve_boot_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preserve_boot_volume CoreInstanceConfiguration#preserve_boot_volume}
   */
   readonly preserveBootVolume?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -3536,7 +3647,7 @@ export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibl
   /**
   * preemption_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preemption_action CoreInstanceConfiguration#preemption_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preemption_action CoreInstanceConfiguration#preemption_action}
   */
   readonly preemptionAction?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibleInstanceConfigPreemptionAction;
 }
@@ -3620,23 +3731,23 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibleIns
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsShapeConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#baseline_ocpu_utilization CoreInstanceConfiguration#baseline_ocpu_utilization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#baseline_ocpu_utilization CoreInstanceConfiguration#baseline_ocpu_utilization}
   */
   readonly baselineOcpuUtilization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#memory_in_gbs CoreInstanceConfiguration#memory_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#memory_in_gbs CoreInstanceConfiguration#memory_in_gbs}
   */
   readonly memoryInGbs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nvmes CoreInstanceConfiguration#nvmes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nvmes CoreInstanceConfiguration#nvmes}
   */
   readonly nvmes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ocpus CoreInstanceConfiguration#ocpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ocpus CoreInstanceConfiguration#ocpus}
   */
   readonly ocpus?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#vcpus CoreInstanceConfiguration#vcpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#vcpus CoreInstanceConfiguration#vcpus}
   */
   readonly vcpus?: number;
 }
@@ -3836,19 +3947,19 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsShapeConfigOut
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetailsInstanceSourceImageFilterDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags_filter CoreInstanceConfiguration#defined_tags_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags_filter CoreInstanceConfiguration#defined_tags_filter}
   */
   readonly definedTagsFilter?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#operating_system CoreInstanceConfiguration#operating_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#operating_system CoreInstanceConfiguration#operating_system}
   */
   readonly operatingSystem?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#operating_system_version CoreInstanceConfiguration#operating_system_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#operating_system_version CoreInstanceConfiguration#operating_system_version}
   */
   readonly operatingSystemVersion?: string;
 }
@@ -4019,33 +4130,33 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetailsI
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_id CoreInstanceConfiguration#boot_volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_id CoreInstanceConfiguration#boot_volume_id}
   */
   readonly bootVolumeId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_size_in_gbs CoreInstanceConfiguration#boot_volume_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_size_in_gbs CoreInstanceConfiguration#boot_volume_size_in_gbs}
   */
   readonly bootVolumeSizeInGbs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_vpus_per_gb CoreInstanceConfiguration#boot_volume_vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_vpus_per_gb CoreInstanceConfiguration#boot_volume_vpus_per_gb}
   */
   readonly bootVolumeVpusPerGb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#image_id CoreInstanceConfiguration#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#image_id CoreInstanceConfiguration#image_id}
   */
   readonly imageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_type CoreInstanceConfiguration#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_type CoreInstanceConfiguration#source_type}
   */
   readonly sourceType: string;
   /**
   * instance_source_image_filter_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_source_image_filter_details CoreInstanceConfiguration#instance_source_image_filter_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_source_image_filter_details CoreInstanceConfiguration#instance_source_image_filter_details}
   */
   readonly instanceSourceImageFilterDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetailsInstanceSourceImageFilterDetails;
 }
@@ -4300,131 +4411,141 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetailsO
 }
 export interface CoreInstanceConfigurationInstanceDetailsLaunchDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#capacity_reservation_id CoreInstanceConfiguration#capacity_reservation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#capacity_reservation_id CoreInstanceConfiguration#capacity_reservation_id}
   */
   readonly capacityReservationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
   */
   readonly clusterPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#dedicated_vm_host_id CoreInstanceConfiguration#dedicated_vm_host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compute_cluster_id CoreInstanceConfiguration#compute_cluster_id}
+  */
+  readonly computeClusterId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#dedicated_vm_host_id CoreInstanceConfiguration#dedicated_vm_host_id}
   */
   readonly dedicatedVmHostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#extended_metadata CoreInstanceConfiguration#extended_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#extended_metadata CoreInstanceConfiguration#extended_metadata}
   */
   readonly extendedMetadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#fault_domain CoreInstanceConfiguration#fault_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#fault_domain CoreInstanceConfiguration#fault_domain}
   */
   readonly faultDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipxe_script CoreInstanceConfiguration#ipxe_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipxe_script CoreInstanceConfiguration#ipxe_script}
   */
   readonly ipxeScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_mode CoreInstanceConfiguration#launch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_mode CoreInstanceConfiguration#launch_mode}
   */
   readonly launchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#metadata CoreInstanceConfiguration#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#metadata CoreInstanceConfiguration#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preferred_maintenance_action CoreInstanceConfiguration#preferred_maintenance_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preferred_maintenance_action CoreInstanceConfiguration#preferred_maintenance_action}
   */
   readonly preferredMaintenanceAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#shape CoreInstanceConfiguration#shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#shape CoreInstanceConfiguration#shape}
   */
   readonly shape?: string;
   /**
   * agent_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#agent_config CoreInstanceConfiguration#agent_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#agent_config CoreInstanceConfiguration#agent_config}
   */
   readonly agentConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsAgentConfig;
   /**
   * availability_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_config CoreInstanceConfiguration#availability_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_config CoreInstanceConfiguration#availability_config}
   */
   readonly availabilityConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsAvailabilityConfig;
   /**
   * create_vnic_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
   */
   readonly createVnicDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsCreateVnicDetails;
   /**
   * instance_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_options CoreInstanceConfiguration#instance_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_options CoreInstanceConfiguration#instance_options}
   */
   readonly instanceOptions?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsInstanceOptions;
   /**
   * launch_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_options CoreInstanceConfiguration#launch_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_options CoreInstanceConfiguration#launch_options}
   */
   readonly launchOptions?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsLaunchOptions;
   /**
   * licensing_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#licensing_configs CoreInstanceConfiguration#licensing_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#licensing_configs CoreInstanceConfiguration#licensing_configs}
   */
   readonly licensingConfigs?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsLicensingConfigs;
   /**
+  * placement_constraint_details block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#placement_constraint_details CoreInstanceConfiguration#placement_constraint_details}
+  */
+  readonly placementConstraintDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails;
+  /**
   * platform_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#platform_config CoreInstanceConfiguration#platform_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#platform_config CoreInstanceConfiguration#platform_config}
   */
   readonly platformConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfig;
   /**
   * preemptible_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preemptible_instance_config CoreInstanceConfiguration#preemptible_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preemptible_instance_config CoreInstanceConfiguration#preemptible_instance_config}
   */
   readonly preemptibleInstanceConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibleInstanceConfig;
   /**
   * shape_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#shape_config CoreInstanceConfiguration#shape_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#shape_config CoreInstanceConfiguration#shape_config}
   */
   readonly shapeConfig?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsShapeConfig;
   /**
   * source_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
   */
   readonly sourceDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetailsSourceDetails;
 }
@@ -4439,6 +4560,7 @@ export function coreInstanceConfigurationInstanceDetailsLaunchDetailsToTerraform
     capacity_reservation_id: cdktf.stringToTerraform(struct!.capacityReservationId),
     cluster_placement_group_id: cdktf.stringToTerraform(struct!.clusterPlacementGroupId),
     compartment_id: cdktf.stringToTerraform(struct!.compartmentId),
+    compute_cluster_id: cdktf.stringToTerraform(struct!.computeClusterId),
     dedicated_vm_host_id: cdktf.stringToTerraform(struct!.dedicatedVmHostId),
     defined_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.definedTags),
     display_name: cdktf.stringToTerraform(struct!.displayName),
@@ -4458,6 +4580,7 @@ export function coreInstanceConfigurationInstanceDetailsLaunchDetailsToTerraform
     instance_options: coreInstanceConfigurationInstanceDetailsLaunchDetailsInstanceOptionsToTerraform(struct!.instanceOptions),
     launch_options: coreInstanceConfigurationInstanceDetailsLaunchDetailsLaunchOptionsToTerraform(struct!.launchOptions),
     licensing_configs: coreInstanceConfigurationInstanceDetailsLaunchDetailsLicensingConfigsToTerraform(struct!.licensingConfigs),
+    placement_constraint_details: coreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsToTerraform(struct!.placementConstraintDetails),
     platform_config: coreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfigToTerraform(struct!.platformConfig),
     preemptible_instance_config: coreInstanceConfigurationInstanceDetailsLaunchDetailsPreemptibleInstanceConfigToTerraform(struct!.preemptibleInstanceConfig),
     shape_config: coreInstanceConfigurationInstanceDetailsLaunchDetailsShapeConfigToTerraform(struct!.shapeConfig),
@@ -4492,6 +4615,12 @@ export function coreInstanceConfigurationInstanceDetailsLaunchDetailsToHclTerraf
     },
     compartment_id: {
       value: cdktf.stringToHclTerraform(struct!.compartmentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    compute_cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.computeClusterId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -4610,6 +4739,12 @@ export function coreInstanceConfigurationInstanceDetailsLaunchDetailsToHclTerraf
       type: "list",
       storageClassType: "CoreInstanceConfigurationInstanceDetailsLaunchDetailsLicensingConfigsList",
     },
+    placement_constraint_details: {
+      value: coreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsToHclTerraform(struct!.placementConstraintDetails),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsList",
+    },
     platform_config: {
       value: coreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfigToHclTerraform(struct!.platformConfig),
       isBlock: true,
@@ -4669,6 +4804,10 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
     if (this._compartmentId !== undefined) {
       hasAnyValues = true;
       internalValueResult.compartmentId = this._compartmentId;
+    }
+    if (this._computeClusterId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computeClusterId = this._computeClusterId;
     }
     if (this._dedicatedVmHostId !== undefined) {
       hasAnyValues = true;
@@ -4746,6 +4885,10 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
       hasAnyValues = true;
       internalValueResult.licensingConfigs = this._licensingConfigs?.internalValue;
     }
+    if (this._placementConstraintDetails?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placementConstraintDetails = this._placementConstraintDetails?.internalValue;
+    }
     if (this._platformConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.platformConfig = this._platformConfig?.internalValue;
@@ -4772,6 +4915,7 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
       this._capacityReservationId = undefined;
       this._clusterPlacementGroupId = undefined;
       this._compartmentId = undefined;
+      this._computeClusterId = undefined;
       this._dedicatedVmHostId = undefined;
       this._definedTags = undefined;
       this._displayName = undefined;
@@ -4791,6 +4935,7 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
       this._instanceOptions.internalValue = undefined;
       this._launchOptions.internalValue = undefined;
       this._licensingConfigs.internalValue = undefined;
+      this._placementConstraintDetails.internalValue = undefined;
       this._platformConfig.internalValue = undefined;
       this._preemptibleInstanceConfig.internalValue = undefined;
       this._shapeConfig.internalValue = undefined;
@@ -4802,6 +4947,7 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
       this._capacityReservationId = value.capacityReservationId;
       this._clusterPlacementGroupId = value.clusterPlacementGroupId;
       this._compartmentId = value.compartmentId;
+      this._computeClusterId = value.computeClusterId;
       this._dedicatedVmHostId = value.dedicatedVmHostId;
       this._definedTags = value.definedTags;
       this._displayName = value.displayName;
@@ -4821,6 +4967,7 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
       this._instanceOptions.internalValue = value.instanceOptions;
       this._launchOptions.internalValue = value.launchOptions;
       this._licensingConfigs.internalValue = value.licensingConfigs;
+      this._placementConstraintDetails.internalValue = value.placementConstraintDetails;
       this._platformConfig.internalValue = value.platformConfig;
       this._preemptibleInstanceConfig.internalValue = value.preemptibleInstanceConfig;
       this._shapeConfig.internalValue = value.shapeConfig;
@@ -4890,6 +5037,22 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
   // Temporarily expose input value. Use with caution.
   public get compartmentIdInput() {
     return this._compartmentId;
+  }
+
+  // compute_cluster_id - computed: true, optional: true, required: false
+  private _computeClusterId?: string; 
+  public get computeClusterId() {
+    return this.getStringAttribute('compute_cluster_id');
+  }
+  public set computeClusterId(value: string) {
+    this._computeClusterId = value;
+  }
+  public resetComputeClusterId() {
+    this._computeClusterId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeClusterIdInput() {
+    return this._computeClusterId;
   }
 
   // dedicated_vm_host_id - computed: true, optional: true, required: false
@@ -5196,6 +5359,22 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
     return this._licensingConfigs.internalValue;
   }
 
+  // placement_constraint_details - computed: false, optional: true, required: false
+  private _placementConstraintDetails = new CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetailsOutputReference(this, "placement_constraint_details");
+  public get placementConstraintDetails() {
+    return this._placementConstraintDetails;
+  }
+  public putPlacementConstraintDetails(value: CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlacementConstraintDetails) {
+    this._placementConstraintDetails.internalValue = value;
+  }
+  public resetPlacementConstraintDetails() {
+    this._placementConstraintDetails.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementConstraintDetailsInput() {
+    return this._placementConstraintDetails.internalValue;
+  }
+
   // platform_config - computed: false, optional: true, required: false
   private _platformConfig = new CoreInstanceConfigurationInstanceDetailsLaunchDetailsPlatformConfigOutputReference(this, "platform_config");
   public get platformConfig() {
@@ -5262,31 +5441,31 @@ export class CoreInstanceConfigurationInstanceDetailsLaunchDetailsOutputReferenc
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesAttachDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#device CoreInstanceConfiguration#device}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#device CoreInstanceConfiguration#device}
   */
   readonly device?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_read_only CoreInstanceConfiguration#is_read_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_read_only CoreInstanceConfiguration#is_read_only}
   */
   readonly isReadOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_shareable CoreInstanceConfiguration#is_shareable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_shareable CoreInstanceConfiguration#is_shareable}
   */
   readonly isShareable?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#use_chap CoreInstanceConfiguration#use_chap}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#use_chap CoreInstanceConfiguration#use_chap}
   */
   readonly useChap?: boolean | cdktf.IResolvable;
 }
@@ -5541,11 +5720,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesAttachDe
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsAutotunePolicies {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#autotune_type CoreInstanceConfiguration#autotune_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#autotune_type CoreInstanceConfiguration#autotune_type}
   */
   readonly autotuneType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#max_vpus_per_gb CoreInstanceConfiguration#max_vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#max_vpus_per_gb CoreInstanceConfiguration#max_vpus_per_gb}
   */
   readonly maxVpusPerGb?: string;
 }
@@ -5687,11 +5866,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDe
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsBlockVolumeReplicas {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
 }
@@ -5801,14 +5980,14 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDe
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsSourceDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#id CoreInstanceConfiguration#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -5918,69 +6097,69 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDe
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#backup_policy_id CoreInstanceConfiguration#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#backup_policy_id CoreInstanceConfiguration#backup_policy_id}
   */
   readonly backupPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
   */
   readonly clusterPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_auto_tune_enabled CoreInstanceConfiguration#is_auto_tune_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_auto_tune_enabled CoreInstanceConfiguration#is_auto_tune_enabled}
   */
   readonly isAutoTuneEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#size_in_gbs CoreInstanceConfiguration#size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#size_in_gbs CoreInstanceConfiguration#size_in_gbs}
   */
   readonly sizeInGbs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#vpus_per_gb CoreInstanceConfiguration#vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#vpus_per_gb CoreInstanceConfiguration#vpus_per_gb}
   */
   readonly vpusPerGb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#xrc_kms_key_id CoreInstanceConfiguration#xrc_kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#xrc_kms_key_id CoreInstanceConfiguration#xrc_kms_key_id}
   */
   readonly xrcKmsKeyId?: string;
   /**
   * autotune_policies block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#autotune_policies CoreInstanceConfiguration#autotune_policies}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#autotune_policies CoreInstanceConfiguration#autotune_policies}
   */
   readonly autotunePolicies?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsAutotunePolicies[] | cdktf.IResolvable;
   /**
   * block_volume_replicas block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#block_volume_replicas CoreInstanceConfiguration#block_volume_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#block_volume_replicas CoreInstanceConfiguration#block_volume_replicas}
   */
   readonly blockVolumeReplicas?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsBlockVolumeReplicas;
   /**
   * source_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
   */
   readonly sourceDetails?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetailsSourceDetails;
 }
@@ -6470,19 +6649,19 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDe
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumes {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#volume_id CoreInstanceConfiguration#volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#volume_id CoreInstanceConfiguration#volume_id}
   */
   readonly volumeId?: string;
   /**
   * attach_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#attach_details CoreInstanceConfiguration#attach_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#attach_details CoreInstanceConfiguration#attach_details}
   */
   readonly attachDetails?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesAttachDetails;
   /**
   * create_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_details CoreInstanceConfiguration#create_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_details CoreInstanceConfiguration#create_details}
   */
   readonly createDetails?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesCreateDetails;
 }
@@ -6656,11 +6835,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumesList ext
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentConfigPluginsConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#desired_state CoreInstanceConfiguration#desired_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#desired_state CoreInstanceConfiguration#desired_state}
   */
   readonly desiredState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#name CoreInstanceConfiguration#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#name CoreInstanceConfiguration#name}
   */
   readonly name?: string;
 }
@@ -6805,21 +6984,21 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentCo
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_all_plugins_disabled CoreInstanceConfiguration#are_all_plugins_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_all_plugins_disabled CoreInstanceConfiguration#are_all_plugins_disabled}
   */
   readonly areAllPluginsDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_management_disabled CoreInstanceConfiguration#is_management_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_management_disabled CoreInstanceConfiguration#is_management_disabled}
   */
   readonly isManagementDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_monitoring_disabled CoreInstanceConfiguration#is_monitoring_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_monitoring_disabled CoreInstanceConfiguration#is_monitoring_disabled}
   */
   readonly isMonitoringDisabled?: boolean | cdktf.IResolvable;
   /**
   * plugins_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#plugins_config CoreInstanceConfiguration#plugins_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#plugins_config CoreInstanceConfiguration#plugins_config}
   */
   readonly pluginsConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentConfigPluginsConfig[] | cdktf.IResolvable;
 }
@@ -6990,11 +7169,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentCo
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAvailabilityConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_live_migration_preferred CoreInstanceConfiguration#is_live_migration_preferred}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_live_migration_preferred CoreInstanceConfiguration#is_live_migration_preferred}
   */
   readonly isLiveMigrationPreferred?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#recovery_action CoreInstanceConfiguration#recovery_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#recovery_action CoreInstanceConfiguration#recovery_action}
   */
   readonly recoveryAction?: string;
 }
@@ -7107,11 +7286,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAvailab
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
   */
   readonly ipv6SubnetCidr?: string;
 }
@@ -7256,57 +7435,57 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateV
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateVnicDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
   */
   readonly assignIpv6Ip?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
   */
   readonly assignPrivateDnsRecord?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
   */
   readonly hostnameLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
   */
   readonly nsgIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
   */
   readonly privateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
   */
   readonly skipSourceDestCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * ipv6address_ipv6subnet_cidr_pair_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
   */
   readonly ipv6AddressIpv6SubnetCidrPairDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails[] | cdktf.IResolvable;
 }
@@ -7738,7 +7917,7 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateV
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsInstanceOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_legacy_imds_endpoints_disabled CoreInstanceConfiguration#are_legacy_imds_endpoints_disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_legacy_imds_endpoints_disabled CoreInstanceConfiguration#are_legacy_imds_endpoints_disabled}
   */
   readonly areLegacyImdsEndpointsDisabled?: boolean | cdktf.IResolvable;
 }
@@ -7822,27 +8001,27 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsInstanc
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLaunchOptions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_type CoreInstanceConfiguration#boot_volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_type CoreInstanceConfiguration#boot_volume_type}
   */
   readonly bootVolumeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#firmware CoreInstanceConfiguration#firmware}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#firmware CoreInstanceConfiguration#firmware}
   */
   readonly firmware?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_consistent_volume_naming_enabled CoreInstanceConfiguration#is_consistent_volume_naming_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_consistent_volume_naming_enabled CoreInstanceConfiguration#is_consistent_volume_naming_enabled}
   */
   readonly isConsistentVolumeNamingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#network_type CoreInstanceConfiguration#network_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#network_type CoreInstanceConfiguration#network_type}
   */
   readonly networkType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#remote_data_volume_type CoreInstanceConfiguration#remote_data_volume_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#remote_data_volume_type CoreInstanceConfiguration#remote_data_volume_type}
   */
   readonly remoteDataVolumeType?: string;
 }
@@ -8071,11 +8250,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLaunchO
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLicensingConfigs {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#license_type CoreInstanceConfiguration#license_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#license_type CoreInstanceConfiguration#license_type}
   */
   readonly licenseType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -8183,49 +8362,160 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLicensi
     return this._type;
   }
 }
+export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compute_host_group_id CoreInstanceConfiguration#compute_host_group_id}
+  */
+  readonly computeHostGroupId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  */
+  readonly type: string;
+}
+
+export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsToTerraform(struct?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsOutputReference | CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    compute_host_group_id: cdktf.stringToTerraform(struct!.computeHostGroupId),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsToHclTerraform(struct?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsOutputReference | CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    compute_host_group_id: {
+      value: cdktf.stringToHclTerraform(struct!.computeHostGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._computeHostGroupId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computeHostGroupId = this._computeHostGroupId;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._computeHostGroupId = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._computeHostGroupId = value.computeHostGroupId;
+      this._type = value.type;
+    }
+  }
+
+  // compute_host_group_id - computed: false, optional: false, required: true
+  private _computeHostGroupId?: string; 
+  public get computeHostGroupId() {
+    return this.getStringAttribute('compute_host_group_id');
+  }
+  public set computeHostGroupId(value: string) {
+    this._computeHostGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeHostGroupIdInput() {
+    return this._computeHostGroupId;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatformConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#are_virtual_instructions_enabled CoreInstanceConfiguration#are_virtual_instructions_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#are_virtual_instructions_enabled CoreInstanceConfiguration#are_virtual_instructions_enabled}
   */
   readonly areVirtualInstructionsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_access_control_service_enabled CoreInstanceConfiguration#is_access_control_service_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_access_control_service_enabled CoreInstanceConfiguration#is_access_control_service_enabled}
   */
   readonly isAccessControlServiceEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_input_output_memory_management_unit_enabled CoreInstanceConfiguration#is_input_output_memory_management_unit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_input_output_memory_management_unit_enabled CoreInstanceConfiguration#is_input_output_memory_management_unit_enabled}
   */
   readonly isInputOutputMemoryManagementUnitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_measured_boot_enabled CoreInstanceConfiguration#is_measured_boot_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_measured_boot_enabled CoreInstanceConfiguration#is_measured_boot_enabled}
   */
   readonly isMeasuredBootEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_memory_encryption_enabled CoreInstanceConfiguration#is_memory_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_memory_encryption_enabled CoreInstanceConfiguration#is_memory_encryption_enabled}
   */
   readonly isMemoryEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_secure_boot_enabled CoreInstanceConfiguration#is_secure_boot_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_secure_boot_enabled CoreInstanceConfiguration#is_secure_boot_enabled}
   */
   readonly isSecureBootEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_symmetric_multi_threading_enabled CoreInstanceConfiguration#is_symmetric_multi_threading_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_symmetric_multi_threading_enabled CoreInstanceConfiguration#is_symmetric_multi_threading_enabled}
   */
   readonly isSymmetricMultiThreadingEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_trusted_platform_module_enabled CoreInstanceConfiguration#is_trusted_platform_module_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_trusted_platform_module_enabled CoreInstanceConfiguration#is_trusted_platform_module_enabled}
   */
   readonly isTrustedPlatformModuleEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#numa_nodes_per_socket CoreInstanceConfiguration#numa_nodes_per_socket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#numa_nodes_per_socket CoreInstanceConfiguration#numa_nodes_per_socket}
   */
   readonly numaNodesPerSocket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#percentage_of_cores_enabled CoreInstanceConfiguration#percentage_of_cores_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#percentage_of_cores_enabled CoreInstanceConfiguration#percentage_of_cores_enabled}
   */
   readonly percentageOfCoresEnabled?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -8596,11 +8886,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatfor
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPreemptibleInstanceConfigPreemptionAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preserve_boot_volume CoreInstanceConfiguration#preserve_boot_volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preserve_boot_volume CoreInstanceConfiguration#preserve_boot_volume}
   */
   readonly preserveBootVolume?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#type CoreInstanceConfiguration#type}
   */
   readonly type: string;
 }
@@ -8712,7 +9002,7 @@ export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPre
   /**
   * preemption_action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preemption_action CoreInstanceConfiguration#preemption_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preemption_action CoreInstanceConfiguration#preemption_action}
   */
   readonly preemptionAction?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPreemptibleInstanceConfigPreemptionAction;
 }
@@ -8796,23 +9086,23 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPreempt
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsShapeConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#baseline_ocpu_utilization CoreInstanceConfiguration#baseline_ocpu_utilization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#baseline_ocpu_utilization CoreInstanceConfiguration#baseline_ocpu_utilization}
   */
   readonly baselineOcpuUtilization?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#memory_in_gbs CoreInstanceConfiguration#memory_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#memory_in_gbs CoreInstanceConfiguration#memory_in_gbs}
   */
   readonly memoryInGbs?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nvmes CoreInstanceConfiguration#nvmes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nvmes CoreInstanceConfiguration#nvmes}
   */
   readonly nvmes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ocpus CoreInstanceConfiguration#ocpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ocpus CoreInstanceConfiguration#ocpus}
   */
   readonly ocpus?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#vcpus CoreInstanceConfiguration#vcpus}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#vcpus CoreInstanceConfiguration#vcpus}
   */
   readonly vcpus?: number;
 }
@@ -9012,19 +9302,19 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsShapeCo
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceDetailsInstanceSourceImageFilterDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags_filter CoreInstanceConfiguration#defined_tags_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags_filter CoreInstanceConfiguration#defined_tags_filter}
   */
   readonly definedTagsFilter?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#operating_system CoreInstanceConfiguration#operating_system}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#operating_system CoreInstanceConfiguration#operating_system}
   */
   readonly operatingSystem?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#operating_system_version CoreInstanceConfiguration#operating_system_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#operating_system_version CoreInstanceConfiguration#operating_system_version}
   */
   readonly operatingSystemVersion?: string;
 }
@@ -9195,33 +9485,33 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceD
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_id CoreInstanceConfiguration#boot_volume_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_id CoreInstanceConfiguration#boot_volume_id}
   */
   readonly bootVolumeId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_size_in_gbs CoreInstanceConfiguration#boot_volume_size_in_gbs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_size_in_gbs CoreInstanceConfiguration#boot_volume_size_in_gbs}
   */
   readonly bootVolumeSizeInGbs?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#boot_volume_vpus_per_gb CoreInstanceConfiguration#boot_volume_vpus_per_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#boot_volume_vpus_per_gb CoreInstanceConfiguration#boot_volume_vpus_per_gb}
   */
   readonly bootVolumeVpusPerGb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#image_id CoreInstanceConfiguration#image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#image_id CoreInstanceConfiguration#image_id}
   */
   readonly imageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#kms_key_id CoreInstanceConfiguration#kms_key_id}
   */
   readonly kmsKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_type CoreInstanceConfiguration#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_type CoreInstanceConfiguration#source_type}
   */
   readonly sourceType: string;
   /**
   * instance_source_image_filter_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_source_image_filter_details CoreInstanceConfiguration#instance_source_image_filter_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_source_image_filter_details CoreInstanceConfiguration#instance_source_image_filter_details}
   */
   readonly instanceSourceImageFilterDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceDetailsInstanceSourceImageFilterDetails;
 }
@@ -9476,131 +9766,141 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceD
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_domain CoreInstanceConfiguration#availability_domain}
   */
   readonly availabilityDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#capacity_reservation_id CoreInstanceConfiguration#capacity_reservation_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#capacity_reservation_id CoreInstanceConfiguration#capacity_reservation_id}
   */
   readonly capacityReservationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#cluster_placement_group_id CoreInstanceConfiguration#cluster_placement_group_id}
   */
   readonly clusterPlacementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compartment_id CoreInstanceConfiguration#compartment_id}
   */
   readonly compartmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#dedicated_vm_host_id CoreInstanceConfiguration#dedicated_vm_host_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#compute_cluster_id CoreInstanceConfiguration#compute_cluster_id}
+  */
+  readonly computeClusterId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#dedicated_vm_host_id CoreInstanceConfiguration#dedicated_vm_host_id}
   */
   readonly dedicatedVmHostId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#extended_metadata CoreInstanceConfiguration#extended_metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#extended_metadata CoreInstanceConfiguration#extended_metadata}
   */
   readonly extendedMetadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#fault_domain CoreInstanceConfiguration#fault_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#fault_domain CoreInstanceConfiguration#fault_domain}
   */
   readonly faultDomain?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipxe_script CoreInstanceConfiguration#ipxe_script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipxe_script CoreInstanceConfiguration#ipxe_script}
   */
   readonly ipxeScript?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#is_pv_encryption_in_transit_enabled CoreInstanceConfiguration#is_pv_encryption_in_transit_enabled}
   */
   readonly isPvEncryptionInTransitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_mode CoreInstanceConfiguration#launch_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_mode CoreInstanceConfiguration#launch_mode}
   */
   readonly launchMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#metadata CoreInstanceConfiguration#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#metadata CoreInstanceConfiguration#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preferred_maintenance_action CoreInstanceConfiguration#preferred_maintenance_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preferred_maintenance_action CoreInstanceConfiguration#preferred_maintenance_action}
   */
   readonly preferredMaintenanceAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#shape CoreInstanceConfiguration#shape}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#shape CoreInstanceConfiguration#shape}
   */
   readonly shape?: string;
   /**
   * agent_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#agent_config CoreInstanceConfiguration#agent_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#agent_config CoreInstanceConfiguration#agent_config}
   */
   readonly agentConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAgentConfig;
   /**
   * availability_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#availability_config CoreInstanceConfiguration#availability_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#availability_config CoreInstanceConfiguration#availability_config}
   */
   readonly availabilityConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsAvailabilityConfig;
   /**
   * create_vnic_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
   */
   readonly createVnicDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsCreateVnicDetails;
   /**
   * instance_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_options CoreInstanceConfiguration#instance_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_options CoreInstanceConfiguration#instance_options}
   */
   readonly instanceOptions?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsInstanceOptions;
   /**
   * launch_options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_options CoreInstanceConfiguration#launch_options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_options CoreInstanceConfiguration#launch_options}
   */
   readonly launchOptions?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLaunchOptions;
   /**
   * licensing_configs block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#licensing_configs CoreInstanceConfiguration#licensing_configs}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#licensing_configs CoreInstanceConfiguration#licensing_configs}
   */
   readonly licensingConfigs?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLicensingConfigs;
   /**
+  * placement_constraint_details block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#placement_constraint_details CoreInstanceConfiguration#placement_constraint_details}
+  */
+  readonly placementConstraintDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails;
+  /**
   * platform_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#platform_config CoreInstanceConfiguration#platform_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#platform_config CoreInstanceConfiguration#platform_config}
   */
   readonly platformConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatformConfig;
   /**
   * preemptible_instance_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#preemptible_instance_config CoreInstanceConfiguration#preemptible_instance_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#preemptible_instance_config CoreInstanceConfiguration#preemptible_instance_config}
   */
   readonly preemptibleInstanceConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPreemptibleInstanceConfig;
   /**
   * shape_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#shape_config CoreInstanceConfiguration#shape_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#shape_config CoreInstanceConfiguration#shape_config}
   */
   readonly shapeConfig?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsShapeConfig;
   /**
   * source_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#source_details CoreInstanceConfiguration#source_details}
   */
   readonly sourceDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsSourceDetails;
 }
@@ -9615,6 +9915,7 @@ export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsToTe
     capacity_reservation_id: cdktf.stringToTerraform(struct!.capacityReservationId),
     cluster_placement_group_id: cdktf.stringToTerraform(struct!.clusterPlacementGroupId),
     compartment_id: cdktf.stringToTerraform(struct!.compartmentId),
+    compute_cluster_id: cdktf.stringToTerraform(struct!.computeClusterId),
     dedicated_vm_host_id: cdktf.stringToTerraform(struct!.dedicatedVmHostId),
     defined_tags: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.definedTags),
     display_name: cdktf.stringToTerraform(struct!.displayName),
@@ -9634,6 +9935,7 @@ export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsToTe
     instance_options: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsInstanceOptionsToTerraform(struct!.instanceOptions),
     launch_options: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLaunchOptionsToTerraform(struct!.launchOptions),
     licensing_configs: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLicensingConfigsToTerraform(struct!.licensingConfigs),
+    placement_constraint_details: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsToTerraform(struct!.placementConstraintDetails),
     platform_config: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatformConfigToTerraform(struct!.platformConfig),
     preemptible_instance_config: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPreemptibleInstanceConfigToTerraform(struct!.preemptibleInstanceConfig),
     shape_config: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsShapeConfigToTerraform(struct!.shapeConfig),
@@ -9668,6 +9970,12 @@ export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsToHc
     },
     compartment_id: {
       value: cdktf.stringToHclTerraform(struct!.compartmentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    compute_cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.computeClusterId),
       isBlock: false,
       type: "simple",
       storageClassType: "string",
@@ -9786,6 +10094,12 @@ export function coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsToHc
       type: "list",
       storageClassType: "CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsLicensingConfigsList",
     },
+    placement_constraint_details: {
+      value: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsToHclTerraform(struct!.placementConstraintDetails),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsList",
+    },
     platform_config: {
       value: coreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatformConfigToHclTerraform(struct!.platformConfig),
       isBlock: true,
@@ -9845,6 +10159,10 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
     if (this._compartmentId !== undefined) {
       hasAnyValues = true;
       internalValueResult.compartmentId = this._compartmentId;
+    }
+    if (this._computeClusterId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.computeClusterId = this._computeClusterId;
     }
     if (this._dedicatedVmHostId !== undefined) {
       hasAnyValues = true;
@@ -9922,6 +10240,10 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
       hasAnyValues = true;
       internalValueResult.licensingConfigs = this._licensingConfigs?.internalValue;
     }
+    if (this._placementConstraintDetails?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.placementConstraintDetails = this._placementConstraintDetails?.internalValue;
+    }
     if (this._platformConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.platformConfig = this._platformConfig?.internalValue;
@@ -9948,6 +10270,7 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
       this._capacityReservationId = undefined;
       this._clusterPlacementGroupId = undefined;
       this._compartmentId = undefined;
+      this._computeClusterId = undefined;
       this._dedicatedVmHostId = undefined;
       this._definedTags = undefined;
       this._displayName = undefined;
@@ -9967,6 +10290,7 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
       this._instanceOptions.internalValue = undefined;
       this._launchOptions.internalValue = undefined;
       this._licensingConfigs.internalValue = undefined;
+      this._placementConstraintDetails.internalValue = undefined;
       this._platformConfig.internalValue = undefined;
       this._preemptibleInstanceConfig.internalValue = undefined;
       this._shapeConfig.internalValue = undefined;
@@ -9978,6 +10302,7 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
       this._capacityReservationId = value.capacityReservationId;
       this._clusterPlacementGroupId = value.clusterPlacementGroupId;
       this._compartmentId = value.compartmentId;
+      this._computeClusterId = value.computeClusterId;
       this._dedicatedVmHostId = value.dedicatedVmHostId;
       this._definedTags = value.definedTags;
       this._displayName = value.displayName;
@@ -9997,6 +10322,7 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
       this._instanceOptions.internalValue = value.instanceOptions;
       this._launchOptions.internalValue = value.launchOptions;
       this._licensingConfigs.internalValue = value.licensingConfigs;
+      this._placementConstraintDetails.internalValue = value.placementConstraintDetails;
       this._platformConfig.internalValue = value.platformConfig;
       this._preemptibleInstanceConfig.internalValue = value.preemptibleInstanceConfig;
       this._shapeConfig.internalValue = value.shapeConfig;
@@ -10066,6 +10392,22 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
   // Temporarily expose input value. Use with caution.
   public get compartmentIdInput() {
     return this._compartmentId;
+  }
+
+  // compute_cluster_id - computed: true, optional: true, required: false
+  private _computeClusterId?: string; 
+  public get computeClusterId() {
+    return this.getStringAttribute('compute_cluster_id');
+  }
+  public set computeClusterId(value: string) {
+    this._computeClusterId = value;
+  }
+  public resetComputeClusterId() {
+    this._computeClusterId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeClusterIdInput() {
+    return this._computeClusterId;
   }
 
   // dedicated_vm_host_id - computed: true, optional: true, required: false
@@ -10372,6 +10714,22 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
     return this._licensingConfigs.internalValue;
   }
 
+  // placement_constraint_details - computed: false, optional: true, required: false
+  private _placementConstraintDetails = new CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetailsOutputReference(this, "placement_constraint_details");
+  public get placementConstraintDetails() {
+    return this._placementConstraintDetails;
+  }
+  public putPlacementConstraintDetails(value: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlacementConstraintDetails) {
+    this._placementConstraintDetails.internalValue = value;
+  }
+  public resetPlacementConstraintDetails() {
+    this._placementConstraintDetails.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get placementConstraintDetailsInput() {
+    return this._placementConstraintDetails.internalValue;
+  }
+
   // platform_config - computed: false, optional: true, required: false
   private _platformConfig = new CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsPlatformConfigOutputReference(this, "platform_config");
   public get platformConfig() {
@@ -10438,11 +10796,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetailsOutputR
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
   */
   readonly ipv6SubnetCidr?: string;
 }
@@ -10587,57 +10945,57 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreate
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreateVnicDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
   */
   readonly assignIpv6Ip?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
   */
   readonly assignPrivateDnsRecord?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
   */
   readonly hostnameLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
   */
   readonly nsgIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
   */
   readonly privateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
   */
   readonly skipSourceDestCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * ipv6address_ipv6subnet_cidr_pair_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
   */
   readonly ipv6AddressIpv6SubnetCidrPairDetails?: CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails[] | cdktf.IResolvable;
 }
@@ -11069,17 +11427,17 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreate
 }
 export interface CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nic_index CoreInstanceConfiguration#nic_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nic_index CoreInstanceConfiguration#nic_index}
   */
   readonly nicIndex?: number;
   /**
   * create_vnic_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
   */
   readonly createVnicDetails?: CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnicsCreateVnicDetails;
 }
@@ -11255,19 +11613,19 @@ export interface CoreInstanceConfigurationInstanceDetailsOptions {
   /**
   * block_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#block_volumes CoreInstanceConfiguration#block_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#block_volumes CoreInstanceConfiguration#block_volumes}
   */
   readonly blockVolumes?: CoreInstanceConfigurationInstanceDetailsOptionsBlockVolumes[] | cdktf.IResolvable;
   /**
   * launch_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_details CoreInstanceConfiguration#launch_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_details CoreInstanceConfiguration#launch_details}
   */
   readonly launchDetails?: CoreInstanceConfigurationInstanceDetailsOptionsLaunchDetails;
   /**
   * secondary_vnics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#secondary_vnics CoreInstanceConfiguration#secondary_vnics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#secondary_vnics CoreInstanceConfiguration#secondary_vnics}
   */
   readonly secondaryVnics?: CoreInstanceConfigurationInstanceDetailsOptionsSecondaryVnics[] | cdktf.IResolvable;
 }
@@ -11441,11 +11799,11 @@ export class CoreInstanceConfigurationInstanceDetailsOptionsList extends cdktf.C
 }
 export interface CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address CoreInstanceConfiguration#ipv6address}
   */
   readonly ipv6Address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6subnet_cidr CoreInstanceConfiguration#ipv6subnet_cidr}
   */
   readonly ipv6SubnetCidr?: string;
 }
@@ -11590,57 +11948,57 @@ export class CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDet
 }
 export interface CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_ipv6ip CoreInstanceConfiguration#assign_ipv6ip}
   */
   readonly assignIpv6Ip?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_private_dns_record CoreInstanceConfiguration#assign_private_dns_record}
   */
   readonly assignPrivateDnsRecord?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#assign_public_ip CoreInstanceConfiguration#assign_public_ip}
   */
   readonly assignPublicIp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#defined_tags CoreInstanceConfiguration#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#freeform_tags CoreInstanceConfiguration#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#hostname_label CoreInstanceConfiguration#hostname_label}
   */
   readonly hostnameLabel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nsg_ids CoreInstanceConfiguration#nsg_ids}
   */
   readonly nsgIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#private_ip CoreInstanceConfiguration#private_ip}
   */
   readonly privateIp?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#security_attributes CoreInstanceConfiguration#security_attributes}
   */
   readonly securityAttributes?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#skip_source_dest_check CoreInstanceConfiguration#skip_source_dest_check}
   */
   readonly skipSourceDestCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#subnet_id CoreInstanceConfiguration#subnet_id}
   */
   readonly subnetId?: string;
   /**
   * ipv6address_ipv6subnet_cidr_pair_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#ipv6address_ipv6subnet_cidr_pair_details CoreInstanceConfiguration#ipv6address_ipv6subnet_cidr_pair_details}
   */
   readonly ipv6AddressIpv6SubnetCidrPairDetails?: CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDetailsIpv6AddressIpv6SubnetCidrPairDetails[] | cdktf.IResolvable;
 }
@@ -12072,17 +12430,17 @@ export class CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDet
 }
 export interface CoreInstanceConfigurationInstanceDetailsSecondaryVnics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#display_name CoreInstanceConfiguration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#nic_index CoreInstanceConfiguration#nic_index}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#nic_index CoreInstanceConfiguration#nic_index}
   */
   readonly nicIndex?: number;
   /**
   * create_vnic_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create_vnic_details CoreInstanceConfiguration#create_vnic_details}
   */
   readonly createVnicDetails?: CoreInstanceConfigurationInstanceDetailsSecondaryVnicsCreateVnicDetails;
 }
@@ -12256,31 +12614,31 @@ export class CoreInstanceConfigurationInstanceDetailsSecondaryVnicsList extends 
 }
 export interface CoreInstanceConfigurationInstanceDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#instance_type CoreInstanceConfiguration#instance_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#instance_type CoreInstanceConfiguration#instance_type}
   */
   readonly instanceType: string;
   /**
   * block_volumes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#block_volumes CoreInstanceConfiguration#block_volumes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#block_volumes CoreInstanceConfiguration#block_volumes}
   */
   readonly blockVolumes?: CoreInstanceConfigurationInstanceDetailsBlockVolumes[] | cdktf.IResolvable;
   /**
   * launch_details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#launch_details CoreInstanceConfiguration#launch_details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#launch_details CoreInstanceConfiguration#launch_details}
   */
   readonly launchDetails?: CoreInstanceConfigurationInstanceDetailsLaunchDetails;
   /**
   * options block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#options CoreInstanceConfiguration#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#options CoreInstanceConfiguration#options}
   */
   readonly options?: CoreInstanceConfigurationInstanceDetailsOptions[] | cdktf.IResolvable;
   /**
   * secondary_vnics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#secondary_vnics CoreInstanceConfiguration#secondary_vnics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#secondary_vnics CoreInstanceConfiguration#secondary_vnics}
   */
   readonly secondaryVnics?: CoreInstanceConfigurationInstanceDetailsSecondaryVnics[] | cdktf.IResolvable;
 }
@@ -12477,15 +12835,15 @@ export class CoreInstanceConfigurationInstanceDetailsOutputReference extends cdk
 }
 export interface CoreInstanceConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#create CoreInstanceConfiguration#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#create CoreInstanceConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#delete CoreInstanceConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#delete CoreInstanceConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#update CoreInstanceConfiguration#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#update CoreInstanceConfiguration#update}
   */
   readonly update?: string;
 }
@@ -12637,7 +12995,7 @@ export class CoreInstanceConfigurationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration oci_core_instance_configuration}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration oci_core_instance_configuration}
 */
 export class CoreInstanceConfiguration extends cdktf.TerraformResource {
 
@@ -12653,7 +13011,7 @@ export class CoreInstanceConfiguration extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CoreInstanceConfiguration resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CoreInstanceConfiguration to import
-  * @param importFromId The id of the existing CoreInstanceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CoreInstanceConfiguration that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CoreInstanceConfiguration to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -12665,7 +13023,7 @@ export class CoreInstanceConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/core_instance_configuration oci_core_instance_configuration} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/core_instance_configuration oci_core_instance_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -12676,8 +13034,8 @@ export class CoreInstanceConfiguration extends cdktf.TerraformResource {
       terraformResourceType: 'oci_core_instance_configuration',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

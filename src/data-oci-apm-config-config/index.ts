@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,174 @@ import * as cdktf from 'cdktf';
 
 export interface DataOciApmConfigConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config#apm_domain_id DataOciApmConfigConfig#apm_domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config#apm_domain_id DataOciApmConfigConfig#apm_domain_id}
   */
   readonly apmDomainId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config#config_id DataOciApmConfigConfig#config_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config#config_id DataOciApmConfigConfig#config_id}
   */
   readonly configId: string;
+}
+export interface DataOciApmConfigConfigConfigConfigMap {
+}
+
+export function dataOciApmConfigConfigConfigConfigMapToTerraform(struct?: DataOciApmConfigConfigConfigConfigMap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciApmConfigConfigConfigConfigMapToHclTerraform(struct?: DataOciApmConfigConfigConfigConfigMap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciApmConfigConfigConfigConfigMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciApmConfigConfigConfigConfigMap | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciApmConfigConfigConfigConfigMap | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // body - computed: true, optional: false, required: false
+  public get body() {
+    return this.getStringAttribute('body');
+  }
+
+  // content_type - computed: true, optional: false, required: false
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+
+  // file_name - computed: true, optional: false, required: false
+  public get fileName() {
+    return this.getStringAttribute('file_name');
+  }
+}
+
+export class DataOciApmConfigConfigConfigConfigMapList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciApmConfigConfigConfigConfigMapOutputReference {
+    return new DataOciApmConfigConfigConfigConfigMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataOciApmConfigConfigConfigA {
+}
+
+export function dataOciApmConfigConfigConfigAToTerraform(struct?: DataOciApmConfigConfigConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciApmConfigConfigConfigAToHclTerraform(struct?: DataOciApmConfigConfigConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciApmConfigConfigConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciApmConfigConfigConfigA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciApmConfigConfigConfigA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // config_map - computed: true, optional: false, required: false
+  private _configMap = new DataOciApmConfigConfigConfigConfigMapList(this, "config_map", false);
+  public get configMap() {
+    return this._configMap;
+  }
+}
+
+export class DataOciApmConfigConfigConfigAList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciApmConfigConfigConfigAOutputReference {
+    return new DataOciApmConfigConfigConfigAOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataOciApmConfigConfigDimensions {
 }
@@ -276,6 +437,163 @@ export class DataOciApmConfigConfigMetricsList extends cdktf.ComplexList {
     return new DataOciApmConfigConfigMetricsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataOciApmConfigConfigOverridesOverrideListStruct {
+}
+
+export function dataOciApmConfigConfigOverridesOverrideListStructToTerraform(struct?: DataOciApmConfigConfigOverridesOverrideListStruct): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciApmConfigConfigOverridesOverrideListStructToHclTerraform(struct?: DataOciApmConfigConfigOverridesOverrideListStruct): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciApmConfigConfigOverridesOverrideListStructOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciApmConfigConfigOverridesOverrideListStruct | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciApmConfigConfigOverridesOverrideListStruct | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // agent_filter - computed: true, optional: false, required: false
+  public get agentFilter() {
+    return this.getStringAttribute('agent_filter');
+  }
+
+  // override_map - computed: true, optional: false, required: false
+  private _overrideMap = new cdktf.StringMap(this, "override_map");
+  public get overrideMap() {
+    return this._overrideMap;
+  }
+}
+
+export class DataOciApmConfigConfigOverridesOverrideListStructList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciApmConfigConfigOverridesOverrideListStructOutputReference {
+    return new DataOciApmConfigConfigOverridesOverrideListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataOciApmConfigConfigOverrides {
+}
+
+export function dataOciApmConfigConfigOverridesToTerraform(struct?: DataOciApmConfigConfigOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciApmConfigConfigOverridesToHclTerraform(struct?: DataOciApmConfigConfigOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciApmConfigConfigOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciApmConfigConfigOverrides | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciApmConfigConfigOverrides | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // override_list - computed: true, optional: false, required: false
+  private _overrideList = new DataOciApmConfigConfigOverridesOverrideListStructList(this, "override_list", false);
+  public get overrideList() {
+    return this._overrideList;
+  }
+}
+
+export class DataOciApmConfigConfigOverridesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciApmConfigConfigOverridesOutputReference {
+    return new DataOciApmConfigConfigOverridesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataOciApmConfigConfigRules {
 }
 
@@ -383,7 +701,7 @@ export class DataOciApmConfigConfigRulesList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config oci_apm_config_config}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config oci_apm_config_config}
 */
 export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
 
@@ -399,7 +717,7 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataOciApmConfigConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataOciApmConfigConfig to import
-  * @param importFromId The id of the existing DataOciApmConfigConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataOciApmConfigConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataOciApmConfigConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -411,7 +729,7 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apm_config_config oci_apm_config_config} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apm_config_config oci_apm_config_config} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -422,8 +740,8 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
       terraformResourceType: 'oci_apm_config_config',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -441,6 +759,11 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // agent_version - computed: true, optional: false, required: false
+  public get agentVersion() {
+    return this.getStringAttribute('agent_version');
+  }
+
   // apm_domain_id - computed: false, optional: false, required: true
   private _apmDomainId?: string; 
   public get apmDomainId() {
@@ -452,6 +775,17 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get apmDomainIdInput() {
     return this._apmDomainId;
+  }
+
+  // attach_install_dir - computed: true, optional: false, required: false
+  public get attachInstallDir() {
+    return this.getStringAttribute('attach_install_dir');
+  }
+
+  // config - computed: true, optional: false, required: false
+  private _config = new DataOciApmConfigConfigConfigAList(this, "config", false);
+  public get config() {
+    return this._config;
   }
 
   // config_id - computed: false, optional: false, required: true
@@ -536,6 +870,21 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
     return this._inUseBy;
   }
 
+  // management_agent_id - computed: true, optional: false, required: false
+  public get managementAgentId() {
+    return this.getStringAttribute('management_agent_id');
+  }
+
+  // match_agents_with_attribute_key - computed: true, optional: false, required: false
+  public get matchAgentsWithAttributeKey() {
+    return this.getListAttribute('match_agents_with_attribute_key');
+  }
+
+  // match_agents_with_attribute_value - computed: true, optional: false, required: false
+  public get matchAgentsWithAttributeValue() {
+    return this.getStringAttribute('match_agents_with_attribute_value');
+  }
+
   // metrics - computed: true, optional: false, required: false
   private _metrics = new DataOciApmConfigConfigMetricsList(this, "metrics", false);
   public get metrics() {
@@ -557,10 +906,31 @@ export class DataOciApmConfigConfig extends cdktf.TerraformDataSource {
     return this.getStringAttribute('options');
   }
 
+  // overrides - computed: true, optional: false, required: false
+  private _overrides = new DataOciApmConfigConfigOverridesList(this, "overrides", false);
+  public get overrides() {
+    return this._overrides;
+  }
+
+  // process_filter - computed: true, optional: false, required: false
+  public get processFilter() {
+    return this.getListAttribute('process_filter');
+  }
+
   // rules - computed: true, optional: false, required: false
   private _rules = new DataOciApmConfigConfigRulesList(this, "rules", false);
   public get rules() {
     return this._rules;
+  }
+
+  // run_as_user - computed: true, optional: false, required: false
+  public get runAsUser() {
+    return this.getStringAttribute('run_as_user');
+  }
+
+  // service_name - computed: true, optional: false, required: false
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
   }
 
   // time_created - computed: true, optional: false, required: false

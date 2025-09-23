@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,98 +8,406 @@ import * as cdktf from 'cdktf';
 
 export interface ApmConfigConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#apm_domain_id ApmConfigConfig#apm_domain_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#agent_version ApmConfigConfig#agent_version}
+  */
+  readonly agentVersion?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#apm_domain_id ApmConfigConfig#apm_domain_id}
   */
   readonly apmDomainId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#config_type ApmConfigConfig#config_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#attach_install_dir ApmConfigConfig#attach_install_dir}
+  */
+  readonly attachInstallDir?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#config_type ApmConfigConfig#config_type}
   */
   readonly configType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#defined_tags ApmConfigConfig#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#defined_tags ApmConfigConfig#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#description ApmConfigConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#description ApmConfigConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#display_name ApmConfigConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#display_name ApmConfigConfig#display_name}
   */
-  readonly displayName: string;
+  readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#filter_id ApmConfigConfig#filter_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#filter_id ApmConfigConfig#filter_id}
   */
   readonly filterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#filter_text ApmConfigConfig#filter_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#filter_text ApmConfigConfig#filter_text}
   */
   readonly filterText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#freeform_tags ApmConfigConfig#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#freeform_tags ApmConfigConfig#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#group ApmConfigConfig#group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#group ApmConfigConfig#group}
   */
   readonly group?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#id ApmConfigConfig#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#id ApmConfigConfig#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#namespace ApmConfigConfig#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#management_agent_id ApmConfigConfig#management_agent_id}
+  */
+  readonly managementAgentId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#match_agents_with_attribute_value ApmConfigConfig#match_agents_with_attribute_value}
+  */
+  readonly matchAgentsWithAttributeValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#namespace ApmConfigConfig#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#opc_dry_run ApmConfigConfig#opc_dry_run}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#opc_dry_run ApmConfigConfig#opc_dry_run}
   */
   readonly opcDryRun?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#options ApmConfigConfig#options}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#options ApmConfigConfig#options}
   */
   readonly options?: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#process_filter ApmConfigConfig#process_filter}
+  */
+  readonly processFilter?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#run_as_user ApmConfigConfig#run_as_user}
+  */
+  readonly runAsUser?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#service_name ApmConfigConfig#service_name}
+  */
+  readonly serviceName?: string;
+  /**
+  * config block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#config ApmConfigConfig#config}
+  */
+  readonly config?: ApmConfigConfigConfigA;
+  /**
   * dimensions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#dimensions ApmConfigConfig#dimensions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#dimensions ApmConfigConfig#dimensions}
   */
   readonly dimensions?: ApmConfigConfigDimensions[] | cdktf.IResolvable;
   /**
   * in_use_by block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#in_use_by ApmConfigConfig#in_use_by}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#in_use_by ApmConfigConfig#in_use_by}
   */
   readonly inUseBy?: ApmConfigConfigInUseBy[] | cdktf.IResolvable;
   /**
   * metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#metrics ApmConfigConfig#metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#metrics ApmConfigConfig#metrics}
   */
   readonly metrics?: ApmConfigConfigMetrics[] | cdktf.IResolvable;
   /**
+  * overrides block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#overrides ApmConfigConfig#overrides}
+  */
+  readonly overrides?: ApmConfigConfigOverrides;
+  /**
   * rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#rules ApmConfigConfig#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#rules ApmConfigConfig#rules}
   */
   readonly rules?: ApmConfigConfigRules[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#timeouts ApmConfigConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#timeouts ApmConfigConfig#timeouts}
   */
   readonly timeouts?: ApmConfigConfigTimeouts;
 }
+export interface ApmConfigConfigConfigConfigMap {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#body ApmConfigConfig#body}
+  */
+  readonly body?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#content_type ApmConfigConfig#content_type}
+  */
+  readonly contentType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#file_name ApmConfigConfig#file_name}
+  */
+  readonly fileName?: string;
+}
+
+export function apmConfigConfigConfigConfigMapToTerraform(struct?: ApmConfigConfigConfigConfigMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    body: cdktf.stringToTerraform(struct!.body),
+    content_type: cdktf.stringToTerraform(struct!.contentType),
+    file_name: cdktf.stringToTerraform(struct!.fileName),
+  }
+}
+
+
+export function apmConfigConfigConfigConfigMapToHclTerraform(struct?: ApmConfigConfigConfigConfigMap | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    body: {
+      value: cdktf.stringToHclTerraform(struct!.body),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    file_name: {
+      value: cdktf.stringToHclTerraform(struct!.fileName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApmConfigConfigConfigConfigMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApmConfigConfigConfigConfigMap | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._body !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.body = this._body;
+    }
+    if (this._contentType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.contentType = this._contentType;
+    }
+    if (this._fileName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fileName = this._fileName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApmConfigConfigConfigConfigMap | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._body = undefined;
+      this._contentType = undefined;
+      this._fileName = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._body = value.body;
+      this._contentType = value.contentType;
+      this._fileName = value.fileName;
+    }
+  }
+
+  // body - computed: true, optional: true, required: false
+  private _body?: string; 
+  public get body() {
+    return this.getStringAttribute('body');
+  }
+  public set body(value: string) {
+    this._body = value;
+  }
+  public resetBody() {
+    this._body = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bodyInput() {
+    return this._body;
+  }
+
+  // content_type - computed: true, optional: true, required: false
+  private _contentType?: string; 
+  public get contentType() {
+    return this.getStringAttribute('content_type');
+  }
+  public set contentType(value: string) {
+    this._contentType = value;
+  }
+  public resetContentType() {
+    this._contentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentTypeInput() {
+    return this._contentType;
+  }
+
+  // file_name - computed: true, optional: true, required: false
+  private _fileName?: string; 
+  public get fileName() {
+    return this.getStringAttribute('file_name');
+  }
+  public set fileName(value: string) {
+    this._fileName = value;
+  }
+  public resetFileName() {
+    this._fileName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileNameInput() {
+    return this._fileName;
+  }
+}
+
+export class ApmConfigConfigConfigConfigMapList extends cdktf.ComplexList {
+  public internalValue? : ApmConfigConfigConfigConfigMap[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApmConfigConfigConfigConfigMapOutputReference {
+    return new ApmConfigConfigConfigConfigMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApmConfigConfigConfigA {
+  /**
+  * config_map block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#config_map ApmConfigConfig#config_map}
+  */
+  readonly configMap?: ApmConfigConfigConfigConfigMap[] | cdktf.IResolvable;
+}
+
+export function apmConfigConfigConfigAToTerraform(struct?: ApmConfigConfigConfigAOutputReference | ApmConfigConfigConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    config_map: cdktf.listMapper(apmConfigConfigConfigConfigMapToTerraform, true)(struct!.configMap),
+  }
+}
+
+
+export function apmConfigConfigConfigAToHclTerraform(struct?: ApmConfigConfigConfigAOutputReference | ApmConfigConfigConfigA): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    config_map: {
+      value: cdktf.listMapperHcl(apmConfigConfigConfigConfigMapToHclTerraform, true)(struct!.configMap),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApmConfigConfigConfigConfigMapList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApmConfigConfigConfigAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApmConfigConfigConfigA | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._configMap?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.configMap = this._configMap?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApmConfigConfigConfigA | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._configMap.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._configMap.internalValue = value.configMap;
+    }
+  }
+
+  // config_map - computed: false, optional: true, required: false
+  private _configMap = new ApmConfigConfigConfigConfigMapList(this, "config_map", false);
+  public get configMap() {
+    return this._configMap;
+  }
+  public putConfigMap(value: ApmConfigConfigConfigConfigMap[] | cdktf.IResolvable) {
+    this._configMap.internalValue = value;
+  }
+  public resetConfigMap() {
+    this._configMap.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configMapInput() {
+    return this._configMap.internalValue;
+  }
+}
 export interface ApmConfigConfigDimensions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#name ApmConfigConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#name ApmConfigConfig#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#value_source ApmConfigConfig#value_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#value_source ApmConfigConfig#value_source}
   */
   readonly valueSource?: string;
 }
@@ -345,19 +653,19 @@ export class ApmConfigConfigInUseByList extends cdktf.ComplexList {
 }
 export interface ApmConfigConfigMetrics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#description ApmConfigConfig#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#description ApmConfigConfig#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#name ApmConfigConfig#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#name ApmConfigConfig#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#unit ApmConfigConfig#unit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#unit ApmConfigConfig#unit}
   */
   readonly unit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#value_source ApmConfigConfig#value_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#value_source ApmConfigConfig#value_source}
   */
   readonly valueSource?: string;
 }
@@ -558,33 +866,268 @@ export class ApmConfigConfigMetricsList extends cdktf.ComplexList {
     return new ApmConfigConfigMetricsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ApmConfigConfigOverridesOverrideListStruct {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#agent_filter ApmConfigConfig#agent_filter}
+  */
+  readonly agentFilter?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#override_map ApmConfigConfig#override_map}
+  */
+  readonly overrideMap?: { [key: string]: string };
+}
+
+export function apmConfigConfigOverridesOverrideListStructToTerraform(struct?: ApmConfigConfigOverridesOverrideListStruct | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    agent_filter: cdktf.stringToTerraform(struct!.agentFilter),
+    override_map: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.overrideMap),
+  }
+}
+
+
+export function apmConfigConfigOverridesOverrideListStructToHclTerraform(struct?: ApmConfigConfigOverridesOverrideListStruct | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    agent_filter: {
+      value: cdktf.stringToHclTerraform(struct!.agentFilter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    override_map: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.overrideMap),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApmConfigConfigOverridesOverrideListStructOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApmConfigConfigOverridesOverrideListStruct | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._agentFilter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.agentFilter = this._agentFilter;
+    }
+    if (this._overrideMap !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.overrideMap = this._overrideMap;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApmConfigConfigOverridesOverrideListStruct | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._agentFilter = undefined;
+      this._overrideMap = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._agentFilter = value.agentFilter;
+      this._overrideMap = value.overrideMap;
+    }
+  }
+
+  // agent_filter - computed: true, optional: true, required: false
+  private _agentFilter?: string; 
+  public get agentFilter() {
+    return this.getStringAttribute('agent_filter');
+  }
+  public set agentFilter(value: string) {
+    this._agentFilter = value;
+  }
+  public resetAgentFilter() {
+    this._agentFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get agentFilterInput() {
+    return this._agentFilter;
+  }
+
+  // override_map - computed: true, optional: true, required: false
+  private _overrideMap?: { [key: string]: string }; 
+  public get overrideMap() {
+    return this.getStringMapAttribute('override_map');
+  }
+  public set overrideMap(value: { [key: string]: string }) {
+    this._overrideMap = value;
+  }
+  public resetOverrideMap() {
+    this._overrideMap = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overrideMapInput() {
+    return this._overrideMap;
+  }
+}
+
+export class ApmConfigConfigOverridesOverrideListStructList extends cdktf.ComplexList {
+  public internalValue? : ApmConfigConfigOverridesOverrideListStruct[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApmConfigConfigOverridesOverrideListStructOutputReference {
+    return new ApmConfigConfigOverridesOverrideListStructOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApmConfigConfigOverrides {
+  /**
+  * override_list block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#override_list ApmConfigConfig#override_list}
+  */
+  readonly overrideList?: ApmConfigConfigOverridesOverrideListStruct[] | cdktf.IResolvable;
+}
+
+export function apmConfigConfigOverridesToTerraform(struct?: ApmConfigConfigOverridesOutputReference | ApmConfigConfigOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    override_list: cdktf.listMapper(apmConfigConfigOverridesOverrideListStructToTerraform, true)(struct!.overrideList),
+  }
+}
+
+
+export function apmConfigConfigOverridesToHclTerraform(struct?: ApmConfigConfigOverridesOutputReference | ApmConfigConfigOverrides): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    override_list: {
+      value: cdktf.listMapperHcl(apmConfigConfigOverridesOverrideListStructToHclTerraform, true)(struct!.overrideList),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApmConfigConfigOverridesOverrideListStructList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApmConfigConfigOverridesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApmConfigConfigOverrides | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._overrideList?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.overrideList = this._overrideList?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApmConfigConfigOverrides | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._overrideList.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._overrideList.internalValue = value.overrideList;
+    }
+  }
+
+  // override_list - computed: false, optional: true, required: false
+  private _overrideList = new ApmConfigConfigOverridesOverrideListStructList(this, "override_list", false);
+  public get overrideList() {
+    return this._overrideList;
+  }
+  public putOverrideList(value: ApmConfigConfigOverridesOverrideListStruct[] | cdktf.IResolvable) {
+    this._overrideList.internalValue = value;
+  }
+  public resetOverrideList() {
+    this._overrideList.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overrideListInput() {
+    return this._overrideList.internalValue;
+  }
+}
 export interface ApmConfigConfigRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#display_name ApmConfigConfig#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#display_name ApmConfigConfig#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#filter_text ApmConfigConfig#filter_text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#filter_text ApmConfigConfig#filter_text}
   */
   readonly filterText?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#is_apply_to_error_spans ApmConfigConfig#is_apply_to_error_spans}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#is_apply_to_error_spans ApmConfigConfig#is_apply_to_error_spans}
   */
   readonly isApplyToErrorSpans?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#is_enabled ApmConfigConfig#is_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#is_enabled ApmConfigConfig#is_enabled}
   */
   readonly isEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#priority ApmConfigConfig#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#priority ApmConfigConfig#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#satisfied_response_time ApmConfigConfig#satisfied_response_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#satisfied_response_time ApmConfigConfig#satisfied_response_time}
   */
   readonly satisfiedResponseTime?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#tolerating_response_time ApmConfigConfig#tolerating_response_time}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#tolerating_response_time ApmConfigConfig#tolerating_response_time}
   */
   readonly toleratingResponseTime?: number;
 }
@@ -874,15 +1417,15 @@ export class ApmConfigConfigRulesList extends cdktf.ComplexList {
 }
 export interface ApmConfigConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#create ApmConfigConfig#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#create ApmConfigConfig#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#delete ApmConfigConfig#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#delete ApmConfigConfig#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#update ApmConfigConfig#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#update ApmConfigConfig#update}
   */
   readonly update?: string;
 }
@@ -1034,7 +1577,7 @@ export class ApmConfigConfigTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config oci_apm_config_config}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config oci_apm_config_config}
 */
 export class ApmConfigConfig extends cdktf.TerraformResource {
 
@@ -1050,7 +1593,7 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApmConfigConfig resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApmConfigConfig to import
-  * @param importFromId The id of the existing ApmConfigConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApmConfigConfig that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApmConfigConfig to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1062,7 +1605,7 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/apm_config_config oci_apm_config_config} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/apm_config_config oci_apm_config_config} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1073,8 +1616,8 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
       terraformResourceType: 'oci_apm_config_config',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1084,7 +1627,9 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._agentVersion = config.agentVersion;
     this._apmDomainId = config.apmDomainId;
+    this._attachInstallDir = config.attachInstallDir;
     this._configType = config.configType;
     this._definedTags = config.definedTags;
     this._description = config.description;
@@ -1094,12 +1639,19 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
     this._freeformTags = config.freeformTags;
     this._group = config.group;
     this._id = config.id;
+    this._managementAgentId = config.managementAgentId;
+    this._matchAgentsWithAttributeValue = config.matchAgentsWithAttributeValue;
     this._namespace = config.namespace;
     this._opcDryRun = config.opcDryRun;
     this._options = config.options;
+    this._processFilter = config.processFilter;
+    this._runAsUser = config.runAsUser;
+    this._serviceName = config.serviceName;
+    this._config.internalValue = config.config;
     this._dimensions.internalValue = config.dimensions;
     this._inUseBy.internalValue = config.inUseBy;
     this._metrics.internalValue = config.metrics;
+    this._overrides.internalValue = config.overrides;
     this._rules.internalValue = config.rules;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -1107,6 +1659,22 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // agent_version - computed: true, optional: true, required: false
+  private _agentVersion?: string; 
+  public get agentVersion() {
+    return this.getStringAttribute('agent_version');
+  }
+  public set agentVersion(value: string) {
+    this._agentVersion = value;
+  }
+  public resetAgentVersion() {
+    this._agentVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get agentVersionInput() {
+    return this._agentVersion;
+  }
 
   // apm_domain_id - computed: false, optional: false, required: true
   private _apmDomainId?: string; 
@@ -1119,6 +1687,22 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get apmDomainIdInput() {
     return this._apmDomainId;
+  }
+
+  // attach_install_dir - computed: true, optional: true, required: false
+  private _attachInstallDir?: string; 
+  public get attachInstallDir() {
+    return this.getStringAttribute('attach_install_dir');
+  }
+  public set attachInstallDir(value: string) {
+    this._attachInstallDir = value;
+  }
+  public resetAttachInstallDir() {
+    this._attachInstallDir = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get attachInstallDirInput() {
+    return this._attachInstallDir;
   }
 
   // config_type - computed: false, optional: false, required: true
@@ -1171,13 +1755,16 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
     return this._description;
   }
 
-  // display_name - computed: false, optional: false, required: true
+  // display_name - computed: true, optional: true, required: false
   private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
@@ -1269,6 +1856,43 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // management_agent_id - computed: true, optional: true, required: false
+  private _managementAgentId?: string; 
+  public get managementAgentId() {
+    return this.getStringAttribute('management_agent_id');
+  }
+  public set managementAgentId(value: string) {
+    this._managementAgentId = value;
+  }
+  public resetManagementAgentId() {
+    this._managementAgentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managementAgentIdInput() {
+    return this._managementAgentId;
+  }
+
+  // match_agents_with_attribute_key - computed: true, optional: false, required: false
+  public get matchAgentsWithAttributeKey() {
+    return this.getListAttribute('match_agents_with_attribute_key');
+  }
+
+  // match_agents_with_attribute_value - computed: true, optional: true, required: false
+  private _matchAgentsWithAttributeValue?: string; 
+  public get matchAgentsWithAttributeValue() {
+    return this.getStringAttribute('match_agents_with_attribute_value');
+  }
+  public set matchAgentsWithAttributeValue(value: string) {
+    this._matchAgentsWithAttributeValue = value;
+  }
+  public resetMatchAgentsWithAttributeValue() {
+    this._matchAgentsWithAttributeValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchAgentsWithAttributeValueInput() {
+    return this._matchAgentsWithAttributeValue;
+  }
+
   // namespace - computed: true, optional: true, required: false
   private _namespace?: string; 
   public get namespace() {
@@ -1317,6 +1941,54 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
     return this._options;
   }
 
+  // process_filter - computed: true, optional: true, required: false
+  private _processFilter?: string[]; 
+  public get processFilter() {
+    return this.getListAttribute('process_filter');
+  }
+  public set processFilter(value: string[]) {
+    this._processFilter = value;
+  }
+  public resetProcessFilter() {
+    this._processFilter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get processFilterInput() {
+    return this._processFilter;
+  }
+
+  // run_as_user - computed: true, optional: true, required: false
+  private _runAsUser?: string; 
+  public get runAsUser() {
+    return this.getStringAttribute('run_as_user');
+  }
+  public set runAsUser(value: string) {
+    this._runAsUser = value;
+  }
+  public resetRunAsUser() {
+    this._runAsUser = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get runAsUserInput() {
+    return this._runAsUser;
+  }
+
+  // service_name - computed: true, optional: true, required: false
+  private _serviceName?: string; 
+  public get serviceName() {
+    return this.getStringAttribute('service_name');
+  }
+  public set serviceName(value: string) {
+    this._serviceName = value;
+  }
+  public resetServiceName() {
+    this._serviceName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceNameInput() {
+    return this._serviceName;
+  }
+
   // time_created - computed: true, optional: false, required: false
   public get timeCreated() {
     return this.getStringAttribute('time_created');
@@ -1330,6 +2002,22 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
   // updated_by - computed: true, optional: false, required: false
   public get updatedBy() {
     return this.getStringAttribute('updated_by');
+  }
+
+  // config - computed: false, optional: true, required: false
+  private _config = new ApmConfigConfigConfigAOutputReference(this, "config");
+  public get config() {
+    return this._config;
+  }
+  public putConfig(value: ApmConfigConfigConfigA) {
+    this._config.internalValue = value;
+  }
+  public resetConfig() {
+    this._config.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get configInput() {
+    return this._config.internalValue;
   }
 
   // dimensions - computed: false, optional: true, required: false
@@ -1380,6 +2068,22 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
     return this._metrics.internalValue;
   }
 
+  // overrides - computed: false, optional: true, required: false
+  private _overrides = new ApmConfigConfigOverridesOutputReference(this, "overrides");
+  public get overrides() {
+    return this._overrides;
+  }
+  public putOverrides(value: ApmConfigConfigOverrides) {
+    this._overrides.internalValue = value;
+  }
+  public resetOverrides() {
+    this._overrides.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get overridesInput() {
+    return this._overrides.internalValue;
+  }
+
   // rules - computed: false, optional: true, required: false
   private _rules = new ApmConfigConfigRulesList(this, "rules", false);
   public get rules() {
@@ -1418,7 +2122,9 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      agent_version: cdktf.stringToTerraform(this._agentVersion),
       apm_domain_id: cdktf.stringToTerraform(this._apmDomainId),
+      attach_install_dir: cdktf.stringToTerraform(this._attachInstallDir),
       config_type: cdktf.stringToTerraform(this._configType),
       defined_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._definedTags),
       description: cdktf.stringToTerraform(this._description),
@@ -1428,12 +2134,19 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
       freeform_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._freeformTags),
       group: cdktf.stringToTerraform(this._group),
       id: cdktf.stringToTerraform(this._id),
+      management_agent_id: cdktf.stringToTerraform(this._managementAgentId),
+      match_agents_with_attribute_value: cdktf.stringToTerraform(this._matchAgentsWithAttributeValue),
       namespace: cdktf.stringToTerraform(this._namespace),
       opc_dry_run: cdktf.stringToTerraform(this._opcDryRun),
       options: cdktf.stringToTerraform(this._options),
+      process_filter: cdktf.listMapper(cdktf.stringToTerraform, false)(this._processFilter),
+      run_as_user: cdktf.stringToTerraform(this._runAsUser),
+      service_name: cdktf.stringToTerraform(this._serviceName),
+      config: apmConfigConfigConfigAToTerraform(this._config.internalValue),
       dimensions: cdktf.listMapper(apmConfigConfigDimensionsToTerraform, true)(this._dimensions.internalValue),
       in_use_by: cdktf.listMapper(apmConfigConfigInUseByToTerraform, true)(this._inUseBy.internalValue),
       metrics: cdktf.listMapper(apmConfigConfigMetricsToTerraform, true)(this._metrics.internalValue),
+      overrides: apmConfigConfigOverridesToTerraform(this._overrides.internalValue),
       rules: cdktf.listMapper(apmConfigConfigRulesToTerraform, true)(this._rules.internalValue),
       timeouts: apmConfigConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
@@ -1441,8 +2154,20 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
 
   protected synthesizeHclAttributes(): { [name: string]: any } {
     const attrs = {
+      agent_version: {
+        value: cdktf.stringToHclTerraform(this._agentVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       apm_domain_id: {
         value: cdktf.stringToHclTerraform(this._apmDomainId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      attach_install_dir: {
+        value: cdktf.stringToHclTerraform(this._attachInstallDir),
         isBlock: false,
         type: "simple",
         storageClassType: "string",
@@ -1501,6 +2226,18 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      management_agent_id: {
+        value: cdktf.stringToHclTerraform(this._managementAgentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      match_agents_with_attribute_value: {
+        value: cdktf.stringToHclTerraform(this._matchAgentsWithAttributeValue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       namespace: {
         value: cdktf.stringToHclTerraform(this._namespace),
         isBlock: false,
@@ -1519,6 +2256,30 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      process_filter: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._processFilter),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      run_as_user: {
+        value: cdktf.stringToHclTerraform(this._runAsUser),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_name: {
+        value: cdktf.stringToHclTerraform(this._serviceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      config: {
+        value: apmConfigConfigConfigAToHclTerraform(this._config.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApmConfigConfigConfigAList",
+      },
       dimensions: {
         value: cdktf.listMapperHcl(apmConfigConfigDimensionsToHclTerraform, true)(this._dimensions.internalValue),
         isBlock: true,
@@ -1536,6 +2297,12 @@ export class ApmConfigConfig extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "ApmConfigConfigMetricsList",
+      },
+      overrides: {
+        value: apmConfigConfigOverridesToHclTerraform(this._overrides.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApmConfigConfigOverridesList",
       },
       rules: {
         value: cdktf.listMapperHcl(apmConfigConfigRulesToHclTerraform, true)(this._rules.internalValue),

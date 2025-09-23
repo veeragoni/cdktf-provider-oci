@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,30 +8,120 @@ import * as cdktf from 'cdktf';
 
 export interface DataOciApigatewayApisConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#compartment_id DataOciApigatewayApis#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#compartment_id DataOciApigatewayApis#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#display_name DataOciApigatewayApis#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#display_name DataOciApigatewayApis#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#id DataOciApigatewayApis#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#id DataOciApigatewayApis#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#state DataOciApigatewayApis#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#state DataOciApigatewayApis#state}
   */
   readonly state?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#filter DataOciApigatewayApis#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#filter DataOciApigatewayApis#filter}
   */
   readonly filter?: DataOciApigatewayApisFilter[] | cdktf.IResolvable;
+}
+export interface DataOciApigatewayApisApiCollectionItemsLocks {
+}
+
+export function dataOciApigatewayApisApiCollectionItemsLocksToTerraform(struct?: DataOciApigatewayApisApiCollectionItemsLocks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciApigatewayApisApiCollectionItemsLocksToHclTerraform(struct?: DataOciApigatewayApisApiCollectionItemsLocks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciApigatewayApisApiCollectionItemsLocksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciApigatewayApisApiCollectionItemsLocks | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciApigatewayApisApiCollectionItemsLocks | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+
+  // related_resource_id - computed: true, optional: false, required: false
+  public get relatedResourceId() {
+    return this.getStringAttribute('related_resource_id');
+  }
+
+  // time_created - computed: true, optional: false, required: false
+  public get timeCreated() {
+    return this.getStringAttribute('time_created');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataOciApigatewayApisApiCollectionItemsLocksList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciApigatewayApisApiCollectionItemsLocksOutputReference {
+    return new DataOciApigatewayApisApiCollectionItemsLocksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
 }
 export interface DataOciApigatewayApisApiCollectionItemsValidationResults {
 }
@@ -196,9 +286,20 @@ export class DataOciApigatewayApisApiCollectionItemsOutputReference extends cdkt
     return this.getStringAttribute('id');
   }
 
+  // is_lock_override - computed: true, optional: false, required: false
+  public get isLockOverride() {
+    return this.getBooleanAttribute('is_lock_override');
+  }
+
   // lifecycle_details - computed: true, optional: false, required: false
   public get lifecycleDetails() {
     return this.getStringAttribute('lifecycle_details');
+  }
+
+  // locks - computed: true, optional: false, required: false
+  private _locks = new DataOciApigatewayApisApiCollectionItemsLocksList(this, "locks", false);
+  public get locks() {
+    return this._locks;
   }
 
   // specification_type - computed: true, optional: false, required: false
@@ -209,6 +310,12 @@ export class DataOciApigatewayApisApiCollectionItemsOutputReference extends cdkt
   // state - computed: true, optional: false, required: false
   public get state() {
     return this.getStringAttribute('state');
+  }
+
+  // system_tags - computed: true, optional: false, required: false
+  private _systemTags = new cdktf.StringMap(this, "system_tags");
+  public get systemTags() {
+    return this._systemTags;
   }
 
   // time_created - computed: true, optional: false, required: false
@@ -324,15 +431,15 @@ export class DataOciApigatewayApisApiCollectionList extends cdktf.ComplexList {
 }
 export interface DataOciApigatewayApisFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#name DataOciApigatewayApis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#name DataOciApigatewayApis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#regex DataOciApigatewayApis#regex}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#regex DataOciApigatewayApis#regex}
   */
   readonly regex?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#values DataOciApigatewayApis#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#values DataOciApigatewayApis#values}
   */
   readonly values: string[];
 }
@@ -500,7 +607,7 @@ export class DataOciApigatewayApisFilterList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis oci_apigateway_apis}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis oci_apigateway_apis}
 */
 export class DataOciApigatewayApis extends cdktf.TerraformDataSource {
 
@@ -516,7 +623,7 @@ export class DataOciApigatewayApis extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataOciApigatewayApis resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataOciApigatewayApis to import
-  * @param importFromId The id of the existing DataOciApigatewayApis that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataOciApigatewayApis that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataOciApigatewayApis to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -528,7 +635,7 @@ export class DataOciApigatewayApis extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/apigateway_apis oci_apigateway_apis} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/apigateway_apis oci_apigateway_apis} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -539,8 +646,8 @@ export class DataOciApigatewayApis extends cdktf.TerraformDataSource {
       terraformResourceType: 'oci_apigateway_apis',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

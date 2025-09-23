@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,62 +8,66 @@ import * as cdktf from 'cdktf';
 
 export interface CloudGuardManagedListConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#compartment_id CloudGuardManagedList#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#compartment_id CloudGuardManagedList#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#defined_tags CloudGuardManagedList#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#defined_tags CloudGuardManagedList#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#description CloudGuardManagedList#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#description CloudGuardManagedList#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#display_name CloudGuardManagedList#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#display_name CloudGuardManagedList#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#freeform_tags CloudGuardManagedList#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#freeform_tags CloudGuardManagedList#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#id CloudGuardManagedList#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#group CloudGuardManagedList#group}
+  */
+  readonly group?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#id CloudGuardManagedList#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#list_items CloudGuardManagedList#list_items}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#list_items CloudGuardManagedList#list_items}
   */
   readonly listItems?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#list_type CloudGuardManagedList#list_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#list_type CloudGuardManagedList#list_type}
   */
   readonly listType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#source_managed_list_id CloudGuardManagedList#source_managed_list_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#source_managed_list_id CloudGuardManagedList#source_managed_list_id}
   */
   readonly sourceManagedListId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#timeouts CloudGuardManagedList#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#timeouts CloudGuardManagedList#timeouts}
   */
   readonly timeouts?: CloudGuardManagedListTimeouts;
 }
 export interface CloudGuardManagedListTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#create CloudGuardManagedList#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#create CloudGuardManagedList#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#delete CloudGuardManagedList#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#delete CloudGuardManagedList#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#update CloudGuardManagedList#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#update CloudGuardManagedList#update}
   */
   readonly update?: string;
 }
@@ -215,7 +219,7 @@ export class CloudGuardManagedListTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list oci_cloud_guard_managed_list}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list oci_cloud_guard_managed_list}
 */
 export class CloudGuardManagedList extends cdktf.TerraformResource {
 
@@ -231,7 +235,7 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudGuardManagedList resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudGuardManagedList to import
-  * @param importFromId The id of the existing CloudGuardManagedList that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudGuardManagedList that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudGuardManagedList to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -243,7 +247,7 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_managed_list oci_cloud_guard_managed_list} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_managed_list oci_cloud_guard_managed_list} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -254,8 +258,8 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
       terraformResourceType: 'oci_cloud_guard_managed_list',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -270,6 +274,7 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
     this._description = config.description;
     this._displayName = config.displayName;
     this._freeformTags = config.freeformTags;
+    this._group = config.group;
     this._id = config.id;
     this._listItems = config.listItems;
     this._listType = config.listType;
@@ -358,6 +363,22 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get freeformTagsInput() {
     return this._freeformTags;
+  }
+
+  // group - computed: true, optional: true, required: false
+  private _group?: string; 
+  public get group() {
+    return this.getStringAttribute('group');
+  }
+  public set group(value: string) {
+    this._group = value;
+  }
+  public resetGroup() {
+    this._group = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupInput() {
+    return this._group;
   }
 
   // id - computed: true, optional: true, required: false
@@ -482,6 +503,7 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       freeform_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._freeformTags),
+      group: cdktf.stringToTerraform(this._group),
       id: cdktf.stringToTerraform(this._id),
       list_items: cdktf.listMapper(cdktf.stringToTerraform, false)(this._listItems),
       list_type: cdktf.stringToTerraform(this._listType),
@@ -521,6 +543,12 @@ export class CloudGuardManagedList extends cdktf.TerraformResource {
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
+      },
+      group: {
+        value: cdktf.stringToHclTerraform(this._group),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       id: {
         value: cdktf.stringToHclTerraform(this._id),

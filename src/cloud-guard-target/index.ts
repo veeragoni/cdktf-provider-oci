@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,60 +8,60 @@ import * as cdktf from 'cdktf';
 
 export interface CloudGuardTargetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#compartment_id CloudGuardTarget#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#compartment_id CloudGuardTarget#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#defined_tags CloudGuardTarget#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#defined_tags CloudGuardTarget#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#description CloudGuardTarget#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#description CloudGuardTarget#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#display_name CloudGuardTarget#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#display_name CloudGuardTarget#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#freeform_tags CloudGuardTarget#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#freeform_tags CloudGuardTarget#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#id CloudGuardTarget#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#id CloudGuardTarget#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#state CloudGuardTarget#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#state CloudGuardTarget#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#target_resource_id CloudGuardTarget#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#target_resource_id CloudGuardTarget#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#target_resource_type CloudGuardTarget#target_resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#target_resource_type CloudGuardTarget#target_resource_type}
   */
   readonly targetResourceType: string;
   /**
   * target_detector_recipes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#target_detector_recipes CloudGuardTarget#target_detector_recipes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#target_detector_recipes CloudGuardTarget#target_detector_recipes}
   */
   readonly targetDetectorRecipes?: CloudGuardTargetTargetDetectorRecipes[] | cdktf.IResolvable;
   /**
   * target_responder_recipes block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#target_responder_recipes CloudGuardTarget#target_responder_recipes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#target_responder_recipes CloudGuardTarget#target_responder_recipes}
   */
   readonly targetResponderRecipes?: CloudGuardTargetTargetResponderRecipes[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#timeouts CloudGuardTarget#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#timeouts CloudGuardTarget#timeouts}
   */
   readonly timeouts?: CloudGuardTargetTimeouts;
 }
@@ -374,6 +374,171 @@ export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsC
     return new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConditionGroupsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalProperties {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // property_type - computed: true, optional: false, required: false
+  public get propertyType() {
+    return this.getStringAttribute('property_type');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValues {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValues | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValues | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsValues {
 }
 
@@ -508,6 +673,23 @@ export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsC
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
     }
+  }
+
+  // additional_properties - computed: true, optional: false, required: false
+  private _additionalProperties = new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAdditionalPropertiesList(this, "additional_properties", false);
+  public get additionalProperties() {
+    return this._additionalProperties;
+  }
+
+  // allowed_values - computed: true, optional: false, required: false
+  private _allowedValues = new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesDetailsConfigurationsAllowedValuesList(this, "allowed_values", false);
+  public get allowedValues() {
+    return this._allowedValues;
+  }
+
+  // allowed_values_data_type - computed: true, optional: false, required: false
+  public get allowedValuesDataType() {
+    return this.getStringAttribute('allowed_values_data_type');
   }
 
   // config_key - computed: true, optional: false, required: false
@@ -742,6 +924,86 @@ export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesEntities
     return new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesEntitiesMappingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleType {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getListAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRules {
 }
 
@@ -830,6 +1092,11 @@ export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesOutputRe
     return this._entitiesMappings;
   }
 
+  // is_cloneable - computed: true, optional: false, required: false
+  public get isCloneable() {
+    return this.getBooleanAttribute('is_cloneable');
+  }
+
   // lifecycle_details - computed: true, optional: false, required: false
   public get lifecycleDetails() {
     return this.getStringAttribute('lifecycle_details');
@@ -848,6 +1115,12 @@ export class CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesOutputRe
   // resource_type - computed: true, optional: false, required: false
   public get resourceType() {
     return this.getStringAttribute('resource_type');
+  }
+
+  // rule_type - computed: true, optional: false, required: false
+  private _ruleType = new CloudGuardTargetTargetDetectorRecipesEffectiveDetectorRulesRuleTypeList(this, "rule_type", false);
+  public get ruleType() {
+    return this._ruleType;
   }
 
   // service_type - computed: true, optional: false, required: false
@@ -972,6 +1245,251 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesEntitiesMappingsL
   */
   public get(index: number): CloudGuardTargetTargetDetectorRecipesDetectorRulesEntitiesMappingsOutputReference {
     return new CloudGuardTargetTargetDetectorRecipesDetectorRulesEntitiesMappingsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleType {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getListAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalProperties {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalProperties): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalProperties | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalProperties | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // property_type - computed: true, optional: false, required: false
+  public get propertyType() {
+    return this.getStringAttribute('property_type');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValues {
+}
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesToTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function cloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesToHclTerraform(struct?: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValues | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValues | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // key - computed: true, optional: false, required: false
+  public get key() {
+    return this.getStringAttribute('key');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesOutputReference {
+    return new CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsValues {
@@ -1110,6 +1628,23 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurat
     }
   }
 
+  // additional_properties - computed: true, optional: false, required: false
+  private _additionalProperties = new CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAdditionalPropertiesList(this, "additional_properties", false);
+  public get additionalProperties() {
+    return this._additionalProperties;
+  }
+
+  // allowed_values - computed: true, optional: false, required: false
+  private _allowedValues = new CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurationsAllowedValuesList(this, "allowed_values", false);
+  public get allowedValues() {
+    return this._allowedValues;
+  }
+
+  // allowed_values_data_type - computed: true, optional: false, required: false
+  public get allowedValuesDataType() {
+    return this.getStringAttribute('allowed_values_data_type');
+  }
+
   // config_key - computed: true, optional: false, required: false
   public get configKey() {
     return this.getStringAttribute('config_key');
@@ -1157,11 +1692,11 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConfigurat
 }
 export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConditionGroups {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#compartment_id CloudGuardTarget#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#compartment_id CloudGuardTarget#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#condition CloudGuardTarget#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#condition CloudGuardTarget#condition}
   */
   readonly condition: string;
 }
@@ -1302,7 +1837,7 @@ export interface CloudGuardTargetTargetDetectorRecipesDetectorRulesDetails {
   /**
   * condition_groups block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#condition_groups CloudGuardTarget#condition_groups}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#condition_groups CloudGuardTarget#condition_groups}
   */
   readonly conditionGroups?: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsConditionGroups[] | cdktf.IResolvable;
 }
@@ -1412,13 +1947,13 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesDetailsOutputRefe
 }
 export interface CloudGuardTargetTargetDetectorRecipesDetectorRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#detector_rule_id CloudGuardTarget#detector_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#detector_rule_id CloudGuardTarget#detector_rule_id}
   */
   readonly detectorRuleId: string;
   /**
   * details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#details CloudGuardTarget#details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#details CloudGuardTarget#details}
   */
   readonly details: CloudGuardTargetTargetDetectorRecipesDetectorRulesDetails;
 }
@@ -1548,6 +2083,11 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesOutputReference e
     return this._entitiesMappings;
   }
 
+  // is_cloneable - computed: true, optional: false, required: false
+  public get isCloneable() {
+    return this.getBooleanAttribute('is_cloneable');
+  }
+
   // lifecycle_details - computed: true, optional: false, required: false
   public get lifecycleDetails() {
     return this.getStringAttribute('lifecycle_details');
@@ -1566,6 +2106,12 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesOutputReference e
   // resource_type - computed: true, optional: false, required: false
   public get resourceType() {
     return this.getStringAttribute('resource_type');
+  }
+
+  // rule_type - computed: true, optional: false, required: false
+  private _ruleType = new CloudGuardTargetTargetDetectorRecipesDetectorRulesRuleTypeList(this, "rule_type", false);
+  public get ruleType() {
+    return this._ruleType;
   }
 
   // service_type - computed: true, optional: false, required: false
@@ -1623,13 +2169,13 @@ export class CloudGuardTargetTargetDetectorRecipesDetectorRulesList extends cdkt
 }
 export interface CloudGuardTargetTargetDetectorRecipes {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#detector_recipe_id CloudGuardTarget#detector_recipe_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#detector_recipe_id CloudGuardTarget#detector_recipe_id}
   */
   readonly detectorRecipeId: string;
   /**
   * detector_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#detector_rules CloudGuardTarget#detector_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#detector_rules CloudGuardTarget#detector_rules}
   */
   readonly detectorRules?: CloudGuardTargetTargetDetectorRecipesDetectorRules[] | cdktf.IResolvable;
 }
@@ -2134,15 +2680,15 @@ export class CloudGuardTargetTargetResponderRecipesEffectiveResponderRulesList e
 }
 export interface CloudGuardTargetTargetResponderRecipesResponderRulesDetailsConfigurations {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#config_key CloudGuardTarget#config_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#config_key CloudGuardTarget#config_key}
   */
   readonly configKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#name CloudGuardTarget#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#name CloudGuardTarget#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#value CloudGuardTarget#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#value CloudGuardTarget#value}
   */
   readonly value: string;
 }
@@ -2307,17 +2853,17 @@ export class CloudGuardTargetTargetResponderRecipesResponderRulesDetailsConfigur
 }
 export interface CloudGuardTargetTargetResponderRecipesResponderRulesDetails {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#condition CloudGuardTarget#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#condition CloudGuardTarget#condition}
   */
   readonly condition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#mode CloudGuardTarget#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#mode CloudGuardTarget#mode}
   */
   readonly mode?: string;
   /**
   * configurations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#configurations CloudGuardTarget#configurations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#configurations CloudGuardTarget#configurations}
   */
   readonly configurations?: CloudGuardTargetTargetResponderRecipesResponderRulesDetailsConfigurations[] | cdktf.IResolvable;
 }
@@ -2464,13 +3010,13 @@ export class CloudGuardTargetTargetResponderRecipesResponderRulesDetailsOutputRe
 }
 export interface CloudGuardTargetTargetResponderRecipesResponderRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#responder_rule_id CloudGuardTarget#responder_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#responder_rule_id CloudGuardTarget#responder_rule_id}
   */
   readonly responderRuleId: string;
   /**
   * details block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#details CloudGuardTarget#details}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#details CloudGuardTarget#details}
   */
   readonly details: CloudGuardTargetTargetResponderRecipesResponderRulesDetails;
 }
@@ -2659,13 +3205,13 @@ export class CloudGuardTargetTargetResponderRecipesResponderRulesList extends cd
 }
 export interface CloudGuardTargetTargetResponderRecipes {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#responder_recipe_id CloudGuardTarget#responder_recipe_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#responder_recipe_id CloudGuardTarget#responder_recipe_id}
   */
   readonly responderRecipeId: string;
   /**
   * responder_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#responder_rules CloudGuardTarget#responder_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#responder_rules CloudGuardTarget#responder_rules}
   */
   readonly responderRules?: CloudGuardTargetTargetResponderRecipesResponderRules[] | cdktf.IResolvable;
 }
@@ -2848,15 +3394,15 @@ export class CloudGuardTargetTargetResponderRecipesList extends cdktf.ComplexLis
 }
 export interface CloudGuardTargetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#create CloudGuardTarget#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#create CloudGuardTarget#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#delete CloudGuardTarget#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#delete CloudGuardTarget#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#update CloudGuardTarget#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#update CloudGuardTarget#update}
   */
   readonly update?: string;
 }
@@ -3008,7 +3554,7 @@ export class CloudGuardTargetTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target oci_cloud_guard_target}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target oci_cloud_guard_target}
 */
 export class CloudGuardTarget extends cdktf.TerraformResource {
 
@@ -3024,7 +3570,7 @@ export class CloudGuardTarget extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CloudGuardTarget resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CloudGuardTarget to import
-  * @param importFromId The id of the existing CloudGuardTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CloudGuardTarget that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CloudGuardTarget to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3036,7 +3582,7 @@ export class CloudGuardTarget extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/cloud_guard_target oci_cloud_guard_target} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/cloud_guard_target oci_cloud_guard_target} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3047,8 +3593,8 @@ export class CloudGuardTarget extends cdktf.TerraformResource {
       terraformResourceType: 'oci_cloud_guard_target',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,84 +8,104 @@ import * as cdktf from 'cdktf';
 
 export interface AiDocumentModelConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#compartment_id AiDocumentModel#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#compartment_id AiDocumentModel#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#defined_tags AiDocumentModel#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#defined_tags AiDocumentModel#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#description AiDocumentModel#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#description AiDocumentModel#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#display_name AiDocumentModel#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#display_name AiDocumentModel#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#freeform_tags AiDocumentModel#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#freeform_tags AiDocumentModel#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#id AiDocumentModel#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#id AiDocumentModel#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#is_quick_mode AiDocumentModel#is_quick_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#inference_units AiDocumentModel#inference_units}
+  */
+  readonly inferenceUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#is_quick_mode AiDocumentModel#is_quick_mode}
   */
   readonly isQuickMode?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#max_training_time_in_hours AiDocumentModel#max_training_time_in_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#language AiDocumentModel#language}
+  */
+  readonly language?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#max_training_time_in_hours AiDocumentModel#max_training_time_in_hours}
   */
   readonly maxTrainingTimeInHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#model_id AiDocumentModel#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_id AiDocumentModel#model_id}
   */
   readonly modelId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#model_type AiDocumentModel#model_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_type AiDocumentModel#model_type}
   */
   readonly modelType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#model_version AiDocumentModel#model_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_version AiDocumentModel#model_version}
   */
   readonly modelVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#project_id AiDocumentModel#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#project_id AiDocumentModel#project_id}
   */
   readonly projectId: string;
   /**
   * component_models block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#component_models AiDocumentModel#component_models}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#component_models AiDocumentModel#component_models}
   */
   readonly componentModels?: AiDocumentModelComponentModels[] | cdktf.IResolvable;
   /**
+  * locks block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#locks AiDocumentModel#locks}
+  */
+  readonly locks?: AiDocumentModelLocks[] | cdktf.IResolvable;
+  /**
+  * model_sub_type block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_sub_type AiDocumentModel#model_sub_type}
+  */
+  readonly modelSubType?: AiDocumentModelModelSubType;
+  /**
   * testing_dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#testing_dataset AiDocumentModel#testing_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#testing_dataset AiDocumentModel#testing_dataset}
   */
   readonly testingDataset?: AiDocumentModelTestingDataset;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#timeouts AiDocumentModel#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#timeouts AiDocumentModel#timeouts}
   */
   readonly timeouts?: AiDocumentModelTimeouts;
   /**
   * training_dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#training_dataset AiDocumentModel#training_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#training_dataset AiDocumentModel#training_dataset}
   */
   readonly trainingDataset?: AiDocumentModelTrainingDataset;
   /**
   * validation_dataset block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#validation_dataset AiDocumentModel#validation_dataset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#validation_dataset AiDocumentModel#validation_dataset}
   */
   readonly validationDataset?: AiDocumentModelValidationDataset;
 }
@@ -636,7 +656,7 @@ export class AiDocumentModelMetricsList extends cdktf.ComplexList {
 }
 export interface AiDocumentModelComponentModels {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#model_id AiDocumentModel#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_id AiDocumentModel#model_id}
   */
   readonly modelId?: string;
 }
@@ -750,25 +770,381 @@ export class AiDocumentModelComponentModelsList extends cdktf.ComplexList {
     return new AiDocumentModelComponentModelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface AiDocumentModelLocks {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#compartment_id AiDocumentModel#compartment_id}
+  */
+  readonly compartmentId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#message AiDocumentModel#message}
+  */
+  readonly message?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#related_resource_id AiDocumentModel#related_resource_id}
+  */
+  readonly relatedResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#time_created AiDocumentModel#time_created}
+  */
+  readonly timeCreated?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#type AiDocumentModel#type}
+  */
+  readonly type: string;
+}
+
+export function aiDocumentModelLocksToTerraform(struct?: AiDocumentModelLocks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    compartment_id: cdktf.stringToTerraform(struct!.compartmentId),
+    message: cdktf.stringToTerraform(struct!.message),
+    related_resource_id: cdktf.stringToTerraform(struct!.relatedResourceId),
+    time_created: cdktf.stringToTerraform(struct!.timeCreated),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function aiDocumentModelLocksToHclTerraform(struct?: AiDocumentModelLocks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    compartment_id: {
+      value: cdktf.stringToHclTerraform(struct!.compartmentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    message: {
+      value: cdktf.stringToHclTerraform(struct!.message),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    related_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.relatedResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_created: {
+      value: cdktf.stringToHclTerraform(struct!.timeCreated),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AiDocumentModelLocksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AiDocumentModelLocks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._compartmentId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.compartmentId = this._compartmentId;
+    }
+    if (this._message !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.message = this._message;
+    }
+    if (this._relatedResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relatedResourceId = this._relatedResourceId;
+    }
+    if (this._timeCreated !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeCreated = this._timeCreated;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AiDocumentModelLocks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._compartmentId = undefined;
+      this._message = undefined;
+      this._relatedResourceId = undefined;
+      this._timeCreated = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._compartmentId = value.compartmentId;
+      this._message = value.message;
+      this._relatedResourceId = value.relatedResourceId;
+      this._timeCreated = value.timeCreated;
+      this._type = value.type;
+    }
+  }
+
+  // compartment_id - computed: true, optional: true, required: false
+  private _compartmentId?: string; 
+  public get compartmentId() {
+    return this.getStringAttribute('compartment_id');
+  }
+  public set compartmentId(value: string) {
+    this._compartmentId = value;
+  }
+  public resetCompartmentId() {
+    this._compartmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compartmentIdInput() {
+    return this._compartmentId;
+  }
+
+  // message - computed: true, optional: true, required: false
+  private _message?: string; 
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+  public set message(value: string) {
+    this._message = value;
+  }
+  public resetMessage() {
+    this._message = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageInput() {
+    return this._message;
+  }
+
+  // related_resource_id - computed: true, optional: true, required: false
+  private _relatedResourceId?: string; 
+  public get relatedResourceId() {
+    return this.getStringAttribute('related_resource_id');
+  }
+  public set relatedResourceId(value: string) {
+    this._relatedResourceId = value;
+  }
+  public resetRelatedResourceId() {
+    this._relatedResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relatedResourceIdInput() {
+    return this._relatedResourceId;
+  }
+
+  // time_created - computed: true, optional: true, required: false
+  private _timeCreated?: string; 
+  public get timeCreated() {
+    return this.getStringAttribute('time_created');
+  }
+  public set timeCreated(value: string) {
+    this._timeCreated = value;
+  }
+  public resetTimeCreated() {
+    this._timeCreated = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeCreatedInput() {
+    return this._timeCreated;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class AiDocumentModelLocksList extends cdktf.ComplexList {
+  public internalValue? : AiDocumentModelLocks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AiDocumentModelLocksOutputReference {
+    return new AiDocumentModelLocksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface AiDocumentModelModelSubType {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_sub_type AiDocumentModel#model_sub_type}
+  */
+  readonly modelSubType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#model_type AiDocumentModel#model_type}
+  */
+  readonly modelType: string;
+}
+
+export function aiDocumentModelModelSubTypeToTerraform(struct?: AiDocumentModelModelSubTypeOutputReference | AiDocumentModelModelSubType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    model_sub_type: cdktf.stringToTerraform(struct!.modelSubType),
+    model_type: cdktf.stringToTerraform(struct!.modelType),
+  }
+}
+
+
+export function aiDocumentModelModelSubTypeToHclTerraform(struct?: AiDocumentModelModelSubTypeOutputReference | AiDocumentModelModelSubType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    model_sub_type: {
+      value: cdktf.stringToHclTerraform(struct!.modelSubType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    model_type: {
+      value: cdktf.stringToHclTerraform(struct!.modelType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AiDocumentModelModelSubTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): AiDocumentModelModelSubType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._modelSubType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modelSubType = this._modelSubType;
+    }
+    if (this._modelType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.modelType = this._modelType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AiDocumentModelModelSubType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._modelSubType = undefined;
+      this._modelType = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._modelSubType = value.modelSubType;
+      this._modelType = value.modelType;
+    }
+  }
+
+  // model_sub_type - computed: false, optional: false, required: true
+  private _modelSubType?: string; 
+  public get modelSubType() {
+    return this.getStringAttribute('model_sub_type');
+  }
+  public set modelSubType(value: string) {
+    this._modelSubType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelSubTypeInput() {
+    return this._modelSubType;
+  }
+
+  // model_type - computed: false, optional: false, required: true
+  private _modelType?: string; 
+  public get modelType() {
+    return this.getStringAttribute('model_type');
+  }
+  public set modelType(value: string) {
+    this._modelType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelTypeInput() {
+    return this._modelType;
+  }
+}
 export interface AiDocumentModelTestingDataset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
   */
   readonly datasetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
   */
   readonly datasetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#object AiDocumentModel#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#object AiDocumentModel#object}
   */
   readonly object?: string;
 }
@@ -965,15 +1341,15 @@ export class AiDocumentModelTestingDatasetOutputReference extends cdktf.ComplexO
 }
 export interface AiDocumentModelTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#create AiDocumentModel#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#create AiDocumentModel#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#delete AiDocumentModel#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#delete AiDocumentModel#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#update AiDocumentModel#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#update AiDocumentModel#update}
   */
   readonly update?: string;
 }
@@ -1125,23 +1501,23 @@ export class AiDocumentModelTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 export interface AiDocumentModelTrainingDataset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
   */
   readonly datasetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
   */
   readonly datasetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#object AiDocumentModel#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#object AiDocumentModel#object}
   */
   readonly object?: string;
 }
@@ -1338,23 +1714,23 @@ export class AiDocumentModelTrainingDatasetOutputReference extends cdktf.Complex
 }
 export interface AiDocumentModelValidationDataset {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#bucket AiDocumentModel#bucket}
   */
   readonly bucket?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_id AiDocumentModel#dataset_id}
   */
   readonly datasetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#dataset_type AiDocumentModel#dataset_type}
   */
   readonly datasetType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#namespace AiDocumentModel#namespace}
   */
   readonly namespace?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#object AiDocumentModel#object}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#object AiDocumentModel#object}
   */
   readonly object?: string;
 }
@@ -1551,7 +1927,7 @@ export class AiDocumentModelValidationDatasetOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model oci_ai_document_model}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model oci_ai_document_model}
 */
 export class AiDocumentModel extends cdktf.TerraformResource {
 
@@ -1567,7 +1943,7 @@ export class AiDocumentModel extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AiDocumentModel resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AiDocumentModel to import
-  * @param importFromId The id of the existing AiDocumentModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AiDocumentModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AiDocumentModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1579,7 +1955,7 @@ export class AiDocumentModel extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_model oci_ai_document_model} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_model oci_ai_document_model} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1590,8 +1966,8 @@ export class AiDocumentModel extends cdktf.TerraformResource {
       terraformResourceType: 'oci_ai_document_model',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1607,13 +1983,17 @@ export class AiDocumentModel extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._freeformTags = config.freeformTags;
     this._id = config.id;
+    this._inferenceUnits = config.inferenceUnits;
     this._isQuickMode = config.isQuickMode;
+    this._language = config.language;
     this._maxTrainingTimeInHours = config.maxTrainingTimeInHours;
     this._modelId = config.modelId;
     this._modelType = config.modelType;
     this._modelVersion = config.modelVersion;
     this._projectId = config.projectId;
     this._componentModels.internalValue = config.componentModels;
+    this._locks.internalValue = config.locks;
+    this._modelSubType.internalValue = config.modelSubType;
     this._testingDataset.internalValue = config.testingDataset;
     this._timeouts.internalValue = config.timeouts;
     this._trainingDataset.internalValue = config.trainingDataset;
@@ -1717,6 +2097,22 @@ export class AiDocumentModel extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // inference_units - computed: true, optional: true, required: false
+  private _inferenceUnits?: number; 
+  public get inferenceUnits() {
+    return this.getNumberAttribute('inference_units');
+  }
+  public set inferenceUnits(value: number) {
+    this._inferenceUnits = value;
+  }
+  public resetInferenceUnits() {
+    this._inferenceUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inferenceUnitsInput() {
+    return this._inferenceUnits;
+  }
+
   // is_composed_model - computed: true, optional: false, required: false
   public get isComposedModel() {
     return this.getBooleanAttribute('is_composed_model');
@@ -1741,6 +2137,22 @@ export class AiDocumentModel extends cdktf.TerraformResource {
   // labels - computed: true, optional: false, required: false
   public get labels() {
     return this.getListAttribute('labels');
+  }
+
+  // language - computed: true, optional: true, required: false
+  private _language?: string; 
+  public get language() {
+    return this.getStringAttribute('language');
+  }
+  public set language(value: string) {
+    this._language = value;
+  }
+  public resetLanguage() {
+    this._language = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get languageInput() {
+    return this._language;
   }
 
   // lifecycle_details - computed: true, optional: false, required: false
@@ -1875,6 +2287,38 @@ export class AiDocumentModel extends cdktf.TerraformResource {
     return this._componentModels.internalValue;
   }
 
+  // locks - computed: false, optional: true, required: false
+  private _locks = new AiDocumentModelLocksList(this, "locks", false);
+  public get locks() {
+    return this._locks;
+  }
+  public putLocks(value: AiDocumentModelLocks[] | cdktf.IResolvable) {
+    this._locks.internalValue = value;
+  }
+  public resetLocks() {
+    this._locks.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locksInput() {
+    return this._locks.internalValue;
+  }
+
+  // model_sub_type - computed: false, optional: true, required: false
+  private _modelSubType = new AiDocumentModelModelSubTypeOutputReference(this, "model_sub_type");
+  public get modelSubType() {
+    return this._modelSubType;
+  }
+  public putModelSubType(value: AiDocumentModelModelSubType) {
+    this._modelSubType.internalValue = value;
+  }
+  public resetModelSubType() {
+    this._modelSubType.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modelSubTypeInput() {
+    return this._modelSubType.internalValue;
+  }
+
   // testing_dataset - computed: false, optional: true, required: false
   private _testingDataset = new AiDocumentModelTestingDatasetOutputReference(this, "testing_dataset");
   public get testingDataset() {
@@ -1951,13 +2395,17 @@ export class AiDocumentModel extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       freeform_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._freeformTags),
       id: cdktf.stringToTerraform(this._id),
+      inference_units: cdktf.numberToTerraform(this._inferenceUnits),
       is_quick_mode: cdktf.booleanToTerraform(this._isQuickMode),
+      language: cdktf.stringToTerraform(this._language),
       max_training_time_in_hours: cdktf.numberToTerraform(this._maxTrainingTimeInHours),
       model_id: cdktf.stringToTerraform(this._modelId),
       model_type: cdktf.stringToTerraform(this._modelType),
       model_version: cdktf.stringToTerraform(this._modelVersion),
       project_id: cdktf.stringToTerraform(this._projectId),
       component_models: cdktf.listMapper(aiDocumentModelComponentModelsToTerraform, true)(this._componentModels.internalValue),
+      locks: cdktf.listMapper(aiDocumentModelLocksToTerraform, true)(this._locks.internalValue),
+      model_sub_type: aiDocumentModelModelSubTypeToTerraform(this._modelSubType.internalValue),
       testing_dataset: aiDocumentModelTestingDatasetToTerraform(this._testingDataset.internalValue),
       timeouts: aiDocumentModelTimeoutsToTerraform(this._timeouts.internalValue),
       training_dataset: aiDocumentModelTrainingDatasetToTerraform(this._trainingDataset.internalValue),
@@ -2003,11 +2451,23 @@ export class AiDocumentModel extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      inference_units: {
+        value: cdktf.numberToHclTerraform(this._inferenceUnits),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
       is_quick_mode: {
         value: cdktf.booleanToHclTerraform(this._isQuickMode),
         isBlock: false,
         type: "simple",
         storageClassType: "boolean",
+      },
+      language: {
+        value: cdktf.stringToHclTerraform(this._language),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
       },
       max_training_time_in_hours: {
         value: cdktf.numberToHclTerraform(this._maxTrainingTimeInHours),
@@ -2044,6 +2504,18 @@ export class AiDocumentModel extends cdktf.TerraformResource {
         isBlock: true,
         type: "list",
         storageClassType: "AiDocumentModelComponentModelsList",
+      },
+      locks: {
+        value: cdktf.listMapperHcl(aiDocumentModelLocksToHclTerraform, true)(this._locks.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AiDocumentModelLocksList",
+      },
+      model_sub_type: {
+        value: aiDocumentModelModelSubTypeToHclTerraform(this._modelSubType.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AiDocumentModelModelSubTypeList",
       },
       testing_dataset: {
         value: aiDocumentModelTestingDatasetToHclTerraform(this._testingDataset.internalValue),

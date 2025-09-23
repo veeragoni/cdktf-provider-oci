@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,50 +8,301 @@ import * as cdktf from 'cdktf';
 
 export interface AiDocumentProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#compartment_id AiDocumentProject#compartment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#compartment_id AiDocumentProject#compartment_id}
   */
   readonly compartmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#defined_tags AiDocumentProject#defined_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#defined_tags AiDocumentProject#defined_tags}
   */
   readonly definedTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#description AiDocumentProject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#description AiDocumentProject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#display_name AiDocumentProject#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#display_name AiDocumentProject#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#freeform_tags AiDocumentProject#freeform_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#freeform_tags AiDocumentProject#freeform_tags}
   */
   readonly freeformTags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#id AiDocumentProject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#id AiDocumentProject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
+  * locks block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#locks AiDocumentProject#locks}
+  */
+  readonly locks?: AiDocumentProjectLocks[] | cdktf.IResolvable;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#timeouts AiDocumentProject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#timeouts AiDocumentProject#timeouts}
   */
   readonly timeouts?: AiDocumentProjectTimeouts;
 }
+export interface AiDocumentProjectLocks {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#compartment_id AiDocumentProject#compartment_id}
+  */
+  readonly compartmentId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#message AiDocumentProject#message}
+  */
+  readonly message?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#related_resource_id AiDocumentProject#related_resource_id}
+  */
+  readonly relatedResourceId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#time_created AiDocumentProject#time_created}
+  */
+  readonly timeCreated?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#type AiDocumentProject#type}
+  */
+  readonly type: string;
+}
+
+export function aiDocumentProjectLocksToTerraform(struct?: AiDocumentProjectLocks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    compartment_id: cdktf.stringToTerraform(struct!.compartmentId),
+    message: cdktf.stringToTerraform(struct!.message),
+    related_resource_id: cdktf.stringToTerraform(struct!.relatedResourceId),
+    time_created: cdktf.stringToTerraform(struct!.timeCreated),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function aiDocumentProjectLocksToHclTerraform(struct?: AiDocumentProjectLocks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    compartment_id: {
+      value: cdktf.stringToHclTerraform(struct!.compartmentId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    message: {
+      value: cdktf.stringToHclTerraform(struct!.message),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    related_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.relatedResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_created: {
+      value: cdktf.stringToHclTerraform(struct!.timeCreated),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class AiDocumentProjectLocksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): AiDocumentProjectLocks | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._compartmentId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.compartmentId = this._compartmentId;
+    }
+    if (this._message !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.message = this._message;
+    }
+    if (this._relatedResourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.relatedResourceId = this._relatedResourceId;
+    }
+    if (this._timeCreated !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.timeCreated = this._timeCreated;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AiDocumentProjectLocks | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._compartmentId = undefined;
+      this._message = undefined;
+      this._relatedResourceId = undefined;
+      this._timeCreated = undefined;
+      this._type = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._compartmentId = value.compartmentId;
+      this._message = value.message;
+      this._relatedResourceId = value.relatedResourceId;
+      this._timeCreated = value.timeCreated;
+      this._type = value.type;
+    }
+  }
+
+  // compartment_id - computed: true, optional: true, required: false
+  private _compartmentId?: string; 
+  public get compartmentId() {
+    return this.getStringAttribute('compartment_id');
+  }
+  public set compartmentId(value: string) {
+    this._compartmentId = value;
+  }
+  public resetCompartmentId() {
+    this._compartmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get compartmentIdInput() {
+    return this._compartmentId;
+  }
+
+  // message - computed: true, optional: true, required: false
+  private _message?: string; 
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+  public set message(value: string) {
+    this._message = value;
+  }
+  public resetMessage() {
+    this._message = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messageInput() {
+    return this._message;
+  }
+
+  // related_resource_id - computed: true, optional: true, required: false
+  private _relatedResourceId?: string; 
+  public get relatedResourceId() {
+    return this.getStringAttribute('related_resource_id');
+  }
+  public set relatedResourceId(value: string) {
+    this._relatedResourceId = value;
+  }
+  public resetRelatedResourceId() {
+    this._relatedResourceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get relatedResourceIdInput() {
+    return this._relatedResourceId;
+  }
+
+  // time_created - computed: true, optional: true, required: false
+  private _timeCreated?: string; 
+  public get timeCreated() {
+    return this.getStringAttribute('time_created');
+  }
+  public set timeCreated(value: string) {
+    this._timeCreated = value;
+  }
+  public resetTimeCreated() {
+    this._timeCreated = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeCreatedInput() {
+    return this._timeCreated;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+
+export class AiDocumentProjectLocksList extends cdktf.ComplexList {
+  public internalValue? : AiDocumentProjectLocks[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): AiDocumentProjectLocksOutputReference {
+    return new AiDocumentProjectLocksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface AiDocumentProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#create AiDocumentProject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#create AiDocumentProject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#delete AiDocumentProject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#delete AiDocumentProject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#update AiDocumentProject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#update AiDocumentProject#update}
   */
   readonly update?: string;
 }
@@ -203,7 +454,7 @@ export class AiDocumentProjectTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project oci_ai_document_project}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project oci_ai_document_project}
 */
 export class AiDocumentProject extends cdktf.TerraformResource {
 
@@ -219,7 +470,7 @@ export class AiDocumentProject extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AiDocumentProject resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AiDocumentProject to import
-  * @param importFromId The id of the existing AiDocumentProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AiDocumentProject that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AiDocumentProject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -231,7 +482,7 @@ export class AiDocumentProject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/resources/ai_document_project oci_ai_document_project} Resource
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/resources/ai_document_project oci_ai_document_project} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -242,8 +493,8 @@ export class AiDocumentProject extends cdktf.TerraformResource {
       terraformResourceType: 'oci_ai_document_project',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -259,6 +510,7 @@ export class AiDocumentProject extends cdktf.TerraformResource {
     this._displayName = config.displayName;
     this._freeformTags = config.freeformTags;
     this._id = config.id;
+    this._locks.internalValue = config.locks;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -385,6 +637,22 @@ export class AiDocumentProject extends cdktf.TerraformResource {
     return this.getStringAttribute('time_updated');
   }
 
+  // locks - computed: false, optional: true, required: false
+  private _locks = new AiDocumentProjectLocksList(this, "locks", false);
+  public get locks() {
+    return this._locks;
+  }
+  public putLocks(value: AiDocumentProjectLocks[] | cdktf.IResolvable) {
+    this._locks.internalValue = value;
+  }
+  public resetLocks() {
+    this._locks.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get locksInput() {
+    return this._locks.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new AiDocumentProjectTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -413,6 +681,7 @@ export class AiDocumentProject extends cdktf.TerraformResource {
       display_name: cdktf.stringToTerraform(this._displayName),
       freeform_tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._freeformTags),
       id: cdktf.stringToTerraform(this._id),
+      locks: cdktf.listMapper(aiDocumentProjectLocksToTerraform, true)(this._locks.internalValue),
       timeouts: aiDocumentProjectTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -454,6 +723,12 @@ export class AiDocumentProject extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      locks: {
+        value: cdktf.listMapperHcl(aiDocumentProjectLocksToHclTerraform, true)(this._locks.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AiDocumentProjectLocksList",
       },
       timeouts: {
         value: aiDocumentProjectTimeoutsToHclTerraform(this._timeouts.internalValue),

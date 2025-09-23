@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_processor_job
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_processor_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataOciAiDocumentProcessorJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_processor_job#processor_job_id DataOciAiDocumentProcessorJob#processor_job_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_processor_job#processor_job_id DataOciAiDocumentProcessorJob#processor_job_id}
   */
   readonly processorJobId: string;
 }
@@ -76,6 +76,11 @@ export class DataOciAiDocumentProcessorJobInputLocationObjectLocationsOutputRefe
   // object - computed: true, optional: false, required: false
   public get object() {
     return this.getStringAttribute('object');
+  }
+
+  // page_range - computed: true, optional: false, required: false
+  public get pageRange() {
+    return this.getListAttribute('page_range');
   }
 }
 
@@ -157,6 +162,11 @@ export class DataOciAiDocumentProcessorJobInputLocationOutputReference extends c
   private _objectLocations = new DataOciAiDocumentProcessorJobInputLocationObjectLocationsList(this, "object_locations", false);
   public get objectLocations() {
     return this._objectLocations;
+  }
+
+  // page_range - computed: true, optional: false, required: false
+  public get pageRange() {
+    return this.getListAttribute('page_range');
   }
 
   // source_type - computed: true, optional: false, required: false
@@ -339,6 +349,11 @@ export class DataOciAiDocumentProcessorJobProcessorConfigFeaturesOutputReference
     return this.getStringAttribute('model_id');
   }
 
+  // selection_mark_detection - computed: true, optional: false, required: false
+  public get selectionMarkDetection() {
+    return this.getBooleanAttribute('selection_mark_detection');
+  }
+
   // tenancy_id - computed: true, optional: false, required: false
   public get tenancyId() {
     return this.getStringAttribute('tenancy_id');
@@ -361,6 +376,157 @@ export class DataOciAiDocumentProcessorJobProcessorConfigFeaturesList extends cd
   */
   public get(index: number): DataOciAiDocumentProcessorJobProcessorConfigFeaturesOutputReference {
     return new DataOciAiDocumentProcessorJobProcessorConfigFeaturesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMap {
+}
+
+export function dataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToTerraform(struct?: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapToHclTerraform(struct?: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMap): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMap | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // normalization_type - computed: true, optional: false, required: false
+  public get normalizationType() {
+    return this.getStringAttribute('normalization_type');
+  }
+}
+
+export class DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference {
+    return new DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataOciAiDocumentProcessorJobProcessorConfigNormalizationFields {
+}
+
+export function dataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsToTerraform(struct?: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFields): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsToHclTerraform(struct?: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFields): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciAiDocumentProcessorJobProcessorConfigNormalizationFields | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciAiDocumentProcessorJobProcessorConfigNormalizationFields | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // map - computed: true, optional: false, required: false
+  private _map = new DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsMapList(this, "map", false);
+  public get map() {
+    return this._map;
+  }
+}
+
+export class DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference {
+    return new DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataOciAiDocumentProcessorJobProcessorConfig {
@@ -435,6 +601,17 @@ export class DataOciAiDocumentProcessorJobProcessorConfigOutputReference extends
     return this.getStringAttribute('language');
   }
 
+  // model_id - computed: true, optional: false, required: false
+  public get modelId() {
+    return this.getStringAttribute('model_id');
+  }
+
+  // normalization_fields - computed: true, optional: false, required: false
+  private _normalizationFields = new DataOciAiDocumentProcessorJobProcessorConfigNormalizationFieldsList(this, "normalization_fields", false);
+  public get normalizationFields() {
+    return this._normalizationFields;
+  }
+
   // processor_type - computed: true, optional: false, required: false
   public get processorType() {
     return this.getStringAttribute('processor_type');
@@ -461,7 +638,7 @@ export class DataOciAiDocumentProcessorJobProcessorConfigList extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_processor_job oci_ai_document_processor_job}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_processor_job oci_ai_document_processor_job}
 */
 export class DataOciAiDocumentProcessorJob extends cdktf.TerraformDataSource {
 
@@ -477,7 +654,7 @@ export class DataOciAiDocumentProcessorJob extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataOciAiDocumentProcessorJob resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataOciAiDocumentProcessorJob to import
-  * @param importFromId The id of the existing DataOciAiDocumentProcessorJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_processor_job#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataOciAiDocumentProcessorJob that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_processor_job#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataOciAiDocumentProcessorJob to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -489,7 +666,7 @@ export class DataOciAiDocumentProcessorJob extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_processor_job oci_ai_document_processor_job} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_processor_job oci_ai_document_processor_job} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -500,8 +677,8 @@ export class DataOciAiDocumentProcessorJob extends cdktf.TerraformDataSource {
       terraformResourceType: 'oci_ai_document_processor_job',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,

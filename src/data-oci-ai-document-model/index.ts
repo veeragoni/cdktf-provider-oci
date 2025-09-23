@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_model
+// https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_model
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,7 +8,7 @@ import * as cdktf from 'cdktf';
 
 export interface DataOciAiDocumentModelConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_model#model_id DataOciAiDocumentModel#model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_model#model_id DataOciAiDocumentModel#model_id}
   */
   readonly modelId: string;
 }
@@ -85,6 +85,101 @@ export class DataOciAiDocumentModelComponentModelsList extends cdktf.ComplexList
   */
   public get(index: number): DataOciAiDocumentModelComponentModelsOutputReference {
     return new DataOciAiDocumentModelComponentModelsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataOciAiDocumentModelLocks {
+}
+
+export function dataOciAiDocumentModelLocksToTerraform(struct?: DataOciAiDocumentModelLocks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciAiDocumentModelLocksToHclTerraform(struct?: DataOciAiDocumentModelLocks): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciAiDocumentModelLocksOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciAiDocumentModelLocks | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciAiDocumentModelLocks | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // compartment_id - computed: true, optional: false, required: false
+  public get compartmentId() {
+    return this.getStringAttribute('compartment_id');
+  }
+
+  // message - computed: true, optional: false, required: false
+  public get message() {
+    return this.getStringAttribute('message');
+  }
+
+  // related_resource_id - computed: true, optional: false, required: false
+  public get relatedResourceId() {
+    return this.getStringAttribute('related_resource_id');
+  }
+
+  // time_created - computed: true, optional: false, required: false
+  public get timeCreated() {
+    return this.getStringAttribute('time_created');
+  }
+
+  // type - computed: true, optional: false, required: false
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+}
+
+export class DataOciAiDocumentModelLocksList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciAiDocumentModelLocksOutputReference {
+    return new DataOciAiDocumentModelLocksOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface DataOciAiDocumentModelMetricsDatasetSummary {
@@ -632,6 +727,86 @@ export class DataOciAiDocumentModelMetricsList extends cdktf.ComplexList {
     return new DataOciAiDocumentModelMetricsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataOciAiDocumentModelModelSubType {
+}
+
+export function dataOciAiDocumentModelModelSubTypeToTerraform(struct?: DataOciAiDocumentModelModelSubType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+
+export function dataOciAiDocumentModelModelSubTypeToHclTerraform(struct?: DataOciAiDocumentModelModelSubType): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
+export class DataOciAiDocumentModelModelSubTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataOciAiDocumentModelModelSubType | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataOciAiDocumentModelModelSubType | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // model_sub_type - computed: true, optional: false, required: false
+  public get modelSubType() {
+    return this.getStringAttribute('model_sub_type');
+  }
+
+  // model_type - computed: true, optional: false, required: false
+  public get modelType() {
+    return this.getStringAttribute('model_type');
+  }
+}
+
+export class DataOciAiDocumentModelModelSubTypeList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataOciAiDocumentModelModelSubTypeOutputReference {
+    return new DataOciAiDocumentModelModelSubTypeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataOciAiDocumentModelTestingDataset {
 }
 
@@ -919,7 +1094,7 @@ export class DataOciAiDocumentModelValidationDatasetList extends cdktf.ComplexLi
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_model oci_ai_document_model}
+* Represents a {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_model oci_ai_document_model}
 */
 export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
 
@@ -935,7 +1110,7 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataOciAiDocumentModel resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataOciAiDocumentModel to import
-  * @param importFromId The id of the existing DataOciAiDocumentModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_model#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataOciAiDocumentModel that should be imported. Refer to the {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_model#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataOciAiDocumentModel to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -947,7 +1122,7 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/6.37.0/docs/data-sources/ai_document_model oci_ai_document_model} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/oracle/oci/7.19.0/docs/data-sources/ai_document_model oci_ai_document_model} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -958,8 +1133,8 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
       terraformResourceType: 'oci_ai_document_model',
       terraformGeneratorMetadata: {
         providerName: 'oci',
-        providerVersion: '6.37.0',
-        providerVersionConstraint: '~> 6.0'
+        providerVersion: '7.19.0',
+        providerVersionConstraint: '~> 7.19.0'
       },
       provider: config.provider,
       dependsOn: config.dependsOn,
@@ -1014,6 +1189,11 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // inference_units - computed: true, optional: false, required: false
+  public get inferenceUnits() {
+    return this.getNumberAttribute('inference_units');
+  }
+
   // is_composed_model - computed: true, optional: false, required: false
   public get isComposedModel() {
     return this.getBooleanAttribute('is_composed_model');
@@ -1029,9 +1209,20 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
     return this.getListAttribute('labels');
   }
 
+  // language - computed: true, optional: false, required: false
+  public get language() {
+    return this.getStringAttribute('language');
+  }
+
   // lifecycle_details - computed: true, optional: false, required: false
   public get lifecycleDetails() {
     return this.getStringAttribute('lifecycle_details');
+  }
+
+  // locks - computed: true, optional: false, required: false
+  private _locks = new DataOciAiDocumentModelLocksList(this, "locks", false);
+  public get locks() {
+    return this._locks;
   }
 
   // max_training_time_in_hours - computed: true, optional: false, required: false
@@ -1056,6 +1247,12 @@ export class DataOciAiDocumentModel extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get modelIdInput() {
     return this._modelId;
+  }
+
+  // model_sub_type - computed: true, optional: false, required: false
+  private _modelSubType = new DataOciAiDocumentModelModelSubTypeList(this, "model_sub_type", false);
+  public get modelSubType() {
+    return this._modelSubType;
   }
 
   // model_type - computed: true, optional: false, required: false
