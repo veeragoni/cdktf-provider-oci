@@ -155,7 +155,7 @@ project.addScripts({
   'check-if-new-provider-version': 'node scripts/check-for-upgrades.js',
   'fetch': 'npx projen fetch',
   'commit': 'git add -A && git commit -am "Update provider" || echo "No changes to commit"',
-  'should-release': '! git diff --exit-code v$(cat version.json | jq -r \'.version\') ./src ./package.json',
+  'should-release': 'node scripts/should-release.js',
   'prebump': 'yarn fetch && yarn compile && yarn run commit && yarn run should-release',
   'build-provider': 'yarn fetch && yarn compile && yarn docgen',
 });

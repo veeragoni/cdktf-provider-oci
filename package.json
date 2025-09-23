@@ -33,7 +33,7 @@
     "watch": "npx projen watch",
     "projen": "npx projen",
     "commit": "git add -A && git commit -am \"Update provider\" || echo \"No changes to commit\"",
-    "should-release": "! git diff --exit-code v$(cat version.json | jq -r '.version') ./src ./package.json",
+    "should-release": "node scripts/force-release.js",
     "prebump": "yarn fetch && yarn compile && yarn run commit && yarn run should-release",
     "build-provider": "yarn fetch && yarn compile && yarn docgen"
   },
